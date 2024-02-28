@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  transpilePackages: ["@wa-criativos/ui"],
+  transpilePackages: ["@wa-criativos/react-utils"],
 };
 
 export default nextConfig;

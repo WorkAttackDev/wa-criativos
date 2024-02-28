@@ -70,10 +70,14 @@
     @apply border-border;
   }
   html {
-    @apply text-[50%] sm:text-[62.5%];
+    @apply text-[50%] sm:text-[62.5%] !scroll-smooth 2xl:text-[87.5%];
     /* color: hsl(); */
   }
   body {
-    @apply bg-background text-foreground min-h-screen;
+    @apply bg-white text-2xl leading-normal text-foreground min-h-screen;
+  }
+
+  section {
+    @apply scroll-mt-32;
   }
 }

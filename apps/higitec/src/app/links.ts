@@ -5,7 +5,7 @@ export const linksObj = {
   },
   ourBrands: {
     href: "#our-brands",
-    label: "As Nossas Marcas",
+    label: "Os Nossos Produtos",
   },
   production: {
     href: "#production",
@@ -18,6 +18,18 @@ export const linksObj = {
   contacts: {
     href: "#contacts",
     label: "Contactos",
+  },
+  termsOfService: {
+    href: "",
+    label: "Termos de Serviço",
+  },
+  cookiesPolicy: {
+    href: "",
+    label: "Política de Cookies",
+  },
+  privacyPolicy: {
+    href: "",
+    label: "Política de Privacidade",
   },
 };
 

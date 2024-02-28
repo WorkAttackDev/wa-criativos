@@ -14,7 +14,9 @@ type Props = {};
 const LangDropdown = (props: Props) => {
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className={buttonVariants({ variant: "outline" })}>
+      <DropdownMenuTrigger
+        className={buttonVariants({ variant: "outline", size: "sm" })}
+      >
         PT
         <ChevronsUpDown className="w-5 h-5 ml-2" />
       </DropdownMenuTrigger>

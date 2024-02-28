@@ -1,39 +1,22 @@
-import type { Config } from "tailwindcss";
-import plugin from "tailwindcss/plugin";
-
-const myPlugin = plugin(function ({ addUtilities }) {
-  addUtilities({
-    ".my-container": {
-      width: "100%",
-      "margin-right": "auto",
-      "margin-left": "auto",
-      "padding-right": "3rem",
-      "padding-left": "3rem",
-      "@media (min-width: 800px)": {
-        "padding-right": "8rem",
-        "padding-left": "8rem",
-      },
-      "@media (min-width: 144rem)": {
-        "max-width": "144rem",
-      },
-    },
-  });
-});
-
-const config = {
+/** @type {import('tailwindcss').Config} */
+module.exports = {
   darkMode: ["class"],
   content: [
-    "./pages/**/*.{ts,tsx}",
-    "./components/**/*.{ts,tsx}",
-    "./app/**/*.{ts,tsx}",
-    "./src/**/*.{ts,tsx}",
+    './pages/**/*.{ts,tsx}',
+    './components/**/*.{ts,tsx}',
+    './app/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}',
   ],
   prefix: "",
   theme: {
-    extend: {
+    container: {
+      center: true,
+      padding: "2rem",
       screens: {
-        mdx: "800px",
+        "2xl": "1400px",
       },
+    },
+    extend: {
       colors: {
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
@@ -70,7 +53,6 @@ const config = {
         },
       },
       borderRadius: {
-        DEFAULT: "var(--radius)",
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
@@ -91,7 +73,5 @@ const config = {
       },
     },
   },
-  plugins: [require("tailwindcss-animate"), myPlugin],
-} satisfies Config;
-
-export default config;
+  plugins: [require("tailwindcss-animate")],
+}
