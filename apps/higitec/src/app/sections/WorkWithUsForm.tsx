@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
+import { Form, FormLabel } from "@/components/ui/form";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -45,7 +45,7 @@ type WorkWithUsType = z.infer<typeof workWithUsSchema>;
 
 type Props = {};
 
-const WorkWithUsForm = (props: Props) => {
+const WorkWithUsForm = (_: Props) => {
   const form = useForm<WorkWithUsType>({
     resolver: zodResolver(workWithUsSchema),
   });
@@ -61,24 +61,50 @@ const WorkWithUsForm = (props: Props) => {
         className="grid relative sm:grid-cols-2 gap-8"
       >
         <MyFormField
-          label="Primeiro Nome"
+          label={
+            <FormLabel className="font-normal capitalize">
+              Primeiro Nome
+            </FormLabel>
+          }
           name="firstName"
           control={form.control}
         >
           {({ field }) => <Input {...field} min={2} max={50} />}
         </MyFormField>
-        <MyFormField label="Último Nome" name="lastName" control={form.control}>
+        <MyFormField
+          label={
+            <FormLabel className="font-normal capitalize">
+              Último Nome
+            </FormLabel>
+          }
+          name="lastName"
+          control={form.control}
+        >
           {({ field }) => <Input {...field} min={2} max={50} />}
         </MyFormField>
-        <MyFormField label="E-mail" name="email" control={form.control}>
+        <MyFormField
+          label={
+            <FormLabel className="font-normal capitalize">E-mail</FormLabel>
+          }
+          name="email"
+          control={form.control}
+        >
           {({ field }) => <Input {...field} type="email" />}
         </MyFormField>
-        <MyFormField label="Telefone" name="phone" control={form.control}>
+        <MyFormField
+          label={
+            <FormLabel className="font-normal capitalize">Telefone</FormLabel>
+          }
+          name="phone"
+          control={form.control}
+        >
           {({ field }) => <Input {...field} type="tel" min={9} max={15} />}
         </MyFormField>
         <MyFormField
           className="sm:col-span-2 w-full"
-          label="Sobre você"
+          label={
+            <FormLabel className="font-normal capitalize">Sobre você</FormLabel>
+          }
           name="about"
           control={form.control}
         >

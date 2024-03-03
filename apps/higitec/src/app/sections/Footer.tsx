@@ -3,34 +3,46 @@ import Link from "next/link";
 import React from "react";
 import { linksObj, navLinks } from "../links";
 import { cn } from "@/lib/utils";
+import { Facebook, Instagram, Linkedin } from "lucide-react";
 
 const ContactInfoAndSocial = () => {
   const socialLinks = [
     {
-      src: "/imgs/instagram.svg",
+      Icon: Instagram,
       alt: "Instagram Icon",
     },
     {
-      src: "/imgs/facebook.svg",
+      Icon: Facebook,
       alt: "Facebook Icon",
     },
     {
-      src: "/imgs/linkedin.svg",
+      Icon: Linkedin,
       alt: "LinkedIn Icon",
     },
   ];
   return (
     <div className="flex gap-6 flex-col items-end text-end">
-      <p>+244 990 009 090</p>
-      <p>info@higitec.com</p>
+      <a
+        className={cn(buttonVariants({ variant: "link" }), "text-foreground")}
+        href="tel:+244990009090"
+      >
+        +244 990 009 090
+      </a>
+      <a
+        className={cn(buttonVariants({ variant: "link" }), "text-foreground")}
+        href="mailto:info@higitec.com"
+      >
+        info@higitec.com
+      </a>
       <span className="flex gap-4">
         {socialLinks.map((link) => (
-          <img
-            className="size-8"
-            key={link.src}
-            src={link.src}
-            alt={link.alt}
-          />
+          <Link
+            href="#"
+            key={link.alt}
+            className="hover:text-primary focus:text-primary"
+          >
+            <link.Icon className="size-8" strokeWidth={1.5} />
+          </Link>
         ))}
       </span>
     </div>
@@ -71,13 +83,15 @@ const Footer = () => {
   return (
     <footer className="flex flex-col gap-16 my-container py-16">
       <section className="flex gap-32 justify-between w-full max-md:flex-wrap">
-        <img
-          src="/imgs/logo.svg"
-          width={285}
-          height={97}
-          alt="Higitec Logo"
-          className="object-contain w-80 lg:w-[28rem] h-auto"
-        />
+        <Link href="/">
+          <img
+            src="/imgs/logo.svg"
+            width={285}
+            height={97}
+            alt="Higitec Logo"
+            className="object-contain w-80 lg:w-[28rem] h-auto"
+          />
+        </Link>
         <nav className="flex flex-col items-start  gap-6 ml-auto">
           {navLinks.map((item) => (
             <Link

@@ -8,7 +8,7 @@ import ContactSection from "./sections/ContactSection";
 
 type Props = {};
 
-const HomePage = (props: Props) => {
+const HomePage = (_: Props) => {
   return (
     <main>
       <HeroSection />

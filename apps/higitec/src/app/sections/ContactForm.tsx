@@ -1,6 +1,6 @@
 "use client";
 import { Button } from "@/components/ui/button";
-import { Form } from "@/components/ui/form";
+import { Form, FormLabel } from "@/components/ui/form";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -39,7 +39,7 @@ type ContactType = z.infer<typeof contactSchema>;
 
 type Props = {};
 
-const ContactForm = (props: Props) => {
+const ContactForm = (_: Props) => {
   const form = useForm<ContactType>({
     resolver: zodResolver(contactSchema),
   });
@@ -55,21 +55,29 @@ const ContactForm = (props: Props) => {
         className="grid relative content-start gap-8"
       >
         <MyFormField
-          label="Primeiro Nome"
+          label={<FormLabel>Primeiro Nome</FormLabel>}
           name="firstName"
           control={form.control}
         >
           {({ field }) => <Input {...field} min={2} max={50} />}
         </MyFormField>
-        <MyFormField label="Último Nome" name="lastName" control={form.control}>
+        <MyFormField
+          label={<FormLabel>Último Nome</FormLabel>}
+          name="lastName"
+          control={form.control}
+        >
           {({ field }) => <Input {...field} min={2} max={50} />}
         </MyFormField>
-        <MyFormField label="E-mail" name="email" control={form.control}>
+        <MyFormField
+          label={<FormLabel>Email</FormLabel>}
+          name="email"
+          control={form.control}
+        >
           {({ field }) => <Input {...field} type="email" />}
         </MyFormField>
         <MyFormField
           className="w-full"
-          label="Mensagem"
+          label={<FormLabel>Mensagem</FormLabel>}
           name="mensagem"
           control={form.control}
         >

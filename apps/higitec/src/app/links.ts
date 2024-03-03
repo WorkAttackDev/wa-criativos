@@ -20,15 +20,15 @@ export const linksObj = {
     label: "Contactos",
   },
   termsOfService: {
-    href: "",
+    href: "/terms-of-service",
     label: "Termos de Serviço",
   },
   cookiesPolicy: {
-    href: "",
+    href: "/cookies-policy",
     label: "Política de Cookies",
   },
   privacyPolicy: {
-    href: "",
+    href: "/terms-of-service",
     label: "Política de Privacidade",
   },
 };

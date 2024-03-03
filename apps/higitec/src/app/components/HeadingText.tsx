@@ -1,6 +1,5 @@
 import { cn } from "@/lib/utils";
-import { cva } from "class-variance-authority";
-import React, { createElement } from "react";
+import { VariantProps, cva } from "class-variance-authority";
 
 const headingVariants = cva("text-primary text-balance font-bold", {
   variants: {
@@ -15,9 +14,8 @@ const headingVariants = cva("text-primary text-balance font-bold", {
   },
 });
 
-type Props = {
+type Props = VariantProps<typeof headingVariants> & {
   children: React.ReactNode;
-  size?: "default" | "sm" | "lg";
   className?: string;
 };
 
@@ -28,11 +26,14 @@ const HeadingText = ({ children, size, className }: Props) => {
     sm: 5,
   } as const;
 
-  const heading = `h${sizeMap[size || "default"]}` as const;
+  const Heading = `h${sizeMap[size || "default"]}` as const;
 
-  return createElement(heading, {
-    className: cn(headingVariants({ size, className }), "leading-normal"),
-    children,
-  });
+  return (
+    <Heading
+      className={cn(headingVariants({ size }), className, "leading-normal")}
+    >
+      {children}
+    </Heading>
+  );
 };
 export default HeadingText;

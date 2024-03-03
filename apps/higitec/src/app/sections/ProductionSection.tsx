@@ -47,7 +47,7 @@ const productionInfo: {
 
 type Props = {};
 
-const ProductionSection = (props: Props) => {
+const ProductionSection = (_: Props) => {
   const sizeMap = {
     sm: {
       width: 60,

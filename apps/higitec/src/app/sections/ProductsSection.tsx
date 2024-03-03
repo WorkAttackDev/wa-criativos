@@ -27,7 +27,7 @@ const categories = [
 
 type Props = {};
 
-const ProductsSection = (props: Props) => {
+const ProductsSection = (_: Props) => {
   return (
     <section
       id={linksObj.ourBrands.href.replace("#", "")}

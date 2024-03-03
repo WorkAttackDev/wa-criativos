@@ -28,7 +28,7 @@ const MyFormField = <
 }: {
   control: Control<T>;
   name: TName;
-  label: string;
+  label: string | ReactNode;
   description?: string;
   className?: string;
   noControl?: boolean;
@@ -39,7 +39,11 @@ const MyFormField = <
     name={name}
     render={({ field }) => (
       <FormItem className={className}>
-        <FormLabel className="font-normal capitalize">{label}</FormLabel>
+        {typeof label === "string" ? (
+          <FormLabel className="font-normal capitalize">{label}</FormLabel>
+        ) : (
+          label
+        )}
         {noControl ? (
           children({ field })
         ) : (

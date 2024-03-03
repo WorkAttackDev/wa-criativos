@@ -6,7 +6,7 @@ import { linksObj } from "../links";
 
 type Props = {};
 
-const WorkWithUs = (props: Props) => {
+const WorkWithUs = (_: Props) => {
   const {
     props: { src },
   } = getImageProps({

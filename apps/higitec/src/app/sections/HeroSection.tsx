@@ -1,9 +1,10 @@
 import { getImageProps } from "next/image";
 import React from "react";
+import BoxAnimation from "../components/BoxAnimation";
 
 type Props = {};
 
-const HeroSection = (props: Props) => {
+const HeroSection = (_: Props) => {
   const {
     props: { src },
   } = getImageProps({
@@ -24,12 +25,16 @@ const HeroSection = (props: Props) => {
       <div
         className={`my-container flex gap-16 flex-col justify-center items-start text-white min-h-[50rem] max-h-[100rem] h-screen bg-cover   bg-[center_top]`}
       >
-        <h3 className="relative text-3xl drop-shadow  lg:text-5xl font-semibold uppercase w-full">
-          Bem-vindo à HIGITEC
-        </h3>
-        <h1 className="relative text-6xl lg:text-8xl font-bold md:max-w-6xl !leading-tight w-full drop-shadow">
-          O seu Parceiro de <br /> Excelência em Higiene
-        </h1>
+        <BoxAnimation>
+          <h3 className="relative text-3xl drop-shadow  lg:text-5xl font-semibold uppercase w-full">
+            Bem-vindo à HIGITEC
+          </h3>
+        </BoxAnimation>
+        <BoxAnimation delay={0.5}>
+          <h1 className="relative text-6xl lg:text-8xl font-bold md:max-w-6xl !leading-tight w-full drop-shadow">
+            O seu Parceiro de <br /> Excelência em Higiene
+          </h1>
+        </BoxAnimation>
       </div>
     </section>
   );

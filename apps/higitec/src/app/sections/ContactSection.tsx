@@ -1,13 +1,12 @@
-import React from "react";
+import Image from "next/image";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
 import { linksObj } from "../links";
-import Image from "next/image";
 import ContactForm from "./ContactForm";
 
 type Props = {};
 
-const ContactSection = (props: Props) => {
+const ContactSection = (_: Props) => {
   return (
     <FeatherBgSection
       id={linksObj.contacts.href.replace("#", "")}

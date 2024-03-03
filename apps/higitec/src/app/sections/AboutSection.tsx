@@ -24,7 +24,7 @@ const infos = [
   },
 ];
 
-const AboutSection = (props: Props) => {
+const AboutSection = (_: Props) => {
   return (
     <FeatherBgSection
       className="grid gap-32"

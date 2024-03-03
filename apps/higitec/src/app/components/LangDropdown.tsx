@@ -11,7 +11,7 @@ import { ChevronsUpDown } from "lucide-react";
 
 type Props = {};
 
-const LangDropdown = (props: Props) => {
+const LangDropdown = (_: Props) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger

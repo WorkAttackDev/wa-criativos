@@ -7,12 +7,14 @@ const Header = () => {
   return (
     <header className="sticky z-40 top-0  bg-white shadow-sm">
       <div className="my-container py-8 bg-white shadow-sm justify-between flex gap-16 items-center flex-wrap">
-        <img
-          src="/imgs/logo.svg"
-          width={185}
-          height={87}
-          className="object-contain w-56 lg:w-80 h-auto"
-        />
+        <Link href="/">
+          <img
+            src="/imgs/logo.svg"
+            width={185}
+            height={87}
+            className="object-contain w-56 lg:w-80 h-auto"
+          />
+        </Link>
         <nav className="hidden xl:flex flex-1 gap-8 justify-center items-center">
           {navLinks.map((item) => (
             <Link
