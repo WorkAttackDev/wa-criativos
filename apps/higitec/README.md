@@ -1,5 +1,5 @@
 # Todos
-
+- [ ] adicionar sidebar
 - [ ] add animation
 - [ ] handle the forms
 - [ ] see nav links not working
