@@ -2,6 +2,7 @@ import { cn } from "@/lib/utils";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
 import { linksObj } from "../links";
+import CounterEffect from "../components/CounterEffect";
 
 const productionInfo: {
   title: string;
@@ -9,39 +10,45 @@ const productionInfo: {
   description: string;
   iconSrc: string;
   size: "sm" | "md";
+  value: number;
 }[] = [
   {
-    title: "120 mil",
+    title: "mil",
     unit: "toneladas",
     description: "De produtos de limpeza por ano",
     iconSrc: "/imgs/production-icon-1.svg",
     size: "md",
+    value: 120,
   },
   {
-    title: "20 mil",
+    title: "mil",
     unit: "toneladas",
     description: "de produtos de higiene por ano",
     iconSrc: "/imgs/production-icon-2.svg",
     size: "md",
+    value: 20,
   },
   {
-    title: "10 mil",
+    title: "mil",
     unit: "toneladas",
     description: "De papel diverso por ano",
     iconSrc: "/imgs/production-icon-3.svg",
     size: "md",
+    value: 10,
   },
   {
-    title: "3 milhões",
+    title: "milhões",
     description: "De fraldas por dia",
     iconSrc: "/imgs/production-icon-4.svg",
     size: "sm",
+    value: 3,
   },
   {
-    title: "6 toneladas",
+    title: "toneladas",
     description: "De sabão e sabonetes por hora",
     iconSrc: "/imgs/production-icon-5.svg",
     size: "sm",
+    value: 6,
   },
 ];
 
@@ -87,7 +94,9 @@ const ProductionSection = (_: Props) => {
               width={sizeMap[info.size].width}
               height={sizeMap[info.size].height}
             />
-            <h3 className="text-6xl font-bold">{info.title}</h3>
+            <h3 className="text-6xl font-bold">
+              <CounterEffect from={0} to={info.value} className="inline" />{" "}
+              {info.title}</h3>
             <p className="text-4xl font-bold">{info.unit}</p>
             <p>{info.description}</p>
           </li>
