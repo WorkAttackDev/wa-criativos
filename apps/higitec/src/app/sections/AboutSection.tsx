@@ -3,6 +3,7 @@ import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
 import Image from "next/image";
 import { linksObj } from "../links";
+import SlideInUpAnimation from "../components/SlideInUpAnimation";
 
 type Props = {};
 
@@ -38,21 +39,23 @@ const AboutSection = (_: Props) => {
       </HeadingText>
       <section className="grid justify-center justify-items-center grid-cols-1 gap-16 md:grid-cols-3">
         {infos.map(({ imgSrc, text, title }, i) => (
-          <article className="overflow-hidden flex gap-8 flex-col text-justify max-w-[40rem]">
-            <Image
-              width={400}
-              height={200}
-              src={imgSrc}
-              alt={title}
-              className="w-full object-cover aspect-[2] hover:scale-110 ease-out duration-500"
-            />
-            <span className="w-full grid gap-4">
-              <HeadingText size="sm" className="uppercase">
-                {title}
-              </HeadingText>
-              <p className="">{text}</p>
-            </span>
-          </article>
+          <SlideInUpAnimation key={title} delay={i * 0.5}>
+            <article className="overflow-hidden flex gap-8 flex-col text-justify opacity-0 max-w-[40rem]">
+              <Image
+                width={400}
+                height={200}
+                src={imgSrc}
+                alt={title}
+                className="w-full object-cover aspect-[2] hover:scale-110 ease-out duration-500"
+              />
+              <span className="w-full grid gap-4">
+                <HeadingText size="sm" className="uppercase">
+                  {title}
+                </HeadingText>
+                <p className="">{text}</p>
+              </span>
+            </article>
+          </SlideInUpAnimation>
         ))}
       </section>
     </FeatherBgSection>
