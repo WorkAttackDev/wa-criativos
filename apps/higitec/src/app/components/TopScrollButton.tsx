@@ -25,7 +25,7 @@ const TopScrollButton = () => {
         size="icon"
         title="Voltar para o topo da página"
         onClick={() => window.scrollTo(0, 0)}
-        className="fixed bottom-4 right-4 mdx:bottom-8 mdx:right-16 z-50"
+        className="fixed bottom-6 right-6 mdx:bottom-8 mdx:right-16 z-50"
         aria-label="Voltar para o topo da página"
       >
         <ChevronUp className="w-10 h-10 " strokeWidth={1.5} />
