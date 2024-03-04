@@ -40,7 +40,7 @@ const AboutSection = (_: Props) => {
       <section className="grid justify-center justify-items-center grid-cols-1 gap-16 md:grid-cols-3">
         {infos.map(({ imgSrc, text, title }, i) => (
           <SlideInUpAnimation key={title} delay={i * 0.5}>
-            <article className="overflow-hidden flex gap-8 flex-col text-justify opacity-0 max-w-[40rem]">
+            <article className="overflow-hidden flex gap-8 flex-col text-justify max-w-[40rem]">
               <Image
                 width={400}
                 height={200}

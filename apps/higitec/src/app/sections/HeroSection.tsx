@@ -26,12 +26,12 @@ const HeroSection = (_: Props) => {
         className={`my-container flex gap-16 flex-col justify-center items-start text-white min-h-[50rem] max-h-[100rem] h-screen bg-cover   bg-[center_top]`}
       >
         <BoxAnimation>
-          <h3 className="opacity-0 relative text-3xl drop-shadow  lg:text-5xl font-semibold uppercase w-full">
+          <h3 className=" relative text-3xl drop-shadow  lg:text-5xl font-semibold uppercase w-full">
             Bem-vindo à HIGITEC
           </h3>
         </BoxAnimation>
         <BoxAnimation delay={0.5}>
-          <h1 className="opacity-0 relative text-6xl lg:text-8xl font-bold md:max-w-6xl !leading-tight w-full drop-shadow">
+          <h1 className=" relative text-6xl lg:text-8xl font-bold md:max-w-6xl !leading-tight w-full drop-shadow">
             O seu Parceiro de <br /> Excelência em Higiene
           </h1>
         </BoxAnimation>

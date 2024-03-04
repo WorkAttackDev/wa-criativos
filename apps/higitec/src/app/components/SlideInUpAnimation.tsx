@@ -1,6 +1,14 @@
 "use client";
-import { ReactNode, useEffect, useRef } from "react";
+import {
+  Children,
+  ReactNode,
+  cloneElement,
+  isValidElement,
+  useEffect,
+  useRef,
+} from "react";
 import { useAnimate, useInView } from "framer-motion";
+import { cn } from "@/lib/utils";
 
 type Props = {
   children: ReactNode;
@@ -35,8 +43,15 @@ const SlideInUpAnimation = ({ children, delay }: Props) => {
   }, [animate, isInView, scope, delay]);
 
   return (
+    // escrever artigo sobre esse código
     <div ref={scope} className="relative overflow-hidden">
-      {children}
+      {Children.map(children, (child) =>
+        isValidElement(child)
+          ? cloneElement(child, {
+              className: cn(child.props.className, "opacity-0"),
+            } as React.HTMLAttributes<HTMLElement>)
+          : child,
+      )}
     </div>
   );
 };
