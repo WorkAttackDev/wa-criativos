@@ -4,12 +4,17 @@
       "mode": "auto"
     }
   ],
+  "files.exclude": {
+    "**/packages/ui": true,
+    "apps/higitec/**": true
+  },
   "cSpell.words": [
     "Connosco",
     "Contactos",
     "higitec",
     "Kido",
     "Mosi",
+    "Refitec",
     "Sabom"
   ]
 }

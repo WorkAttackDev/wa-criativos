@@ -11,10 +11,10 @@ const Header = () => {
         <BoxAnimation>
           <Link href="/">
             <img
-              src="/imgs/logo.svg"
+              src="/imgs/logo.png"
               width={185}
               height={87}
-              className="h-auto w-56 object-contain lg:w-80"
+              className="h-auto w-40 object-contain lg:w-56"
             />
           </Link>
         </BoxAnimation>
