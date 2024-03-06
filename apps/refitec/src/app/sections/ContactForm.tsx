@@ -9,6 +9,9 @@ import MyFormField from "@wa-criativos/react-utils/MyFormField";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
+/**
+ * @deprecated Don't use this component, it's just for demonstration purposes
+ */
 const contactSchema = z.object({
   firstName: z
     .string({
@@ -52,7 +55,7 @@ const ContactForm = (_: Props) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid relative content-start gap-8"
+        className="relative grid content-start gap-8"
       >
         <MyFormField
           label={<FormLabel>Primeiro Nome</FormLabel>}

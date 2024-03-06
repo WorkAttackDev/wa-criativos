@@ -8,7 +8,7 @@ const SectionBlock = ({
   content: string;
 }) => (
   <article className="space-y-4">
-    <HeadingText size="sm" className="text-primary-foreground">
+    <HeadingText size="sm" className="text-primary">
       {title}
     </HeadingText>
     <p>{content}</p>

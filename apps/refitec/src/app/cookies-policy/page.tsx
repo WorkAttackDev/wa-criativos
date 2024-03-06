@@ -7,13 +7,13 @@ type Props = {};
 
 const CookiesPolicyPage = (props: Props) => {
   return (
-    <FeatherBgSection>
-      <main className="grid w-full gap-16 my-container">
+    <main className="bg-gray-100 py-32 my-container">
+      <div className="grid w-full gap-16 my-container">
         <header className="grid gap-4">
-          <HeadingText size="lg" className="text-primary-foreground">
+          <HeadingText size="lg" className="text-primary">
             Política de Cookies
           </HeadingText>
-          <p className="max-w-3xl text-xl/relaxed text-secondary">
+          <p className="max-w-3xl text-xl/relaxed text-secondary-foreground">
             Leia atentamente esta política antes de usar nosso serviço.
           </p>
         </header>
@@ -32,11 +32,11 @@ const CookiesPolicyPage = (props: Props) => {
           />
           <SectionBlock
             title="Como você pode entrar em contato conosco?"
-            content="Se você tiver alguma dúvida ou comentário sobre a nossa política de cookies, você pode entrar em contato conosco pelo e-mail info@higitec.com ou pelo telefone +244 222 123 456."
+            content="Se você tiver alguma dúvida ou comentário sobre a nossa política de cookies, você pode entrar em contato conosco pelo e-mail info@refitec.com ou pelo telefone +244 222 123 456."
           />
         </section>
-      </main>
-    </FeatherBgSection>
+      </div>
+    </main>
   );
 };
 

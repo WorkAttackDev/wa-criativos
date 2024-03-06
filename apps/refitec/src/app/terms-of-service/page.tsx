@@ -7,13 +7,13 @@ type Props = {};
 
 const TermsOfServicePage = (props: Props) => {
   return (
-    <FeatherBgSection>
-      <main className="my-container grid gap-16 w-full">
+    <main className="bg-gray-100 py-32 my-container">
+      <div className="grid w-full gap-16 my-container">
         <header className="grid gap-4">
-          <HeadingText size="lg" className="text-primary-foreground">
+          <HeadingText size="lg" className="text-primary">
             Termos de Serviço
           </HeadingText>
-          <p className="max-w-3xl text-secondary text-xl/relaxed">
+          <p className="max-w-3xl text-xl/relaxed text-secondary-foreground">
             Leia estes Termos e Condições cuidadosamente antes de usar nosso
             Serviço.
           </p>
@@ -56,8 +56,8 @@ const TermsOfServicePage = (props: Props) => {
             content="Se você tiver alguma dúvida sobre esta termos de serviço, por favor Entre em contato conosco: - por e -mail: info@example.com"
           />
         </section>
-      </main>
-    </FeatherBgSection>
+      </div>
+    </main>
   );
 };
 

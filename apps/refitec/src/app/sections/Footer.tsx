@@ -1,54 +1,8 @@
 import { buttonVariants } from "@/components/ui/button";
-import Link from "next/link";
-import React from "react";
-import { linksObj, navLinks } from "../links";
 import { cn } from "@/lib/utils";
-import { Facebook, Instagram, Linkedin } from "lucide-react";
+import Link from "next/link";
 import BoxAnimation from "../components/BoxAnimation";
-
-// const ContactInfoAndSocial = () => {
-//   const socialLinks = [
-//     {
-//       Icon: Instagram,
-//       alt: "Instagram Icon",
-//     },
-//     {
-//       Icon: Facebook,
-//       alt: "Facebook Icon",
-//     },
-//     {
-//       Icon: Linkedin,
-//       alt: "LinkedIn Icon",
-//     },
-//   ];
-//   return (
-//     <div className="flex flex-col items-center gap-6 text-center sm:items-end sm:text-end">
-//       <a
-//         className={cn(buttonVariants({ variant: "link" }), "text-foreground")}
-//         href="tel:+244990009090"
-//       >
-//         +244 990 009 090
-//       </a>
-//       <a
-//         className={cn(buttonVariants({ variant: "link" }), "text-foreground")}
-//         href="mailto:info@refitec.com"
-//       >
-//         info@refitec.com
-//       </a>
-//       <span className="flex gap-4">
-//         {socialLinks.map((link) => (
-//           <Link
-//             href="#"
-//             key={link.alt}
-//             className="hover:text-primary focus:text-primary"
-//           >
-//             <link.Icon className="size-8" strokeWidth={1.5} />
-//           </Link>
-//         ))}
-//       </span>
-//     </div>
-//   );
-// };
+import { linksObj, navLinks } from "../links";
 
 const legalLinks = [
   linksObj.termsOfService,
@@ -110,7 +64,7 @@ const Footer = () => {
           </nav>
         </article>
         <p className="text-xl text-secondary-foreground md:hidden">
-          © 2024 Todos direitos reservados à HIGITEC LDA.
+          © 2024 Todos direitos reservados à REFITEC LDA.
         </p>
       </section>
     </footer>

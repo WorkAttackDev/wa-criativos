@@ -1,4 +1,5 @@
 import AboutSection from "./sections/AboutSection";
+import ContactSection from "./sections/ContactSection";
 import HeroSection from "./sections/HeroSection";
 import InNumbersSection from "./sections/InNumbersSection";
 import TimelineSection from "./sections/TimelineSection";
@@ -12,6 +13,7 @@ const HomePage = (_: Props) => {
       <AboutSection />
       <InNumbersSection />
       <TimelineSection />
+      <ContactSection />
     </main>
   );
 };

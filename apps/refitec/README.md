@@ -8,3 +8,4 @@
 # em falta
 
 - [ ] link para redes sociais
+- [ ] logo em svg
