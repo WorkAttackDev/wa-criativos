@@ -18,7 +18,7 @@ const Footer = () => {
           <BoxAnimation>
             <Link href="/" className="flex max-md:min-w-full">
               <img
-                src="/imgs/logo.png"
+                src="/imgs/logo.svg"
                 width={185}
                 height={87}
                 alt="Refitec Logo"

@@ -9,8 +9,7 @@ const infos = [
   {
     title: "Missão",
     text: "Tornarmos uma força líder na indústria de óleos alimentares, fornecendo produtos que redefinem a excelência.",
-    imgSrc:
-      "/imgs/bottling-line-sunflower-oil-bottles-vegetable-oil-production-plant-high.jpeg",
+    imgSrc: "/imgs/oil-bottles.png",
   },
   {
     title: "Visão",
