@@ -5,9 +5,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import MyFormField from "@wa-criativos/react-utils/MyFormField";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import MyFormField from "../components/MyFormField";
 
 const contactSchema = z.object({
   firstName: z
@@ -52,7 +52,7 @@ const ContactForm = (_: Props) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid relative content-start gap-8"
+        className="relative grid content-start gap-8"
       >
         <MyFormField
           label={<FormLabel>Primeiro Nome</FormLabel>}

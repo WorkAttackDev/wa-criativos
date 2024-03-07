@@ -41,9 +41,6 @@ importers:
       '@wa-criativos/react-utils':
         specifier: workspace:*
         version: link:../../packages/react-utils
-      '@wa-criativos/ui':
-        specifier: workspace:*
-        version: link:../../packages/ui
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.0

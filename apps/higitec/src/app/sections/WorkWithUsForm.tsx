@@ -5,9 +5,9 @@ import React from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
-import MyFormField from "@wa-criativos/react-utils/MyFormField";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import MyFormField from "../components/MyFormField";
 
 const workWithUsSchema = z.object({
   firstName: z
@@ -58,7 +58,7 @@ const WorkWithUsForm = (_: Props) => {
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit(onSubmit)}
-        className="grid relative sm:grid-cols-2 gap-8"
+        className="relative grid gap-8 sm:grid-cols-2"
       >
         <MyFormField
           label={
@@ -101,7 +101,7 @@ const WorkWithUsForm = (_: Props) => {
           {({ field }) => <Input {...field} type="tel" min={9} max={15} />}
         </MyFormField>
         <MyFormField
-          className="sm:col-span-2 w-full"
+          className="w-full sm:col-span-2"
           label={
             <FormLabel className="font-normal capitalize">Sobre você</FormLabel>
           }
