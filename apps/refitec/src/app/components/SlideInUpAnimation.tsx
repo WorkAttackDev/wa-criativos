@@ -5,7 +5,6 @@ import {
   cloneElement,
   isValidElement,
   useEffect,
-  useRef,
 } from "react";
 import { useAnimate, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";

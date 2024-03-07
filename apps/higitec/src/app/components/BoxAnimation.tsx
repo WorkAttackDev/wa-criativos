@@ -56,15 +56,15 @@ const BoxAnimation = ({ children, delay }: Props) => {
   return (
     <div ref={scope} className="relative">
       {Children.map(children, (child) =>
-        isValidElement(child)
+        isValidElement<React.HTMLAttributes<HTMLElement>>(child)
           ? cloneElement(child, {
               className: cn(child.props.className, "opacity-0"),
-            } as React.HTMLAttributes<HTMLElement>)
+            })
           : child,
       )}
       <div
         ref={divRef}
-        className="-top-2 w-full scale-x-0 h-[120%] absolute inset-0 bg-white"
+        className="absolute inset-0 -top-2 h-[120%] w-full scale-x-0 bg-white"
       />
     </div>
   );

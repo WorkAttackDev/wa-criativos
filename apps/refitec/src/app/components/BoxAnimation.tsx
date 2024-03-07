@@ -1,4 +1,6 @@
 "use client";
+import { cn } from "@/lib/utils";
+import { useAnimate, useInView } from "framer-motion";
 import {
   Children,
   cloneElement,
@@ -6,12 +8,6 @@ import {
   useEffect,
   useRef,
 } from "react";
-import {
-  AnimationPlaybackControls,
-  useAnimate,
-  useInView,
-} from "framer-motion";
-import { cn } from "@/lib/utils";
 
 type Props = {
   children: React.ReactNode;
@@ -19,7 +15,7 @@ type Props = {
   className?: string;
 };
 
-const BoxAnimation = ({ children, className, delay }: Props) => {
+const BoxAnimation: React.FC<Props> = ({ children, className, delay }) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
     once: true,
@@ -57,10 +53,10 @@ const BoxAnimation = ({ children, className, delay }: Props) => {
   return (
     <div ref={scope} className={cn("relative", className)}>
       {Children.map(children, (child) =>
-        isValidElement(child)
+        isValidElement<React.HTMLAttributes<HTMLElement>>(child)
           ? cloneElement(child, {
               className: cn(child.props.className, "opacity-0"),
-            } as React.HTMLAttributes<HTMLElement>)
+            })
           : child,
       )}
       <div

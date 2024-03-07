@@ -1,18 +1,16 @@
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import {
   Sheet,
-  SheetTrigger,
   SheetContent,
-  SheetHeader,
-  SheetTitle,
   SheetDescription,
   SheetFooter,
-  SheetClose,
+  SheetHeader,
+  SheetTrigger,
 } from "@/components/ui/sheet";
-import { navLinks } from "../links";
-import Link from "next/link";
-import { AlignRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { AlignRight } from "lucide-react";
+import Link from "next/link";
+import { navLinks } from "../links";
 import BoxAnimation from "./BoxAnimation";
 
 type Props = {};

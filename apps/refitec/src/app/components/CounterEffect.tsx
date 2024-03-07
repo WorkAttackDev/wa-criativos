@@ -3,15 +3,13 @@
 import { useAnimate, useInView } from "framer-motion";
 import { useEffect, useRef } from "react";
 
-const CounterEffect = ({
-  from,
-  to,
-  className,
-}: {
+type Props = {
   from: number;
   to: number;
   className?: string;
-}) => {
+};
+
+const CounterEffect: React.FC<Props> = ({ from, to, className }) => {
   const [scope, animate] = useAnimate<HTMLParagraphElement>();
   const onceRef = useRef(false);
   const isInView = useInView(scope, {

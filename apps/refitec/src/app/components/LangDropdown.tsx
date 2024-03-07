@@ -9,16 +9,14 @@ import {
 } from "@/components/ui/dropdown-menu";
 import { ChevronsUpDown } from "lucide-react";
 
-type Props = {};
-
-const LangDropdown = (_: Props) => {
+const LangDropdown = () => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
         className={buttonVariants({ variant: "outline", size: "sm" })}
       >
         PT
-        <ChevronsUpDown className="w-5 h-5 ml-2" />
+        <ChevronsUpDown className="ml-2 h-5 w-5" />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>Idiomas</DropdownMenuLabel>
