@@ -24,7 +24,7 @@ const ContactInfoAndSocial = () => {
     },
   ];
   return (
-    <div className="flex flex-col items-center gap-6 text-center sm:items-end sm:text-end">
+    <div className="flex flex-col gap-6 text-center sm:items-end sm:text-end">
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-current")}
         href="tel:+244990009090"
@@ -73,7 +73,7 @@ const ContactSection = (_: Props) => {
           Contactos
         </HeadingText>
       </header>
-      <article className="relative flex justify-between bg-foreground/80 py-16 text-white my-container">
+      <article className="relative flex flex-wrap justify-between gap-16 bg-foreground/80 py-16 text-white my-container">
         <p className="max-w-3xl leading-normal">
           O projecto será implementado na Província de
           Luanda-Angola,aproximadamente 700m do Porto de Luanda, num local

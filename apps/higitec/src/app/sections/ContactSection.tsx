@@ -4,6 +4,7 @@ import HeadingText from "../components/HeadingText";
 import { linksObj } from "../links";
 import ContactForm from "./ContactForm";
 import SlideInUpAnimation from "../components/SlideInUpAnimation";
+import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 
 type Props = {};
 
@@ -23,16 +24,16 @@ const ContactSection = (_: Props) => {
             limpo e seguro.
           </p>
         </header>
-        <SlideInUpAnimation>
+        <SlideInUpZoomAnimation>
           <Image
             src="/imgs/map.jpg"
             alt="Mapa"
             width={1080}
             height={720}
             sizes="80vw"
-            className="w-full h-auto aspect-[2] object-cover"
+            className="aspect-[2] h-auto w-full object-cover"
           />
-        </SlideInUpAnimation>
+        </SlideInUpZoomAnimation>
       </section>
       <ContactForm />
     </FeatherBgSection>

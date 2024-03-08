@@ -4,6 +4,8 @@ import HeadingText from "../components/HeadingText";
 import Image from "next/image";
 import { linksObj } from "../links";
 import SlideInUpAnimation from "../components/SlideInUpAnimation";
+import FadeInAnimation from "../components/FadeInAnimation";
+import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 
 type Props = {};
 
@@ -37,25 +39,27 @@ const AboutSection = (_: Props) => {
         atendendo a diversos sectores e garantindo um ambiente saudável e seguro
         para todos.
       </HeadingText>
-      <section className="grid justify-center justify-items-center grid-cols-1 gap-16 md:grid-cols-3">
+      <section className="grid grid-cols-1 justify-center justify-items-center gap-16 md:grid-cols-3">
         {infos.map(({ imgSrc, text, title }, i) => (
-          <SlideInUpAnimation key={title} delay={i * 0.5}>
-            <article className="overflow-hidden flex gap-8 flex-col text-justify max-w-[40rem]">
-              <Image
-                width={400}
-                height={200}
-                src={imgSrc}
-                alt={title}
-                className="w-full object-cover aspect-[2] hover:scale-110 ease-out duration-500"
-              />
-              <span className="w-full grid gap-4">
+          <FadeInAnimation key={title} duration={0.5} delay={i * 0.5}>
+            <article className="flex max-w-[40rem] flex-col gap-8 overflow-hidden text-justify">
+              <SlideInUpZoomAnimation duration={2} delay={i * 0.5}>
+                <Image
+                  width={400}
+                  height={200}
+                  src={imgSrc}
+                  alt={title}
+                  className="aspect-[2] w-full object-cover duration-500 ease-out hover:!scale-110"
+                />
+              </SlideInUpZoomAnimation>
+              <span className="grid w-full gap-4">
                 <HeadingText size="sm" className="uppercase">
                   {title}
                 </HeadingText>
                 <p className="">{text}</p>
               </span>
             </article>
-          </SlideInUpAnimation>
+          </FadeInAnimation>
         ))}
       </section>
     </FeatherBgSection>

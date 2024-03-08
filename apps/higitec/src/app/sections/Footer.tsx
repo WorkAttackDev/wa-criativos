@@ -22,7 +22,7 @@ const ContactInfoAndSocial = () => {
     },
   ];
   return (
-    <div className="flex gap-6 flex-col items-center text-center sm:items-end sm:text-end">
+    <div className="flex flex-col items-center gap-6 text-center sm:items-end sm:text-end">
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-foreground")}
         href="tel:+244990009090"
@@ -58,11 +58,11 @@ const FooterBottom = () => {
   ];
 
   return (
-    <footer className="flex gap-8 justify-between max-sm:text-center w-full text-lg text-secondary max-sm:flex-col">
+    <footer className="flex w-full justify-between gap-8 text-lg text-secondary max-sm:flex-col max-sm:text-center">
       <p className="max-sm:order-2">
         © 2024 Todos direitos reservados à HIGITEC LDA.
       </p>
-      <nav className="flex gap-8 flex-wrap max-sm:justify-center">
+      <nav className="flex flex-wrap gap-8 max-sm:justify-center">
         {links.map((item) => (
           <Link
             key={item.href}
@@ -71,7 +71,7 @@ const FooterBottom = () => {
               buttonVariants({
                 variant: "link",
               }),
-              "text-secondary font-medium text-lg",
+              "text-lg font-medium text-secondary",
             )}
           >
             {item.label}
@@ -84,8 +84,8 @@ const FooterBottom = () => {
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col gap-16 my-container py-16">
-      <section className="flex max-sm:justify-center  gap-32 justify-between w-full max-md:flex-wrap">
+    <footer className="flex flex-col gap-16 py-16 my-container">
+      <section className="flex w-full flex-col  justify-between gap-32 max-sm:justify-center sm:flex-row">
         <BoxAnimation>
           <Link href="/" className="flex justify-center max-sm:min-w-full">
             <img
@@ -93,11 +93,11 @@ const Footer = () => {
               width={285}
               height={97}
               alt="Higitec Logo"
-              className="object-contain w-80 lg:w-[28rem] h-auto"
+              className="h-auto w-80 object-contain lg:w-[28rem]"
             />
           </Link>
         </BoxAnimation>
-        <nav className="flex flex-col max-sm:items-center items-start  gap-6 sm:ml-auto">
+        <nav className="flex flex-col items-start gap-6  max-sm:items-center sm:ml-auto">
           {navLinks.map((item) => (
             <Link
               key={item.href}

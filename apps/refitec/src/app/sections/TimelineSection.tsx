@@ -113,7 +113,7 @@ const TimelineSection = (props: Props) => {
           opts={{
             align: "start",
           }}
-          className="grid w-full"
+          className="grid w-full max-sm:mx-auto max-sm:w-[90%]"
         >
           <CarouselContent className="flex px-8 py-32">
             {infos.map(({ description, title }, i) => (

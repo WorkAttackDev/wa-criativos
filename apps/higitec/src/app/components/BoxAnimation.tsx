@@ -16,9 +16,10 @@ import { cn } from "@/lib/utils";
 type Props = {
   children: React.ReactNode;
   delay?: number;
+  className?: string;
 };
 
-const BoxAnimation = ({ children, delay }: Props) => {
+const BoxAnimation = ({ children, delay, className }: Props) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
     once: true,
@@ -54,7 +55,7 @@ const BoxAnimation = ({ children, delay }: Props) => {
   }, [animate, isInView, delay, divRef]);
 
   return (
-    <div ref={scope} className="relative">
+    <div ref={scope} className={cn("relative", className)}>
       {Children.map(children, (child) =>
         isValidElement<React.HTMLAttributes<HTMLElement>>(child)
           ? cloneElement(child, {

@@ -14,7 +14,7 @@ const categories = [
     ],
   },
   {
-    name: "Sabonetes",
+    name: "Sabão e Sabonetes",
     brands: [
       { name: "Confiança", imgSrc: "/imgs/brand-4.png" },
       { name: "Sabom", imgSrc: "/imgs/brand-5.png" },
@@ -31,7 +31,7 @@ const ProductsSection = (_: Props) => {
   return (
     <section
       id={linksObj.ourBrands.href.replace("#", "")}
-      className="my-container grid gap-32 bg-white py-32"
+      className="grid gap-32 bg-white py-32 my-container"
     >
       <span className="grid gap-8">
         <HeadingText className="uppercase">Os Nossos Produtos</HeadingText>
@@ -46,11 +46,11 @@ const ProductsSection = (_: Props) => {
           <HeadingText className="uppercase" size="sm">
             {category.name}
           </HeadingText>
-          <ul className="flex overflow-x-auto gap-16 snap-x snap-mandatory ">
+          <ul className="flex snap-x snap-mandatory gap-16 overflow-x-auto ">
             {category.brands.map((brand) => (
               <li
                 key={brand.name}
-                className="snap-start relative group flex-shrink-0 "
+                className="group relative flex-shrink-0 snap-start "
               >
                 <Image
                   src={brand.imgSrc}
@@ -59,7 +59,7 @@ const ProductsSection = (_: Props) => {
                   height={250}
                   className="object-contain"
                 />
-                <div className="absolute inset-0 text-3xl font-medium text-white flex items-center pointer-events-none opacity-0 duration-300 ease-out justify-center bg-foreground/30 backdrop-blur-sm group-hover:opacity-100 group-hover:pointer-events-auto">
+                <div className="pointer-events-none absolute inset-0 flex items-center justify-center bg-foreground/30 text-3xl font-medium text-white opacity-0 backdrop-blur-sm duration-300 ease-out group-hover:pointer-events-auto group-hover:opacity-100">
                   {brand.name}
                 </div>
               </li>

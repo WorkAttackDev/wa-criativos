@@ -55,7 +55,7 @@ const SideBar = (props: Props) => {
         </nav>
         <SheetFooter>
           <p className="text-xl text-secondary-foreground">
-            © 2024 Todos direitos reservados à Refitec LDA.
+            © 2024 Todos direitos reservados à Higitec LDA.
           </p>
         </SheetFooter>
       </SheetContent>

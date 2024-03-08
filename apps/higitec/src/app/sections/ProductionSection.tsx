@@ -72,22 +72,18 @@ const ProductionSection = (_: Props) => {
       id={linksObj.production.href.replace("#", "")}
     >
       <HeadingText className="uppercase">Produção</HeadingText>
-      <ul className="flex flex-wrap items-center justify-center gap-x-16 gap-y-24">
+      <ul className="flex flex-wrap items-center justify-start gap-x-16 gap-y-24 sm:justify-center">
         {productionInfo.map((info, i) => (
           <li
             key={info.iconSrc}
             className={cn(
               "grid grid-cols-[auto_auto] grid-rows-[auto_auto_auto] items-start gap-x-8 uppercase text-secondary",
-              i % 2 === 0
-                ? ""
-                : "justify-items-end text-end sm:justify-items-start sm:text-start",
             )}
           >
             <img
               className={cn(
                 "row-span-full object-contain",
                 info.size === "sm" ? "size-24" : "size-32",
-                i % 2 === 0 ? "" : "col-start-2 sm:col-start-auto",
               )}
               src={info.iconSrc}
               alt={info.title}

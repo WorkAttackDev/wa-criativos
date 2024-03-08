@@ -13,9 +13,10 @@ import { cn } from "@/lib/utils";
 type Props = {
   children: ReactNode;
   delay?: number;
+  duration?: number;
 };
 
-const SlideInUpAnimation = ({ children, delay }: Props) => {
+const FadeInAnimation = ({ children, delay, duration = 1 }: Props) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
     once: true,
@@ -30,12 +31,10 @@ const SlideInUpAnimation = ({ children, delay }: Props) => {
     animate(
       firstChild,
       {
-        opacity: [0, 1, 1],
-        y: [-1000, -100, 0],
-        scale: [0.5, 0.5, 1],
+        opacity: [0, 1],
       },
       {
-        duration: 1,
+        duration,
         ease: "easeOut",
         delay,
       },
@@ -56,4 +55,4 @@ const SlideInUpAnimation = ({ children, delay }: Props) => {
   );
 };
 
-export default SlideInUpAnimation;
+export default FadeInAnimation;

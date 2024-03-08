@@ -59,14 +59,14 @@ const ContactForm = (_: Props) => {
           name="firstName"
           control={form.control}
         >
-          {({ field }) => <Input {...field} min={2} max={50} />}
+          {({ field }) => <Input {...field} minLength={2} maxLength={50} />}
         </MyFormField>
         <MyFormField
           label={<FormLabel>Último Nome</FormLabel>}
           name="lastName"
           control={form.control}
         >
-          {({ field }) => <Input {...field} min={2} max={50} />}
+          {({ field }) => <Input {...field} minLength={2} maxLength={50} />}
         </MyFormField>
         <MyFormField
           label={<FormLabel>Email</FormLabel>}

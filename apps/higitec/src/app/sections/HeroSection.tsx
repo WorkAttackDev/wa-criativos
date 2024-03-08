@@ -16,22 +16,22 @@ const HeroSection = (_: Props) => {
 
   return (
     <section
-      className={`bg-cover relative  bg-[center_top]`}
+      className={`relative bg-cover  bg-[70%_top]`}
       style={{
         backgroundImage: `url(${src})`,
       }}
     >
-      <div className="absolute inset-0 bg-foreground/20 pointer-events-none"></div>
+      <div className="pointer-events-none absolute inset-0 bg-foreground/20"></div>
       <div
-        className={`my-container flex gap-16 flex-col justify-center items-start text-white min-h-[50rem] max-h-[100rem] h-screen bg-cover   bg-[center_top]`}
+        className={`flex h-screen max-h-[60rem] min-h-[50rem] flex-col items-start justify-center gap-16 bg-cover bg-[center_top] text-white my-container   sm:max-h-[100rem]`}
       >
         <BoxAnimation>
-          <h3 className=" relative text-3xl drop-shadow  lg:text-5xl font-semibold uppercase w-full">
+          <h3 className=" relative w-full text-3xl  font-semibold uppercase drop-shadow lg:text-5xl">
             Bem-vindo à HIGITEC
           </h3>
         </BoxAnimation>
         <BoxAnimation delay={0.5}>
-          <h1 className=" relative text-6xl lg:text-8xl font-bold md:max-w-6xl !leading-tight w-full drop-shadow">
+          <h1 className=" relative w-full text-6xl font-bold !leading-tight drop-shadow md:max-w-6xl lg:text-8xl">
             O seu Parceiro de <br /> Excelência em Higiene
           </h1>
         </BoxAnimation>

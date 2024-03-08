@@ -13,10 +13,12 @@ import { cn } from "@/lib/utils";
 type Props = {
   children: ReactNode;
   delay?: number;
+  duration?: number;
 };
 
-const SlideInUpAnimation = ({ children, delay }: Props) => {
+const SlideInUpZoomAnimation = ({ children, delay, duration = 1 }: Props) => {
   const [scope, animate] = useAnimate();
+  const divRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(scope, {
     once: true,
   });
@@ -25,17 +27,27 @@ const SlideInUpAnimation = ({ children, delay }: Props) => {
     if (!isInView) return;
 
     const firstChild = scope.current.firstChild;
-    if (!firstChild) return;
+    if (!firstChild || !divRef.current) return;
 
     animate(
       firstChild,
       {
-        opacity: [0, 1, 1],
-        y: [-1000, -100, 0],
-        scale: [0.5, 0.5, 1],
+        scale: [1.2, 1],
       },
       {
-        duration: 1,
+        duration: duration / 3,
+        ease: "easeOut",
+        delay,
+      },
+    );
+
+    animate(
+      divRef.current,
+      {
+        y: [0, 500],
+      },
+      {
+        duration,
         ease: "easeOut",
         delay,
       },
@@ -48,12 +60,16 @@ const SlideInUpAnimation = ({ children, delay }: Props) => {
       {Children.map(children, (child) =>
         isValidElement<React.HTMLAttributes<HTMLElement>>(child)
           ? cloneElement(child, {
-              className: cn(child.props.className, "opacity-0"),
+              className: cn(child.props.className, "scale-150 "),
             })
           : child,
       )}
+      <div
+        ref={divRef}
+        className="absolute inset-0 left-0 top-0 h-[120%] w-full  bg-white"
+      />
     </div>
   );
 };
 
-export default SlideInUpAnimation;
+export default SlideInUpZoomAnimation;

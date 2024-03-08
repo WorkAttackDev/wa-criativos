@@ -3,12 +3,13 @@ import { buttonVariants } from "../../components/ui/button";
 import LangDropdown from "../components/LangDropdown";
 import { navLinks } from "../links";
 import BoxAnimation from "../components/BoxAnimation";
+import SideBar from "../components/SideBar";
 
 const Header = () => {
   return (
     <header className="sticky top-0 z-40  bg-white shadow-sm">
-      <div className="flex flex-wrap items-center justify-between gap-16 bg-white py-8 shadow-sm my-container">
-        <BoxAnimation>
+      <div className="flex flex-wrap items-center justify-between gap-8 bg-white py-8 shadow-sm my-container sm:gap-16">
+        <BoxAnimation className="mr-auto">
           <Link href="/">
             <img
               src="/imgs/logo.svg"
@@ -30,6 +31,7 @@ const Header = () => {
           ))}
         </nav>
         <LangDropdown />
+        <SideBar />
       </div>
     </header>
   );

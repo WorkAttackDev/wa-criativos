@@ -13,9 +13,9 @@ const Header = () => {
           <Link href="/">
             <img
               src="/imgs/logo.svg"
-              width={185}
-              height={87}
-              className="h-auto w-40 object-contain lg:w-56"
+              width={205}
+              height={107}
+              className="h-auto w-48 object-contain lg:w-64"
             />
           </Link>
         </BoxAnimation>
