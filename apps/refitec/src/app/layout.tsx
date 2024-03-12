@@ -31,7 +31,7 @@ export const metadata: Metadata = {
       {
         url: `${
           process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
-        }/imgs/og-image.jpg`,
+        }/imgs/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Refitec - Transformando o Futuro dos Óleos Alimentares em Angola",
@@ -48,7 +48,7 @@ export const metadata: Metadata = {
       {
         url: `${
           process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
-        }/imgs/og-image.jpg`,
+        }/imgs/og-image.png`,
         alt: "Refitec - Transformando o Futuro dos Óleos Alimentares em Angola",
       },
     ],
