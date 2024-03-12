@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   description:
     "Refitec, uma futura potência industrial angolana que irá revolucionar o processamento, embalagem e comercialização de óleos alimentares.",
   metadataBase: new URL(
-    process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/",
+    process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/",
   ),
   alternates: {
     canonical: "/",
@@ -23,15 +23,15 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    url: process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/",
+    url: process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/",
     title: "Seja bem-vindo à Refitec!",
     description:
       "Refitec, uma futura potência industrial angolana que irá revolucionar o processamento, embalagem e comercialização de óleos alimentares.",
     images: [
       {
         url: `${
-          process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/"
-        }imgs/og-image.jpg`,
+          process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
+        }/imgs/og-image.jpg`,
         width: 1200,
         height: 630,
         alt: "Refitec - Transformando o Futuro dos Óleos Alimentares em Angola",
@@ -41,15 +41,14 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Seja bem vindo à Refitec!",
-    site:
-      process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/",
+    site: process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/",
     description:
       "Refitec, uma futura potência industrial angolana que irá revolucionar o processamento, embalagem e comercialização de óleos alimentares.",
     images: [
       {
         url: `${
-          process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/"
-        }imgs/og-image.jpg`,
+          process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
+        }/imgs/og-image.jpg`,
         alt: "Refitec - Transformando o Futuro dos Óleos Alimentares em Angola",
       },
     ],
@@ -61,8 +60,8 @@ export const metadata: Metadata = {
       sizes: "180x180",
       href: "/apple-touch-icon.png",
       url: `${
-        process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/"
-      }apple-touch-icon.png`,
+        process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
+      }/apple-touch-icon.png`,
     },
     {
       rel: "icon",
@@ -70,8 +69,8 @@ export const metadata: Metadata = {
       sizes: "32x32",
       href: "/favicon-32x32.png",
       url: `${
-        process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/"
-      }favicon-32x32.png`,
+        process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
+      }/favicon-32x32.png`,
     },
     {
       rel: "icon",
@@ -79,21 +78,21 @@ export const metadata: Metadata = {
       sizes: "16x16",
       href: "/favicon-16x16.png",
       url: `${
-        process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/"
-      }favicon-16x16.png`,
+        process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
+      }/favicon-16x16.png`,
     },
     {
       rel: "mask-icon",
       href: "/safari-pinned-tab.svg",
       color: "#5bbad5",
       url: `${
-        process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/"
-      }safari-pinned-tab.svg`,
+        process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
+      }/safari-pinned-tab.svg`,
     },
   ],
   manifest: `${
-    process.env.NEXT_PUBLIC_VERCEL_URL || "https://wa-refitec.vercel.app/"
-  }site.webmanifest`,
+    process.env.NEXT_PUBLIC_BASE_URL || "https://wa-refitec.vercel.app/"
+  }/site.webmanifest`,
 };
 
 export default function RootLayout({
