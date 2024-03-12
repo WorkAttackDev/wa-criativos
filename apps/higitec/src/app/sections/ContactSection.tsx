@@ -1,10 +1,9 @@
 import Image from "next/image";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
+import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 import { linksObj } from "../links";
 import ContactForm from "./ContactForm";
-import SlideInUpAnimation from "../components/SlideInUpAnimation";
-import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 
 type Props = {};
 

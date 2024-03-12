@@ -1,11 +1,9 @@
-import React from "react";
+import Image from "next/image";
+import FadeInAnimation from "../components/FadeInAnimation";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
-import Image from "next/image";
-import { linksObj } from "../links";
-import SlideInUpAnimation from "../components/SlideInUpAnimation";
-import FadeInAnimation from "../components/FadeInAnimation";
 import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
+import { linksObj } from "../links";
 
 type Props = {};
 
@@ -18,7 +16,7 @@ const infos = [
   {
     title: "Visão",
     text: "Aspiramos evoluir continuamente e sermos reconhecidos como o fornecedor líder de produtos de higiene e limpeza em Angola e arredores.",
-    imgSrc: "/imgs/mother-change-diaper.jpg",
+    imgSrc: "/imgs/female-scientist-working.jpeg",
   },
   {
     title: "Valores",
