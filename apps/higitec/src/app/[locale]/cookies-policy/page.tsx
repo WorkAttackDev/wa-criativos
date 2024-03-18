@@ -6,7 +6,7 @@ import { useTranslations } from "next-intl";
 
 type Props = {};
 
-const CookiesPolicyPage = (props: Props) => {
+const CookiesPolicyPage = (_: Props) => {
   const t = useTranslations("Cookies");
   return (
     <FeatherBgSection>

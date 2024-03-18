@@ -1,5 +1,6 @@
 import { buttonVariants } from "@/components/ui/button";
-import Link from "next/link";
+import { Link } from "@/lib/i18n";
+import NextLink from "next/link";
 import React from "react";
 import { linksObj, navLinks } from "../links";
 import { cn } from "@/lib/utils";
@@ -88,7 +89,7 @@ const Footer = () => {
     <footer className="flex flex-col gap-16 py-16 my-container">
       <section className="flex w-full flex-col  justify-between gap-32 max-sm:justify-center sm:flex-row">
         <BoxAnimation>
-          <Link href="/" className="flex justify-center max-sm:min-w-full">
+          <NextLink href="/" className="flex justify-center max-sm:min-w-full">
             <img
               src="/imgs/logo.svg"
               width={285}
@@ -96,7 +97,7 @@ const Footer = () => {
               alt="Higitec Logo"
               className="h-auto w-80 object-contain lg:w-[28rem]"
             />
-          </Link>
+          </NextLink>
         </BoxAnimation>
         <nav className="flex flex-col items-start gap-6  max-sm:items-center sm:ml-auto">
           {navLinks.map((item) => (
@@ -109,9 +110,7 @@ const Footer = () => {
                 }),
                 "text-foreground",
               )}
-            >
-              {t(item.key)}
-            </Link>
+            ></Link>
           ))}
         </nav>
         <ContactInfoAndSocial />

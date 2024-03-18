@@ -30,16 +30,12 @@ const LangDropdown = (_: Props) => {
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>{t("language")}</DropdownMenuLabel>
         <DropdownMenuSeparator />
-        <DropdownMenuItem>
-          <Link href="/" locale="pt">
-            Português
-          </Link>
-        </DropdownMenuItem>
-        <DropdownMenuItem>
-          <Link href="/" locale="en">
-            English
-          </Link>
-        </DropdownMenuItem>
+        <Link href="/" locale="pt">
+          <DropdownMenuItem>Português</DropdownMenuItem>
+        </Link>
+        <Link href="/" locale="en">
+          <DropdownMenuItem>English</DropdownMenuItem>
+        </Link>
       </DropdownMenuContent>
     </DropdownMenu>
   );
