@@ -12,10 +12,13 @@ import { AlignRight } from "lucide-react";
 import Link from "next/link";
 import { navLinks } from "../links";
 import BoxAnimation from "./BoxAnimation";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const SideBar = (props: Props) => {
+  const t = useTranslations("Header");
+  const tf = useTranslations("Footer");
   return (
     <Sheet>
       <SheetTrigger
@@ -37,7 +40,7 @@ const SideBar = (props: Props) => {
               />
             </Link>
           </BoxAnimation>
-          <SheetDescription>Navegação principal</SheetDescription>
+          <SheetDescription>{t("mainNavigation")}</SheetDescription>
         </SheetHeader>
         <nav className="flex flex-1 flex-col gap-8">
           {navLinks.map((item) => (
@@ -49,13 +52,13 @@ const SideBar = (props: Props) => {
                 "w-fit justify-start",
               )}
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
         </nav>
         <SheetFooter>
           <p className="text-xl text-secondary-foreground">
-            © 2024 Todos direitos reservados à Higitec LDA.
+            {tf("allRightsReserved")}
           </p>
         </SheetFooter>
       </SheetContent>
