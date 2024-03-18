@@ -4,7 +4,8 @@ import HeadingText from "../components/HeadingText";
 import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 import { linksObj } from "../links";
 import ContactForm from "./ContactForm";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { GoogleMapsEmbed } from "@next/third-parties/google";
 
 type Props = {};
 
@@ -12,6 +13,8 @@ const ContactSection = (_: Props) => {
   const t = useTranslations("Contacts");
   const th = useTranslations("Header");
   const tg = useTranslations("Global");
+  const locale = useLocale();
+
   return (
     <FeatherBgSection
       id={linksObj.contacts.href.replace("#", "")}
@@ -22,7 +25,7 @@ const ContactSection = (_: Props) => {
           <HeadingText>{th(linksObj.contacts.key)}</HeadingText>
           <p>{t("description")}</p>
         </header>
-        <SlideInUpZoomAnimation>
+        {/* <SlideInUpZoomAnimation>
           <Image
             src="/imgs/map.jpg"
             alt="Mapa"
@@ -31,7 +34,15 @@ const ContactSection = (_: Props) => {
             sizes="80vw"
             className="aspect-[2] h-auto w-full object-cover"
           />
-        </SlideInUpZoomAnimation>
+        </SlideInUpZoomAnimation> */}
+        <GoogleMapsEmbed
+          apiKey={process.env.GOOGLE_MAPS_API_KEY || ""}
+          height={300}
+          width="100%"
+          mode="place"
+          q="483X+4RX Polo Industrial, Viana"
+          language={locale}
+        />
       </section>
       <ContactForm
         emailLabel={tg("email")}
