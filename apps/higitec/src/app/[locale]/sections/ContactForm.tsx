@@ -37,9 +37,21 @@ const contactSchema = z.object({
 
 type ContactType = z.infer<typeof contactSchema>;
 
-type Props = {};
+type Props = {
+  firstNameLabel: string;
+  lastNameLabel: string;
+  emailLabel: string;
+  messageLabel: string;
+  sendLabel: string;
+};
 
-const ContactForm = (_: Props) => {
+const ContactForm = ({
+  emailLabel,
+  firstNameLabel,
+  lastNameLabel,
+  messageLabel,
+  sendLabel,
+}: Props) => {
   const form = useForm<ContactType>({
     resolver: zodResolver(contactSchema),
   });
@@ -55,21 +67,21 @@ const ContactForm = (_: Props) => {
         className="relative grid content-start gap-8"
       >
         <MyFormField
-          label={<FormLabel>Primeiro Nome</FormLabel>}
+          label={<FormLabel>{firstNameLabel}</FormLabel>}
           name="firstName"
           control={form.control}
         >
           {({ field }) => <Input {...field} minLength={2} maxLength={50} />}
         </MyFormField>
         <MyFormField
-          label={<FormLabel>Último Nome</FormLabel>}
+          label={<FormLabel>{lastNameLabel}</FormLabel>}
           name="lastName"
           control={form.control}
         >
           {({ field }) => <Input {...field} minLength={2} maxLength={50} />}
         </MyFormField>
         <MyFormField
-          label={<FormLabel>Email</FormLabel>}
+          label={<FormLabel>{emailLabel}</FormLabel>}
           name="email"
           control={form.control}
         >
@@ -77,7 +89,7 @@ const ContactForm = (_: Props) => {
         </MyFormField>
         <MyFormField
           className="w-full"
-          label={<FormLabel>Mensagem</FormLabel>}
+          label={<FormLabel>{messageLabel}</FormLabel>}
           name="mensagem"
           control={form.control}
         >
@@ -93,7 +105,7 @@ const ContactForm = (_: Props) => {
         </MyFormField>
 
         <Button size="sm" type="submit" className="mt-8 w-fit">
-          Enviar
+          {sendLabel}
         </Button>
       </form>
     </Form>

@@ -4,10 +4,14 @@ import HeadingText from "../components/HeadingText";
 import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 import { linksObj } from "../links";
 import ContactForm from "./ContactForm";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const ContactSection = (_: Props) => {
+  const t = useTranslations("Contacts");
+  const th = useTranslations("Header");
+  const tg = useTranslations("Global");
   return (
     <FeatherBgSection
       id={linksObj.contacts.href.replace("#", "")}
@@ -15,13 +19,8 @@ const ContactSection = (_: Props) => {
     >
       <section className="flex flex-col gap-16">
         <header className="grid gap-4">
-          <HeadingText>{linksObj.contacts.label}</HeadingText>
-          <p>
-            Na HIGITEC acreditamos que um ambiente alegre e motivado é a base
-            para uma sociedade saudável e próspera. Junte-se a nós na nossa
-            jornada rumo à excelência para juntos construirmos um futuro mais
-            limpo e seguro.
-          </p>
+          <HeadingText>{th(linksObj.contacts.key)}</HeadingText>
+          <p>{t("description")}</p>
         </header>
         <SlideInUpZoomAnimation>
           <Image
@@ -34,7 +33,13 @@ const ContactSection = (_: Props) => {
           />
         </SlideInUpZoomAnimation>
       </section>
-      <ContactForm />
+      <ContactForm
+        emailLabel={tg("email")}
+        firstNameLabel={tg("firstName")}
+        lastNameLabel={tg("lastName")}
+        messageLabel={tg("message")}
+        sendLabel={tg("send")}
+      />
     </FeatherBgSection>
   );
 };

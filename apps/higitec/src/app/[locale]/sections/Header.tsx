@@ -1,11 +1,13 @@
 import Link from "next/link";
-import { buttonVariants } from "../../components/ui/button";
 import LangDropdown from "../components/LangDropdown";
 import { navLinks } from "../links";
 import BoxAnimation from "../components/BoxAnimation";
 import SideBar from "../components/SideBar";
+import { buttonVariants } from "@/components/ui/button";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
+  const t = useTranslations("Header");
   return (
     <header className="sticky top-0 z-40  bg-white shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-8 bg-white py-8 shadow-sm my-container sm:gap-16">
@@ -26,7 +28,7 @@ const Header = () => {
               href={item.href}
               className={buttonVariants({ variant: "link" })}
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
         </nav>

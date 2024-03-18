@@ -1,35 +1,37 @@
+import { useTranslations } from "next-intl";
+
 export const linksObj = {
   whoWeAre: {
     href: "#who-we-are",
-    label: "Quem Somos",
+    key: "about" as const,
   },
   ourBrands: {
     href: "#our-brands",
-    label: "Os Nossos Produtos",
+    key: "products" as const,
   },
   production: {
     href: "#production",
-    label: "Produção",
+    key: "production" as const,
   },
   workWithUs: {
     href: "#work-with-us",
-    label: "Trabalhe Connosco",
+    key: "workWithUs" as const,
   },
   contacts: {
     href: "#contacts",
-    label: "Contactos",
+    key: "contacts" as const,
   },
   termsOfService: {
     href: "/terms-of-service",
-    label: "Termos de Serviço",
+    key: "termsOfService" as const,
   },
   cookiesPolicy: {
     href: "/cookies-policy",
-    label: "Política de Cookies",
+    key: "cookiesPolicy" as const,
   },
   privacyPolicy: {
     href: "/terms-of-service",
-    label: "Política de Privacidade",
+    key: "privacyPolicy" as const,
   },
 };
 

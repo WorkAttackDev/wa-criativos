@@ -2,20 +2,22 @@ import React from "react";
 import HeadingText from "../components/HeadingText";
 import FeatherBgSection from "../components/FeatherBgSection";
 import SectionBlock from "../components/SectionBlock";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
-const TermsOfServicePage = (props: Props) => {
+const TermsOfServicePage = (_: Props) => {
+  const t = useTranslations("TermsOfService");
+
   return (
     <FeatherBgSection>
-      <main className="my-container grid gap-16 w-full">
+      <main className="grid w-full gap-16 my-container">
         <header className="grid gap-4">
           <HeadingText size="lg" className="text-primary-foreground">
-            Termos de Serviço
+            {t("title")}
           </HeadingText>
-          <p className="max-w-3xl text-secondary text-xl/relaxed">
-            Leia estes Termos e Condições cuidadosamente antes de usar nosso
-            Serviço.
+          <p className="max-w-3xl text-xl/relaxed text-secondary">
+            {t("description")}
           </p>
         </header>
         <section className="space-y-8">

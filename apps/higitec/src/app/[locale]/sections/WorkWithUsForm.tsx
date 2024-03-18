@@ -8,6 +8,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import MyFormField from "../components/MyFormField";
+import { useTranslations } from "next-intl";
 
 const workWithUsSchema = z.object({
   firstName: z
@@ -43,9 +44,25 @@ const workWithUsSchema = z.object({
 
 type WorkWithUsType = z.infer<typeof workWithUsSchema>;
 
-type Props = {};
+type Props = {
+  firstNameLabel: string;
+  lastNameLabel: string;
+  emailLabel: string;
+  phoneLabel: string;
+  aboutYouLabel: string;
+  clearLabel: string;
+  sendLabel: string;
+};
 
-const WorkWithUsForm = (_: Props) => {
+const WorkWithUsForm = ({
+  firstNameLabel,
+  lastNameLabel,
+  emailLabel,
+  phoneLabel,
+  aboutYouLabel,
+  clearLabel,
+  sendLabel,
+}: Props) => {
   const form = useForm<WorkWithUsType>({
     resolver: zodResolver(workWithUsSchema),
   });
@@ -63,7 +80,7 @@ const WorkWithUsForm = (_: Props) => {
         <MyFormField
           label={
             <FormLabel className="font-normal capitalize">
-              Primeiro Nome
+              {firstNameLabel}
             </FormLabel>
           }
           name="firstName"
@@ -74,7 +91,7 @@ const WorkWithUsForm = (_: Props) => {
         <MyFormField
           label={
             <FormLabel className="font-normal capitalize">
-              Último Nome
+              {lastNameLabel}
             </FormLabel>
           }
           name="lastName"
@@ -84,7 +101,9 @@ const WorkWithUsForm = (_: Props) => {
         </MyFormField>
         <MyFormField
           label={
-            <FormLabel className="font-normal capitalize">E-mail</FormLabel>
+            <FormLabel className="font-normal capitalize">
+              {emailLabel}
+            </FormLabel>
           }
           name="email"
           control={form.control}
@@ -93,7 +112,9 @@ const WorkWithUsForm = (_: Props) => {
         </MyFormField>
         <MyFormField
           label={
-            <FormLabel className="font-normal capitalize">Telefone</FormLabel>
+            <FormLabel className="font-normal capitalize">
+              {phoneLabel}
+            </FormLabel>
           }
           name="phone"
           control={form.control}
@@ -103,7 +124,9 @@ const WorkWithUsForm = (_: Props) => {
         <MyFormField
           className="w-full sm:col-span-2"
           label={
-            <FormLabel className="font-normal capitalize">Sobre você</FormLabel>
+            <FormLabel className="font-normal capitalize">
+              {aboutYouLabel}
+            </FormLabel>
           }
           name="about"
           control={form.control}
@@ -125,10 +148,10 @@ const WorkWithUsForm = (_: Props) => {
             size="sm"
             className="border-current text-current"
           >
-            Limpar
+            {clearLabel}
           </Button>
           <Button size="sm" type="submit">
-            Enviar
+            {sendLabel}
           </Button>
         </span>
       </form>

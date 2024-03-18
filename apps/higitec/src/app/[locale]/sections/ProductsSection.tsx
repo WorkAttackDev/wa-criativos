@@ -2,44 +2,42 @@ import React from "react";
 import HeadingText from "../components/HeadingText";
 import Image from "next/image";
 import { linksObj } from "../links";
-
-const categories = [
-  {
-    name: "Fraldas",
-    brands: [
-      { name: "Mimo", imgSrc: "/imgs/brand.png" },
-      { name: "Naval", imgSrc: "/imgs/brand-1.png" },
-      { name: "Noddy", imgSrc: "/imgs/brand-2.png" },
-      { name: "Kido", imgSrc: "/imgs/brand-3.png" },
-    ],
-  },
-  {
-    name: "Sabão e Sabonetes",
-    brands: [
-      { name: "Confiança", imgSrc: "/imgs/brand-4.png" },
-      { name: "Sabom", imgSrc: "/imgs/brand-5.png" },
-      { name: "Topic", imgSrc: "/imgs/brand-6.png" },
-      { name: "Clara", imgSrc: "/imgs/brand-7.png" },
-      { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-8.png" },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const ProductsSection = (_: Props) => {
+  const t = useTranslations("Products");
+
+  const categories = [
+    {
+      name: t("diaper"),
+      brands: [
+        { name: "Mimo", imgSrc: "/imgs/brand.png" },
+        { name: "Naval", imgSrc: "/imgs/brand-1.png" },
+        { name: "Noddy", imgSrc: "/imgs/brand-2.png" },
+        { name: "Kido", imgSrc: "/imgs/brand-3.png" },
+      ],
+    },
+    {
+      name: t("soap"),
+      brands: [
+        { name: "Confiança", imgSrc: "/imgs/brand-4.png" },
+        { name: "Sabom", imgSrc: "/imgs/brand-5.png" },
+        { name: "Topic", imgSrc: "/imgs/brand-6.png" },
+        { name: "Clara", imgSrc: "/imgs/brand-7.png" },
+        { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-8.png" },
+      ],
+    },
+  ];
   return (
     <section
       id={linksObj.ourBrands.href.replace("#", "")}
       className="grid gap-32 bg-white py-32 my-container"
     >
       <span className="grid gap-8">
-        <HeadingText className="uppercase">Os Nossos Produtos</HeadingText>
-        <p>
-          Oferecemos uma gama de produtos que afirmam qualidade a preços
-          acessíveis. Explore o nosso catálogo e eleve as suas ofertas de
-          retalho.
-        </p>
+        <HeadingText className="uppercase">{t("title")}</HeadingText>
+        <p>{t("description")}</p>
       </span>
       {categories.map((category) => (
         <section key={category.name} className="grid gap-4">

@@ -3,58 +3,12 @@ import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
 import { linksObj } from "../links";
 import CounterEffect from "../components/CounterEffect";
-
-const productionInfo: {
-  title: string;
-  unit?: string;
-  description: string;
-  iconSrc: string;
-  size: "sm" | "md";
-  value: number;
-}[] = [
-  {
-    title: "mil",
-    unit: "toneladas",
-    description: "De produtos de limpeza por ano",
-    iconSrc: "/imgs/production-icon-1.svg",
-    size: "md",
-    value: 120,
-  },
-  {
-    title: "mil",
-    unit: "toneladas",
-    description: "de produtos de higiene por ano",
-    iconSrc: "/imgs/production-icon-2.svg",
-    size: "md",
-    value: 20,
-  },
-  {
-    title: "mil",
-    unit: "toneladas",
-    description: "De papel diverso por ano",
-    iconSrc: "/imgs/production-icon-3.svg",
-    size: "md",
-    value: 10,
-  },
-  {
-    title: "milhões",
-    description: "De fraldas por dia",
-    iconSrc: "/imgs/production-icon-4.svg",
-    size: "sm",
-    value: 3,
-  },
-  {
-    title: "toneladas",
-    description: "De sabão e sabonetes por hora",
-    iconSrc: "/imgs/production-icon-5.svg",
-    size: "sm",
-    value: 6,
-  },
-];
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const ProductionSection = (_: Props) => {
+  const t = useTranslations("Production");
   const sizeMap = {
     sm: {
       width: 60,
@@ -66,12 +20,60 @@ const ProductionSection = (_: Props) => {
     },
   };
 
+  const productionInfo: {
+    title: string;
+    unit?: string;
+    description: string;
+    iconSrc: string;
+    size: "sm" | "md";
+    value: number;
+  }[] = [
+    {
+      title: t("mil"),
+      unit: t("tons"),
+      description: t("cleaningProducts"),
+      iconSrc: "/imgs/production-icon-1.svg",
+      size: "md",
+      value: 120,
+    },
+    {
+      title: t("mil"),
+      unit: t("tons"),
+      description: t("hygieneProducts"),
+      iconSrc: "/imgs/production-icon-2.svg",
+      size: "md",
+      value: 20,
+    },
+    {
+      title: t("mil"),
+      unit: t("tons"),
+      description: t("paper"),
+      iconSrc: "/imgs/production-icon-3.svg",
+      size: "md",
+      value: 10,
+    },
+    {
+      title: t("millions"),
+      description: t("diapers"),
+      iconSrc: "/imgs/production-icon-4.svg",
+      size: "sm",
+      value: 3,
+    },
+    {
+      title: t("tons"),
+      description: t("soap"),
+      iconSrc: "/imgs/production-icon-5.svg",
+      size: "sm",
+      value: 6,
+    },
+  ];
+
   return (
     <FeatherBgSection
       className="grid gap-32 py-32"
       id={linksObj.production.href.replace("#", "")}
     >
-      <HeadingText className="uppercase">Produção</HeadingText>
+      <HeadingText className="uppercase">{t("title")}</HeadingText>
       <ul className="flex flex-wrap items-center justify-start gap-x-16 gap-y-24 sm:justify-center">
         {productionInfo.map((info, i) => (
           <li

@@ -5,6 +5,7 @@ import { linksObj, navLinks } from "../links";
 import { cn } from "@/lib/utils";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import BoxAnimation from "../components/BoxAnimation";
+import { useTranslations } from "next-intl";
 
 const ContactInfoAndSocial = () => {
   const socialLinks = [
@@ -51,6 +52,7 @@ const ContactInfoAndSocial = () => {
 };
 
 const FooterBottom = () => {
+  const t = useTranslations("Footer");
   const links = [
     linksObj.termsOfService,
     linksObj.cookiesPolicy,
@@ -59,9 +61,7 @@ const FooterBottom = () => {
 
   return (
     <footer className="flex w-full justify-between gap-8 text-lg text-secondary max-sm:flex-col max-sm:text-center">
-      <p className="max-sm:order-2">
-        © 2024 Todos direitos reservados à HIGITEC LDA.
-      </p>
+      <p className="max-sm:order-2">{t("allRightsReserved")}</p>
       <nav className="flex flex-wrap gap-8 max-sm:justify-center">
         {links.map((item) => (
           <Link
@@ -74,7 +74,7 @@ const FooterBottom = () => {
               "text-lg font-medium text-secondary",
             )}
           >
-            {item.label}
+            {t(item.key)}
           </Link>
         ))}
       </nav>
@@ -83,6 +83,7 @@ const FooterBottom = () => {
 };
 
 const Footer = () => {
+  const t = useTranslations("Header");
   return (
     <footer className="flex flex-col gap-16 py-16 my-container">
       <section className="flex w-full flex-col  justify-between gap-32 max-sm:justify-center sm:flex-row">
@@ -109,7 +110,7 @@ const Footer = () => {
                 "text-foreground",
               )}
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
         </nav>

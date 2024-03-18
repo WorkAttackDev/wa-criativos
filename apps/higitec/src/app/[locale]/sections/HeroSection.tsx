@@ -1,6 +1,7 @@
 import { getImageProps } from "next/image";
 import React from "react";
 import BoxAnimation from "../components/BoxAnimation";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
@@ -13,6 +14,8 @@ const HeroSection = (_: Props) => {
     sizes: "100vw",
     src: "/imgs/man-smiling.jpg",
   });
+
+  const t = useTranslations("Hero");
 
   return (
     <section
@@ -27,12 +30,12 @@ const HeroSection = (_: Props) => {
       >
         <BoxAnimation>
           <h3 className=" relative w-full text-3xl  font-semibold uppercase drop-shadow lg:text-5xl">
-            Bem-vindo à HIGITEC
+            {t("welcome")}
           </h3>
         </BoxAnimation>
         <BoxAnimation delay={0.5}>
           <h1 className=" relative w-full text-6xl font-bold !leading-tight drop-shadow md:max-w-6xl lg:text-8xl">
-            O seu Parceiro de <br /> Excelência em Higiene
+            {t("sloganPart1")} <br /> {t("sloganPart2")}
           </h1>
         </BoxAnimation>
       </div>

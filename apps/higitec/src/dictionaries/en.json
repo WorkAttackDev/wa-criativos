@@ -1,0 +1,74 @@
+{
+    "Global": {
+        "clear": "Clear",
+        "send": "Send",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "message": "Message",
+        "aboutYou": "About You",
+        "phone": "Phone"
+    },
+    "Header": {
+        "home": "Home",
+        "about": "Who We Are",
+        "products": "Our Products",
+        "production": "Production",
+        "workWithUs": "Work With Us",
+        "contacts": "Contacts",
+        "lang": "en",
+        "language": "Language"
+    },
+    "Hero": {
+        "welcome": "WELCOME TO HIGITEC",
+        "sloganPart1": "Your Partner in",
+        "sloganPart2": "Hygiene Excellence"
+    },
+    "About": {
+        "about": "Committed to setting standards in the production of high-quality hygiene and cleaning products, with a foundation rooted in innovation, serving various sectors and ensuring a healthy and safe environment for all.",
+        "mission": "Mission",
+        "missionText": "To provide innovative hygiene and cleaning solutions that exceed our customers' expectations at affordable prices.",
+        "vision": "Vision",
+        "visionText": "We aspire to continuously evolve and be recognized as the leading supplier of hygiene and cleaning products in Angola and surroundings.",
+        "values": "Values",
+        "valuesText": "Excellence and Quality: Producing products of the highest standard, exploring new trends and technologies, with products that contribute to a healthier planet."
+    },
+    "Products": {
+        "title": "Our Products",
+        "description": "We offer a range of products that affirm quality at affordable prices. Explore our catalogue and elevate your retail offerings.",
+        "diaper": "Diapers",
+        "soap": "Soap and Soaps"
+    },
+    "Production": {
+        "title": "Production",
+        "tons": "Tons",
+        "cleaningProducts": "Of cleaning products per year",
+        "hygieneProducts": "Of hygiene products per year",
+        "paper": "Of various paper per year",
+        "diapers": "Of diapers per day",
+        "soap": "Of soap and soaps per hour",
+        "mil": "thousand",
+        "millions": "millions"
+    },
+    "WorkWithUs": {
+        "title": "Join us/vacancy",
+        "description": "At HIGITEC we believe that a cheerful and motivated environment is the foundation for a healthy and prosperous society. Join us on our journey towards excellence to build a cleaner and safer future together."
+    },
+    "Contacts": {
+        "description": "At HIGITEC we believe that a cheerful and motivated environment is the foundation for a healthy and prosperous society. Join us on our journey towards excellence to build a cleaner and safer future together."
+    },
+    "Footer": {
+        "termsOfService": "Terms of Service",
+        "cookiesPolicy": "Cookies Policy",
+        "privacyPolicy": "Privacy Policy",
+        "allRightsReserved": "© 2024 All rights reserved to HIGITEC LTD."
+    },
+    "Cookies": {
+        "title": "Cookies Policy",
+        "description": "Please read this policy carefully before using our service."
+    },
+    "TermsOfService": {
+        "title": "Terms of Service",
+        "description": "Please read these Terms and Conditions carefully before using our Service."
+    }
+}

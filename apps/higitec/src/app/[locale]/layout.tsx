@@ -108,11 +108,13 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
+  params: { locale },
 }: Readonly<{
   children: React.ReactNode;
+  params: { locale: string };
 }>) {
   return (
-    <html lang="pt">
+    <html lang={locale}>
       <body className={inter.className}>
         <Header />
         {children}

@@ -4,38 +4,37 @@ import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
 import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 import { linksObj } from "../links";
+import { useTranslations } from "next-intl";
 
 type Props = {};
-
-const infos = [
-  {
-    title: "Missão",
-    text: "Fornecer soluções de higiene e limpeza inovadoras, que excedam as expectativas dos nossos clientes a preços acessíveis.",
-    imgSrc: "/imgs/machine.jpg",
-  },
-  {
-    title: "Visão",
-    text: "Aspiramos evoluir continuamente e sermos reconhecidos como o fornecedor líder de produtos de higiene e limpeza em Angola e arredores.",
-    imgSrc: "/imgs/female-scientist-working.jpeg",
-  },
-  {
-    title: "Valores",
-    text: "Excelência e Qualidade: Produzindo produtos do mais alto padrão, explorando novas tendências e tecnologias, com produtos que contribuem para um planeta mais saudável.",
-    imgSrc: "/imgs/worker-touching-tablet.jpg",
-  },
-];
-
 const AboutSection = (_: Props) => {
+  const t = useTranslations("About");
+
+  const infos = [
+    {
+      title: t("mission"),
+      text: t("missionText"),
+      imgSrc: "/imgs/machine.jpg",
+    },
+    {
+      title: t("vision"),
+      text: t("visionText"),
+      imgSrc: "/imgs/female-scientist-working.jpeg",
+    },
+    {
+      title: t("values"),
+      text: t("valuesText"),
+      imgSrc: "/imgs/worker-touching-tablet.jpg",
+    },
+  ];
+
   return (
     <FeatherBgSection
       className="grid gap-32"
       id={linksObj.whoWeAre.href.replace("#", "")}
     >
       <HeadingText size="lg" className="text-center">
-        Empenhados em estabelecer padrões na produção de produtos de higiene e
-        limpeza de elevada qualidade, com uma base enraizada na inovação,
-        atendendo a diversos sectores e garantindo um ambiente saudável e seguro
-        para todos.
+        {t("about")}
       </HeadingText>
       <section className="grid grid-cols-1 justify-center justify-items-center gap-16 md:grid-cols-3">
         {infos.map(({ imgSrc, text, title }, i) => (

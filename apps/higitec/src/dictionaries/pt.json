@@ -1,0 +1,74 @@
+{
+    "Global": {
+        "clear": "Limpar",
+        "send": "Enviar",
+        "firstName": "Primeiro Nome",
+        "lastName": "Último Nome",
+        "email": "Email",
+        "message": "Mensagem",
+        "aboutYou": "Sobre Você",
+        "phone": "Telefone"
+    },
+    "Header": {
+        "home": "Início",
+        "about": "Quem Somos",
+        "products": "Os Nossos Produtos",
+        "production": "Produção",
+        "workWithUs": "Trabalhe Connosco",
+        "contacts": "Contactos",
+        "lang": "pt",
+        "language": "Idioma"
+    },
+    "Hero": {
+        "welcome": "BEM-VINDO À HIGITEC",
+        "sloganPart1": "O seu Parceiro de",
+        "sloganPart2": "Excelência em Higiene"
+    },
+    "About": {
+        "about": "Empenhados em estabelecer padrões na produção de produtos de higiene e limpeza de elevada qualidade, com uma base enraizada na inovação, atendendo a diversos sectores e garantindo um ambiente saudável e seguro para todos.",
+        "mission": "Missão",
+        "missionText": "Fornecer soluções de higiene e limpeza inovadoras, que excedam as expectativas dos nossos clientes a preços acessíveis.",
+        "vision": "Visão",
+        "visionText": "Aspiramos evoluir continuamente e sermos reconhecidos como o fornecedor líder de produtos de higiene e limpeza em Angola e arredores.",
+        "values": "Valores",
+        "valuesText": "Excelência e Qualidade: Produzindo produtos do mais alto padrão, explorando novas tendências e tecnologias, com produtos que contribuem para um planeta mais saudável."
+    },
+    "Products": {
+        "title": "Os Nossos Produtos",
+        "description": " Oferecemos uma gama de produtos que afirmam qualidade a preços acessíveis. Explore o nosso catálogo e eleve as suas ofertas de retalho.",
+        "diaper": "Fraldas",
+        "soap": "Sabão e Sabonetes"
+    },
+    "Production": {
+        "title": "Produção",
+        "tons": "Toneladas",
+        "cleaningProducts": "De produtos de limpeza por ano",
+        "hygieneProducts": "De produtos de higiene por ano",
+        "paper": "De papel diverso por ano",
+        "diapers": "De fraldas por dia",
+        "soap": "De sabão e sabonetes por hora",
+        "mil": "mil",
+        "millions": "milhões"
+    },
+    "WorkWithUs": {
+        "title": "Junte-se a nós/vaga",
+        "description": "Na HIGITEC acreditamos que um ambiente alegre e motivado é a base para uma sociedade saudável e próspera. Junte-se a nós na nossa jornada rumo à excelência para juntos construirmos um futuro mais limpo e seguro."
+    },
+    "Contacts": {
+        "description": "Na HIGITEC acreditamos que um ambiente alegre e motivado é a base para uma sociedade saudável e próspera. Junte-se a nós na nossa jornada rumo à excelência para juntos construirmos um futuro mais limpo e seguro."
+    },
+    "Footer": {
+        "termsOfService": "Termos de Serviço",
+        "cookiesPolicy": "Política de Cookies",
+        "privacyPolicy": "Política de Privacidade",
+        "allRightsReserved": "© 2024 Todos direitos reservados à HIGITEC LDA."
+    },
+    "Cookies": {
+        "title": "Política de Cookies",
+        "description": "Leia atentamente esta política antes de usar nosso serviço."
+    },
+    "TermsOfService": {
+        "title": "Termos de Serviço",
+        "description": "Leia estes Termos e Condições cuidadosamente antes de usar nosso Serviço."
+    }
+}
