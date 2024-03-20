@@ -84,7 +84,8 @@ const ContactSection = ({ description, locale, title, mapKey }: Props) => {
     animate(
       '[aria-label="Show Map"]',
       {
-        top: showMap ? "-50%" : "-15%",
+        top: showMap ? "-40%" : "-15%",
+        scale: showMap ? 0.6 : 1,
       },
       {
         duration: 0.3,
