@@ -21,17 +21,17 @@
     "Hero": {
         "welcome": "Welcome to Refitec",
         "sloganPart1": "Transforming the Future of",
-        "sloganPart2": "Food Oils in Angola"
+        "sloganPart2": "Edible Oils in Angola"
     },
     "About": {
-        "description": "Refitec, a future Angolan industrial powerhouse that will revolutionise the processing, packaging and marketing of food oils",
+        "description": "Refitec, a future Angolan industrial powerhouse that will revolutionize the processing, packaging and marketing of edible oils.",
         "title": "Who we are",
         "mission": "Mission",
         "missionText": "To become a leading force in the food oil industry, providing products that redefine excellence.",
         "vision": "Vision",
         "visionText": "To establish a benchmark for quality, sustainability and customer satisfaction. We strive to be a driving force in the culinary scene.",
         "values": "Values",
-        "valuesText": "We maintain the highest standards in processing, aiming to minimise our ecological footprint and contribute to a sustainable future."
+        "valuesText": "We maintain the highest standards in processing, aiming to minimize our ecological footprint and contribute to a sustainable future."
     },
     "InNumbers": {
         "title": "Refitec in Numbers",
