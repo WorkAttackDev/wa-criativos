@@ -84,8 +84,9 @@ const ContactSection = ({ description, locale, title, mapKey }: Props) => {
     animate(
       '[aria-label="Show Map"]',
       {
-        top: showMap ? "-40%" : "-15%",
+        top: showMap ? "-40%" : window.innerWidth < 640 ? "-8%" : "-15%",
         scale: showMap ? 0.6 : 1,
+        x: "-50%",
       },
       {
         duration: 0.3,
@@ -128,7 +129,7 @@ const ContactSection = ({ description, locale, title, mapKey }: Props) => {
           title="Show Map"
           size="icon"
           className={cn(
-            "absolute left-[50%] top-[-15%] z-10 size-24 translate-x-[-50%] rounded-full",
+            "absolute left-[50%] top-[-15%] z-10 size-24 translate-x-[-50%] rounded-full max-sm:top-[-8%]",
           )}
           onClick={() => setShowMap((prev) => !prev)}
         >
