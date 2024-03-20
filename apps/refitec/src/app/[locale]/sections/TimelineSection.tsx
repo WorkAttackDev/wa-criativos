@@ -11,40 +11,9 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel";
 import { linksObj } from "../links";
+import { useTranslations } from "next-intl";
 
 type Props = {};
-
-const infos = [
-  {
-    title: "Janeiro de 2021",
-    description: "Decisão de Investimento",
-  },
-  {
-    title: "Agosto de 2021",
-    description: "Selecção de fornecedores",
-  },
-  {
-    title: "Dezembro de 2021",
-    description: "Assinatura de contratos de fornecimento de equipamentos",
-  },
-  {
-    title: "Janeiro de 2022",
-    description: "Início do desenvolvimento do projecto das instalações",
-  },
-  {
-    title: "Julho de 2022",
-    description:
-      "Conclusão do processo de aquisição de terreno para implantação do projecto",
-  },
-  {
-    title: "Março de 2023",
-    description: "Início da construção",
-  },
-  {
-    title: "Final de 2024",
-    description: "Início da produção",
-  },
-];
 
 type TimelineItemProps = {
   title: string;
@@ -89,6 +58,8 @@ const TimelineItem = ({
 );
 
 const TimelineSection = (props: Props) => {
+  const t = useTranslations("Timeline");
+
   const {
     props: { src },
   } = getImageProps({
@@ -97,6 +68,36 @@ const TimelineSection = (props: Props) => {
     fill: true,
     sizes: "100vw",
   });
+  const infos = [
+    {
+      title: t("investmentDecision.title"),
+      description: t("investmentDecision.description"),
+    },
+    {
+      title: t("supplierSelection.title"),
+      description: t("supplierSelection.description"),
+    },
+    {
+      title: t("supplyContractsSigning.title"),
+      description: t("supplyContractsSigning.description"),
+    },
+    {
+      title: t("projectDevelopment.title"),
+      description: t("projectDevelopment.description"),
+    },
+    {
+      title: t("landAcquisition.title"),
+      description: t("landAcquisition.description"),
+    },
+    {
+      title: t("constructionStart.title"),
+      description: t("constructionStart.description"),
+    },
+    {
+      title: t("productionStart.title"),
+      description: t("productionStart.description"),
+    },
+  ];
 
   return (
     <section
@@ -107,7 +108,7 @@ const TimelineSection = (props: Props) => {
       <div className="pointer-events-none absolute inset-0 bg-primary/60"></div>
       <section className="relative grid gap-32 py-32 my-container">
         <HeadingText variant="secondary" className="text-center">
-          Cronologia do Projecto
+          {t("title")}
         </HeadingText>
         <Carousel
           opts={{
@@ -133,18 +134,6 @@ const TimelineSection = (props: Props) => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-
-        {/* <ul className="flex gap-4  overflow-x-auto py-32">
-          {infos.map(({ description, title }, i) => (
-            <TimelineItem
-              key={title}
-              title={title}
-              description={description}
-              isFirst={i === 0}
-              reverse={i % 2 === 0}
-            />
-          ))}
-        </ul> */}
       </section>
     </section>
   );

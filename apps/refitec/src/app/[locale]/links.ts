@@ -1,30 +1,30 @@
 export const linksObj = {
   whoWeAre: {
-    label: "Quem Somos",
+    key: "whoWeAre" as const,
     href: "#whoWeAre",
   },
   inNumbers: {
-    label: "Em Números",
+    key: "inNumbers" as const,
     href: "#inNumbers",
   },
   timeline: {
-    label: "Cronograma",
+    key: "timeline" as const,
     href: "#timeline",
   },
   contacts: {
-    label: "Contactos",
+    key: "contacts" as const,
     href: "#contacts",
   },
   termsOfService: {
-    label: "Termos de Serviço",
+    key: "termsOfService" as const,
     href: "/terms-of-service",
   },
   cookiesPolicy: {
-    label: "Política de Cookies",
+    key: "cookiesPolicy" as const,
     href: "/cookies-policy",
   },
   privacyPolicy: {
-    label: "Política de Privacidade",
+    key: "privacyPolicy" as const,
     href: "/privacy-policy",
   },
 };

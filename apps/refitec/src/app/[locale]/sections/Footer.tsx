@@ -1,8 +1,10 @@
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
-import Link from "next/link";
+import NextLink from "next/link";
+import { Link } from "@/lib/i18n";
 import BoxAnimation from "../components/BoxAnimation";
 import { linksObj, navLinks } from "../links";
+import { useTranslations } from "next-intl";
 
 const legalLinks = [
   linksObj.termsOfService,
@@ -11,12 +13,14 @@ const legalLinks = [
 ];
 
 const Footer = () => {
+  const t = useTranslations("Footer");
+  const th = useTranslations("Header");
   return (
     <footer className="flex flex-col gap-16 py-16 my-container">
       <section className="flex w-full  justify-between gap-16 max-md:flex-wrap md:gap-32 ">
         <article className="flex flex-col gap-8">
           <BoxAnimation>
-            <Link href="/" className="flex max-md:min-w-full">
+            <NextLink href="/" className="flex max-md:min-w-full">
               <img
                 src="/imgs/logo.svg"
                 width={185}
@@ -24,10 +28,10 @@ const Footer = () => {
                 alt="Refitec Logo"
                 className="h-auto w-72 object-contain"
               />
-            </Link>
+            </NextLink>
           </BoxAnimation>
           <p className="text-xl text-secondary-foreground max-md:hidden">
-            © 2024 Todos direitos reservados à Refitec LDA.
+            {t("allRightsReserved")}
           </p>
         </article>
         <article className="flex flex-col gap-16 md:mt-auto">
@@ -42,13 +46,13 @@ const Footer = () => {
                   }),
                 )}
               >
-                {item.label}
+                {th(item.key)}
               </Link>
             ))}
           </nav>
           <nav className="flex flex-wrap gap-8 md:justify-end">
             {legalLinks.map((item) => (
-              <Link
+              <NextLink
                 key={item.href}
                 href={item.href}
                 className={cn(
@@ -58,13 +62,13 @@ const Footer = () => {
                   "text-xl font-medium text-secondary-foreground",
                 )}
               >
-                {item.label}
-              </Link>
+                {t(item.key)}
+              </NextLink>
             ))}
           </nav>
         </article>
         <p className="text-xl text-secondary-foreground md:hidden">
-          © 2024 Todos direitos reservados à REFITEC LDA.
+          {t("allRightsReserved")}
         </p>
       </section>
     </footer>

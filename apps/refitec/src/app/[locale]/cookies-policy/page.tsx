@@ -2,19 +2,21 @@ import React from "react";
 import HeadingText from "../components/HeadingText";
 import FeatherBgSection from "../components/FeatherBgSection";
 import SectionBlock from "../components/SectionBlock";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const CookiesPolicyPage = (props: Props) => {
+  const t = useTranslations("Cookies");
   return (
     <main className="bg-gray-100 py-32 my-container">
       <div className="grid w-full gap-16 my-container">
         <header className="grid gap-4">
           <HeadingText size="lg" className="text-primary">
-            Política de Cookies
+            {t("title")}
           </HeadingText>
           <p className="max-w-3xl text-xl/relaxed text-secondary-foreground">
-            Leia atentamente esta política antes de usar nosso serviço.
+            {t("description")}
           </p>
         </header>
         <section className="space-y-8">

@@ -2,28 +2,31 @@ import Image from "next/image";
 import HeadingText from "../components/HeadingText";
 import SlideInUpAnimation from "../components/SlideInUpAnimation";
 import { linksObj } from "../links";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
-const infos = [
-  {
-    title: "Missão",
-    text: "Tornarmos uma força líder na indústria de óleos alimentares, fornecendo produtos que redefinem a excelência.",
-    imgSrc: "/imgs/oil-bottles.png",
-  },
-  {
-    title: "Visão",
-    text: "Estabelecer uma referência de qualidade, sustentabilidade e satisfação do cliente. Nós nos esforçamos para ser uma força motriz no cenário culinário.",
-    imgSrc: "/imgs/man-handling-machine.jpg",
-  },
-  {
-    title: "Valores",
-    text: "Mantemos os mais altos padrões no processamento, visando minimizar a nossa pegada ecológica e contribuir para um futuro sustentável.",
-    imgSrc: "/imgs/worker-touching-tablet.jpg",
-  },
-];
-
 const AboutSection = (_: Props) => {
+  const t = useTranslations("About");
+
+  const infos = [
+    {
+      title: t("mission"),
+      text: t("missionText"),
+      imgSrc: "/imgs/oil-bottles.png",
+    },
+    {
+      title: t("vision"),
+      text: t("visionText"),
+      imgSrc: "/imgs/man-handling-machine.jpg",
+    },
+    {
+      title: t("values"),
+      text: t("valuesText"),
+      imgSrc: "/imgs/worker-touching-tablet.jpg",
+    },
+  ];
+
   return (
     <section
       className="grid gap-32 py-32 my-container"
@@ -31,11 +34,10 @@ const AboutSection = (_: Props) => {
     >
       <header className="grid gap-16">
         <HeadingText variant="secondary" className="text-center">
-          Quem nós somos
+          {t("title")}
         </HeadingText>
         <HeadingText size="lg" className="text-center">
-          Refitec, uma futura potência industrial angolana que irá revolucionar
-          o processamento, embalagem e comercialização de óleos alimentares
+          {t("description")}
         </HeadingText>
       </header>
       <section className="grid grid-cols-1 justify-center justify-items-center gap-16 md:grid-cols-3">

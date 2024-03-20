@@ -3,30 +3,11 @@ import { getImageProps } from "next/image";
 import HeadingText from "../components/HeadingText";
 import { linksObj } from "../links";
 import CounterEffect from "../components/CounterEffect";
-
-// 500.000
-// Litros de capacidade de processamento diário
-// 1.000.000
-// Litros de capacidade de embalamento diário
-// 84.440
-// Metros quadrado de área total
-
-const infos = [
-  {
-    value: 500_000,
-    label: "Litros de capacidade de processamento diário",
-  },
-  {
-    value: 1_000_000,
-    label: "Litros de capacidade de embalamento diário",
-  },
-  {
-    value: 84_440,
-    label: "Metros quadrado de área total",
-  },
-];
+import { useTranslations } from "next-intl";
 
 const InNumbersSection = () => {
+  const t = useTranslations("InNumbers");
+
   const {
     props: { src },
   } = getImageProps({
@@ -36,6 +17,22 @@ const InNumbersSection = () => {
     src: "/imgs/silos.jpg",
     quality: 100,
   });
+
+  const infos = [
+    {
+      value: 500_000,
+      label: t("dailyProcessingCapacity"),
+    },
+    {
+      value: 1_000_000,
+      label: t("dailyPackagingCapacity"),
+    },
+    {
+      value: 84_440,
+      label: t("totalArea"),
+    },
+  ];
+
   return (
     <section
       className="relative grid gap-32 bg-cover bg-center py-32 my-container"
@@ -47,12 +44,9 @@ const InNumbersSection = () => {
       <div className="pointer-events-none absolute inset-0 bg-foreground/60"></div>
       <header className="relative grid justify-center gap-12 text-center">
         <HeadingText variant="secondary" className="text-center">
-          Refitec em Números
+          {t("title")}
         </HeadingText>
-        <p className="text-white">
-          Bem-vindo à REFITEC, onde a precisão encontra a excelência nos nossos
-          departamentos especializados de linhas de produção.
-        </p>
+        <p className="text-white">{t("description")}</p>
       </header>
       <ul className="relative flex flex-wrap items-center justify-center gap-16 text-white lg:gap-32">
         {infos.map(({ value, label }) => (

@@ -9,13 +9,18 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { AlignRight } from "lucide-react";
-import Link from "next/link";
+import NextLink from "next/link";
+import { Link } from "@/lib/i18n";
 import { navLinks } from "../links";
 import BoxAnimation from "./BoxAnimation";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const SideBar = (props: Props) => {
+  const t = useTranslations("Header");
+  const tf = useTranslations("Footer");
+
   return (
     <Sheet>
       <SheetTrigger
@@ -28,16 +33,16 @@ const SideBar = (props: Props) => {
       <SheetContent className="flex flex-col gap-10 bg-white">
         <SheetHeader className="flex flex-col items-start gap-8">
           <BoxAnimation>
-            <Link href="/">
+            <NextLink href="/">
               <img
                 src="/imgs/logo.svg"
                 width={185}
                 height={87}
                 className="h-auto w-48 object-contain lg:w-64"
               />
-            </Link>
+            </NextLink>
           </BoxAnimation>
-          <SheetDescription>Navegação principal</SheetDescription>
+          <SheetDescription>{t("mainNavigation")}</SheetDescription>
         </SheetHeader>
         <nav className="flex flex-1 flex-col gap-8">
           {navLinks.map((item) => (
@@ -49,13 +54,13 @@ const SideBar = (props: Props) => {
                 "w-fit justify-start",
               )}
             >
-              {item.label}
+              {t(item.key)}
             </Link>
           ))}
         </nav>
         <SheetFooter>
           <p className="text-xl text-secondary-foreground">
-            © 2024 Todos direitos reservados à Refitec LDA.
+            {tf("allRightsReserved")}
           </p>
         </SheetFooter>
       </SheetContent>

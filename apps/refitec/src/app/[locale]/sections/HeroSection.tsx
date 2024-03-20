@@ -2,10 +2,13 @@ import { getImageProps } from "next/image";
 import React from "react";
 import BoxAnimation from "../components/BoxAnimation";
 import { ArrowDownToDot } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 type Props = {};
 
 const HeroSection = (_: Props) => {
+  const t = useTranslations("Hero");
+
   const {
     props: { src },
   } = getImageProps({
@@ -29,14 +32,14 @@ const HeroSection = (_: Props) => {
         >
           <BoxAnimation>
             <h3 className="w-full text-3xl  font-semibold uppercase drop-shadow lg:text-4xl">
-              Bem-vindo à Refitec
+              {t("welcome")}
             </h3>
           </BoxAnimation>
           <BoxAnimation delay={0.5}>
             <h1 className="w-full text-6xl font-bold !leading-tight drop-shadow md:max-w-6xl lg:text-7xl">
-              Transformando o Futuro dos
+              {t("sloganPart1")}
               <br />
-              Óleos Alimentares em Angola
+              {t("sloganPart2")}
             </h1>
           </BoxAnimation>
         </article>
