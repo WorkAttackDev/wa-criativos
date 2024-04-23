@@ -15,12 +15,13 @@ const HeroSection = (_: Props) => {
     alt: "Man smiling",
     fill: true,
     sizes: "100vw",
-    src: "/imgs/bottling-line-sunflower-oil-bottles-vegetable-oil-production-plant-high.jpeg",
+    quality: 100,
+    src: "/imgs/oil-bottles.jpg",
   });
 
   return (
     <section
-      className={`max-h relative bg-cover  bg-[center_top] text-white`}
+      className={`max-h relative bg-cover  bg-[center_bottom] text-white`}
       style={{
         backgroundImage: `url(${src})`,
       }}
