@@ -21,7 +21,7 @@ const HeroSection = (_: Props) => {
 
   return (
     <section
-      className={`max-h relative bg-cover  bg-[center_bottom] text-white`}
+      className={`relative max-h-[80vh] bg-cover  bg-[center_bottom] text-white`}
       style={{
         backgroundImage: `url(${src})`,
       }}
