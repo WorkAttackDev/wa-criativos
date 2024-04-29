@@ -13,7 +13,8 @@ const AboutSection = (_: Props) => {
     {
       title: t("mission"),
       text: t("missionText"),
-      imgSrc: "/imgs/oil-bottles.jpg",
+      imgSrc:
+        "/imgs/bottling-line-sunflower-oil-bottles-vegetable-oil-production-plant-high.jpg",
     },
     {
       title: t("vision"),

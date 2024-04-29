@@ -16,7 +16,7 @@ const HeroSection = (_: Props) => {
     fill: true,
     sizes: "100vw",
     quality: 100,
-    src: "/imgs/bottling-line-sunflower-oil-bottles-vegetable-oil-production-plant-high.jpg",
+    src: "/imgs/oil-bottles.jpg",
   });
 
   return (
