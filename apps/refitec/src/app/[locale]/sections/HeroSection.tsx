@@ -9,20 +9,11 @@ type Props = {};
 const HeroSection = (_: Props) => {
   const t = useTranslations("Hero");
 
-  const {
-    props: { src },
-  } = getImageProps({
-    alt: "Man smiling",
-    fill: true,
-    quality: 100,
-    src: "/imgs/oil-bottles.jpg",
-  });
-
   return (
     <section
       className={`relative h-[80vh] max-h-[60rem] min-h-[50rem] bg-cover bg-[center_bottom]  text-white sm:max-h-[100rem]`}
       style={{
-        backgroundImage: `url(${src})`,
+        backgroundImage: `url(/imgs/oil-bottles.jpg)`,
       }}
     >
       <div className="pointer-events-none absolute inset-0 bg-foreground/40"></div>
