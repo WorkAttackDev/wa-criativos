@@ -14,7 +14,6 @@ const HeroSection = (_: Props) => {
   } = getImageProps({
     alt: "Man smiling",
     fill: true,
-    sizes: "100vw",
     quality: 100,
     src: "/imgs/oil-bottles.jpg",
   });
