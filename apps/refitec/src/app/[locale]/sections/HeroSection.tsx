@@ -21,13 +21,13 @@ const HeroSection = (_: Props) => {
 
   return (
     <section
-      className={`relative max-h-[80vh] bg-cover  bg-[center_bottom] text-white`}
+      className={`relative h-[80vh] max-h-[60rem] min-h-[50rem] bg-cover bg-[center_bottom]  text-white sm:max-h-[100rem]`}
       style={{
         backgroundImage: `url(${src})`,
       }}
     >
       <div className="pointer-events-none absolute inset-0 bg-foreground/40"></div>
-      <div className="relative flex h-screen max-h-[60rem] min-h-[50rem] flex-col justify-center gap-16 py-32 my-container sm:max-h-[100rem]">
+      <div className="relative flex h-full  flex-col justify-center gap-16 py-32 my-container ">
         <article
           className={`my-auto flex flex-col items-start justify-center gap-16`}
         >
