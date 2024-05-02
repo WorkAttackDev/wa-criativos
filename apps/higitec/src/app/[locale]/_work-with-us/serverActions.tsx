@@ -14,32 +14,30 @@ export const sendWorkWithUsEmailServerActions = (payload: WorkWithUsType) =>
     successMessage:
       "O email foi enviado com sucesso, abra o seu e-mail para confirmar o recebimento.",
     errorMessage: "Ocorreu um erro ao enviar o email",
-    actionFn: async ({
-      data: { email, firstName, lastName, about, phone },
-    }) => {
-      await sendEmail({
-        to: "info@higitec.com",
-        html: render(
-          <NewContactEmailTemplate
-            userName={firstName + " " + lastName}
-            message={about}
-            subject={"Contato para vaga de emprego"}
-            email={email}
-            phone={phone}
-          />,
-        ),
-        subject: "Contato para vaga de emprego",
-      });
-
-      await sendEmail({
-        to: email,
-        html: render(
-          <ContactEmailTemplate
-            userName={firstName + " " + lastName}
-            host={headers().get("host") || "localhost"}
-          />,
-        ),
-        subject: "Obrigado por entrar em contato",
-      });
-    },
+    actionFn: async ({ data: { email, firstName, lastName, about, phone } }) =>
+      Promise.all([
+        sendEmail({
+          to: "info@higitec.com",
+          html: render(
+            <NewContactEmailTemplate
+              userName={firstName + " " + lastName}
+              message={about}
+              subject={"Contato para vaga de emprego"}
+              email={email}
+              phone={phone}
+            />,
+          ),
+          subject: "Contato para vaga de emprego",
+        }),
+        sendEmail({
+          to: email,
+          html: render(
+            <ContactEmailTemplate
+              userName={firstName + " " + lastName}
+              host={headers().get("host") || "localhost"}
+            />,
+          ),
+          subject: "Obrigado por entrar em contato",
+        }),
+      ]),
   });
