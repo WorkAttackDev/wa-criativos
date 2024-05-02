@@ -11,7 +11,7 @@ const HeroSection = (_: Props) => {
 
   return (
     <section
-      className={`relative h-[80vh] max-h-[60rem] min-h-[50rem] bg-cover bg-[center_bottom]  text-white sm:max-h-[100rem]`}
+      className={`relative h-[60vh] max-h-[50rem] min-h-[40rem] bg-cover bg-[center_bottom] text-white sm:h-[80vh]  sm:max-h-[100rem] sm:min-h-[50rem]`}
       style={{
         backgroundImage: `url(/imgs/oil-bottles.jpg)`,
       }}
@@ -34,7 +34,6 @@ const HeroSection = (_: Props) => {
             </h1>
           </BoxAnimation>
         </article>
-        <ArrowDownToDot className="mx-auto size-14 text-current" />
       </div>
     </section>
   );
