@@ -3,39 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Form, FormLabel } from "@/components/ui/form";
 import React from "react";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import MyFormField from "../components/MyFormField";
-
-const contactSchema = z.object({
-  firstName: z
-    .string({
-      required_error: "Por favor, insira o seu primeiro nome",
-    })
-    .min(2, "O primeiro nome deve ter pelo menos 2 caracteres")
-    .max(50, "O primeiro nome deve ter no máximo 50 caracteres"),
-  lastName: z
-    .string({
-      required_error: "Por favor, insira o seu último nome",
-    })
-    .min(2, "O último nome deve ter pelo menos 2 caracteres")
-    .max(50, "O último nome deve ter no máximo 50 caracteres"),
-  email: z
-    .string({
-      required_error: "Por favor, insira o seu e-mail",
-    })
-    .email("Por favor, insira um e-mail válido"),
-  mensagem: z
-    .string({
-      required_error: "Por favor, insira uma mensagem",
-    })
-    .min(10, "A mensagem deve ter pelo menos 10 caracteres")
-    .max(500, "A mensagem deve ter no máximo 500 caracteres"),
-});
-
-type ContactType = z.infer<typeof contactSchema>;
+import { ContactType, contactSchema } from "./schema";
+import { sendContactEmailServerActions } from "./serverActions";
+import useFormSubmit from "@/lib/my-next-utils/useFormSubmit";
+import { Loader2 } from "lucide-react";
 
 type Props = {
   firstNameLabel: string;
@@ -45,6 +20,13 @@ type Props = {
   sendLabel: string;
 };
 
+const defaultValues = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  mensagem: "",
+};
+
 const ContactForm = ({
   emailLabel,
   firstNameLabel,
@@ -52,18 +34,24 @@ const ContactForm = ({
   messageLabel,
   sendLabel,
 }: Props) => {
-  const form = useForm<ContactType>({
-    resolver: zodResolver(contactSchema),
+  const { isSubmitting, onSubmit } = useFormSubmit({
+    serverActionFn: sendContactEmailServerActions,
   });
 
-  const onSubmit = (data: ContactType) => {
-    console.log(data);
-  };
+  const form = useForm<ContactType>({
+    resolver: zodResolver(contactSchema),
+    defaultValues,
+    disabled: isSubmitting,
+  });
 
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
+        onSubmit={form.handleSubmit((d) =>
+          onSubmit(d, {
+            onSuccess: () => form.reset(defaultValues),
+          }),
+        )}
         className="relative grid content-start gap-8"
       >
         <MyFormField
@@ -71,14 +59,28 @@ const ContactForm = ({
           name="firstName"
           control={form.control}
         >
-          {({ field }) => <Input {...field} minLength={2} maxLength={50} />}
+          {({ field }) => (
+            <Input
+              {...field}
+              autoComplete="first-name"
+              minLength={contactSchema.shape.firstName.minLength || 2}
+              maxLength={contactSchema.shape.firstName.maxLength || 50}
+            />
+          )}
         </MyFormField>
         <MyFormField
           label={<FormLabel>{lastNameLabel}</FormLabel>}
           name="lastName"
           control={form.control}
         >
-          {({ field }) => <Input {...field} minLength={2} maxLength={50} />}
+          {({ field }) => (
+            <Input
+              autoComplete="family-name"
+              {...field}
+              minLength={contactSchema.shape.lastName.minLength || 2}
+              maxLength={contactSchema.shape.lastName.maxLength || 50}
+            />
+          )}
         </MyFormField>
         <MyFormField
           label={<FormLabel>{emailLabel}</FormLabel>}
@@ -96,16 +98,22 @@ const ContactForm = ({
           {({ field }) => (
             <Textarea
               {...field}
-              minLength={10}
-              maxLength={500}
+              minLength={contactSchema.shape.mensagem.minLength || 10}
+              maxLength={contactSchema.shape.mensagem.maxLength || 500}
               rows={5}
               className="w-full"
             />
           )}
         </MyFormField>
 
-        <Button size="sm" type="submit" className="mt-8 w-fit">
+        <Button
+          size="sm"
+          type="submit"
+          className="mt-8 w-fit"
+          disabled={isSubmitting}
+        >
           {sendLabel}
+          {isSubmitting && <Loader2 className="ml-2 h-6 w-6 animate-spin" />}
         </Button>
       </form>
     </Form>

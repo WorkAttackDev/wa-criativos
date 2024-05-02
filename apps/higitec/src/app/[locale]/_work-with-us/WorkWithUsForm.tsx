@@ -1,48 +1,16 @@
 "use client";
+
 import { Button } from "@/components/ui/button";
 import { Form, FormLabel } from "@/components/ui/form";
-import React from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
+import useFormSubmit from "@/lib/my-next-utils/useFormSubmit";
+import { zodResolver } from "@hookform/resolvers/zod";
+import { Loader2 } from "lucide-react";
+import { useForm } from "react-hook-form";
 import MyFormField from "../components/MyFormField";
-import { useTranslations } from "next-intl";
-
-const workWithUsSchema = z.object({
-  firstName: z
-    .string({
-      required_error: "Por favor, insira o seu primeiro nome",
-    })
-    .min(2, "O primeiro nome deve ter pelo menos 2 caracteres")
-    .max(50, "O primeiro nome deve ter no máximo 50 caracteres"),
-  lastName: z
-    .string({
-      required_error: "Por favor, insira o seu último nome",
-    })
-    .min(2, "O último nome deve ter pelo menos 2 caracteres")
-    .max(50, "O último nome deve ter no máximo 50 caracteres"),
-  email: z
-    .string({
-      required_error: "Por favor, insira o seu e-mail",
-    })
-    .email("Por favor, insira um e-mail válido"),
-  phone: z
-    .string({
-      required_error: "Por favor, insira o seu telefone",
-    })
-    .min(9, "O telefone deve ter pelo menos 9 caracteres")
-    .max(15, "O telefone deve ter no máximo 15 caracteres"),
-  about: z
-    .string({
-      required_error: "Por favor, insira uma mensagem",
-    })
-    .min(10, "A mensagem deve ter pelo menos 10 caracteres")
-    .max(500, "A mensagem deve ter no máximo 500 caracteres"),
-});
-
-type WorkWithUsType = z.infer<typeof workWithUsSchema>;
+import { WorkWithUsType, workWithUsSchema } from "./schema";
+import { sendWorkWithUsEmailServerActions } from "./serverActions";
 
 type Props = {
   firstNameLabel: string;
@@ -54,6 +22,14 @@ type Props = {
   sendLabel: string;
 };
 
+const defaultValues: WorkWithUsType = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  phone: "",
+  about: "",
+};
+
 const WorkWithUsForm = ({
   firstNameLabel,
   lastNameLabel,
@@ -63,18 +39,22 @@ const WorkWithUsForm = ({
   clearLabel,
   sendLabel,
 }: Props) => {
-  const form = useForm<WorkWithUsType>({
-    resolver: zodResolver(workWithUsSchema),
+  const { isSubmitting, onSubmit } = useFormSubmit({
+    serverActionFn: sendWorkWithUsEmailServerActions,
   });
 
-  const onSubmit = (data: WorkWithUsType) => {
-    console.log(data);
-  };
+  const form = useForm<WorkWithUsType>({
+    resolver: zodResolver(workWithUsSchema),
+    defaultValues,
+    disabled: isSubmitting,
+  });
 
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit(onSubmit)}
+        onSubmit={form.handleSubmit((d) =>
+          onSubmit(d, { onSuccess: () => form.reset(defaultValues) }),
+        )}
         className="relative grid gap-8 sm:grid-cols-2"
       >
         <MyFormField
@@ -86,7 +66,14 @@ const WorkWithUsForm = ({
           name="firstName"
           control={form.control}
         >
-          {({ field }) => <Input {...field} min={2} max={50} />}
+          {({ field }) => (
+            <Input
+              autoComplete="first-name"
+              {...field}
+              min={workWithUsSchema.shape.firstName.minLength || 2}
+              max={workWithUsSchema.shape.firstName.maxLength || 50}
+            />
+          )}
         </MyFormField>
         <MyFormField
           label={
@@ -97,7 +84,14 @@ const WorkWithUsForm = ({
           name="lastName"
           control={form.control}
         >
-          {({ field }) => <Input {...field} min={2} max={50} />}
+          {({ field }) => (
+            <Input
+              autoComplete="last-name"
+              {...field}
+              min={workWithUsSchema.shape.lastName.minLength || 2}
+              max={workWithUsSchema.shape.lastName.maxLength || 50}
+            />
+          )}
         </MyFormField>
         <MyFormField
           label={
@@ -119,7 +113,14 @@ const WorkWithUsForm = ({
           name="phone"
           control={form.control}
         >
-          {({ field }) => <Input {...field} type="tel" min={9} max={15} />}
+          {({ field }) => (
+            <Input
+              {...field}
+              type="tel"
+              min={workWithUsSchema.shape.phone.minLength || 9}
+              max={workWithUsSchema.shape.phone.maxLength || 15}
+            />
+          )}
         </MyFormField>
         <MyFormField
           className="w-full sm:col-span-2"
@@ -134,8 +135,8 @@ const WorkWithUsForm = ({
           {({ field }) => (
             <Textarea
               {...field}
-              minLength={10}
-              maxLength={500}
+              minLength={workWithUsSchema.shape.about.minLength || 10}
+              maxLength={workWithUsSchema.shape.about.maxLength || 500}
               rows={5}
               className="w-full"
             />
@@ -147,11 +148,14 @@ const WorkWithUsForm = ({
             type="button"
             size="sm"
             className="border-current text-current"
+            onClick={() => form.reset()}
+            disabled={isSubmitting}
           >
             {clearLabel}
           </Button>
-          <Button size="sm" type="submit">
+          <Button size="sm" type="submit" disabled={isSubmitting}>
             {sendLabel}
+            {isSubmitting && <Loader2 className="ml-2 h-6 w-6 animate-spin" />}
           </Button>
         </span>
       </form>

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./sections/Header";
 import Footer from "./sections/Footer";
 import TopScrollButton from "./components/TopScrollButton";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -120,6 +121,7 @@ export default function RootLayout({
         {children}
         <Footer />
         <TopScrollButton />
+        <Toaster />
       </body>
     </html>
   );

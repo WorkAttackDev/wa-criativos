@@ -1,7 +1,7 @@
 import { getImageProps } from "next/image";
 import React from "react";
 import HeadingText from "../components/HeadingText";
-import WorkWithUsForm from "./WorkWithUsForm";
+import WorkWithUsForm from "../_work-with-us/WorkWithUsForm";
 import { linksObj } from "../links";
 import { useTranslations } from "next-intl";
 

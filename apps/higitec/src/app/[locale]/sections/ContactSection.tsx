@@ -3,13 +3,11 @@ import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
 import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 import { linksObj } from "../links";
-import ContactForm from "./ContactForm";
+import ContactForm from "../_contact/ContactForm";
 import { useLocale, useTranslations } from "next-intl";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
 
-type Props = {};
-
-const ContactSection = (_: Props) => {
+const ContactSection = () => {
   const t = useTranslations("Contacts");
   const th = useTranslations("Header");
   const tg = useTranslations("Global");

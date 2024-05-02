@@ -2,8 +2,8 @@
     "Global": {
         "clear": "Limpar",
         "send": "Enviar",
-        "firstName": "Primeiro Nome",
-        "lastName": "Último Nome",
+        "firstName": "Nome",
+        "lastName": "Sobrenome",
         "email": "Email",
         "message": "Mensagem",
         "aboutYou": "Sobre Você",

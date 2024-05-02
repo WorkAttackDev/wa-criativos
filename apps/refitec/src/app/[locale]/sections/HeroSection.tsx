@@ -1,8 +1,5 @@
-import { getImageProps } from "next/image";
-import React from "react";
-import BoxAnimation from "../components/BoxAnimation";
-import { ArrowDownToDot } from "lucide-react";
 import { useTranslations } from "next-intl";
+import BoxAnimation from "../components/BoxAnimation";
 
 type Props = {};
 

@@ -110,7 +110,9 @@ const Footer = () => {
                 }),
                 "text-foreground",
               )}
-            ></Link>
+            >
+              {t(item.key)}
+            </Link>
           ))}
         </nav>
         <ContactInfoAndSocial />
