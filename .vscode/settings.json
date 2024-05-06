@@ -6,8 +6,8 @@
   ],
   "files.exclude": {
     "**/packages/ui": true,
-    // "apps/higitec/**": true,
-    "apps/refitec/**": true
+    "apps/higitec/**": true,
+    // "apps/refitec/**": true
   },
   "cSpell.words": [
     "Connosco",
