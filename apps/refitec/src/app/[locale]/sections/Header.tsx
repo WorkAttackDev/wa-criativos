@@ -6,6 +6,7 @@ import BoxAnimation from "../components/BoxAnimation";
 import SideBar from "../components/SideBar";
 import { buttonVariants } from "@/components/ui/button";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 const Header = () => {
   const t = useTranslations("Header");
@@ -14,11 +15,13 @@ const Header = () => {
       <div className="flex flex-wrap items-center justify-between gap-16 bg-white py-8 shadow-sm my-container">
         <BoxAnimation className="mr-auto">
           <NextLink href="/">
-            <img
+            <Image
               src="/imgs/logo.svg"
+              alt="Refitec Logo"
+              unoptimized
               width={205}
               height={107}
-              className="h-auto w-48 object-contain lg:w-64"
+              className="h-auto w-44 object-contain lg:w-48"
             />
           </NextLink>
         </BoxAnimation>

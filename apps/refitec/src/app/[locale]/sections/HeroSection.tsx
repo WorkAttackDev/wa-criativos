@@ -8,7 +8,9 @@ const HeroSection = (_: Props) => {
 
   return (
     <section
-      className={`relative h-[60vh] max-h-[50rem] min-h-[40rem] bg-cover bg-[center_40%] text-white sm:h-[80vh]  sm:max-h-[100rem] sm:min-h-[50rem]`}
+      className={
+        "relative h-[60vh] max-h-[50rem] min-h-[40rem] bg-cover bg-[center_40%] text-white sm:h-[85vh]  sm:max-h-[100rem] sm:min-h-[50rem]"
+      }
       style={{
         backgroundImage: `url(/imgs/oil-bottles.jpg)`,
       }}
