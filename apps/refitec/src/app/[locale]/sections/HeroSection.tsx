@@ -9,7 +9,7 @@ const HeroSection = (_: Props) => {
   return (
     <section
       className={
-        "relative h-[70vh] max-h-[60rem] min-h-[40rem] bg-cover bg-[left_95%] text-white sm:h-[80vh]  sm:max-h-[100rem] sm:min-h-[50rem]"
+        "relative h-[70vh] max-h-[60rem] min-h-[40rem] bg-cover bg-[left_95%] text-white sm:h-[80vh]  sm:max-h-[100rem] sm:min-h-[65rem]"
       }
       style={{
         backgroundImage: `url(/imgs/oil-bottles.jpg)`,
@@ -18,7 +18,7 @@ const HeroSection = (_: Props) => {
       <div className="pointer-events-none absolute inset-0 bg-foreground/40"></div>
       <div className="relative flex h-full  flex-col justify-center gap-16 py-32 my-container ">
         <article
-          className={`my-auto flex flex-col items-start justify-center gap-16`}
+          className={`my-auto flex flex-col items-start justify-center gap-16 pb-10`}
         >
           <BoxAnimation>
             <h3 className="w-full text-3xl  font-semibold uppercase drop-shadow lg:text-4xl">
