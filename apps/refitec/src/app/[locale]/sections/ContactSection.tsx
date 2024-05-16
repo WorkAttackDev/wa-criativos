@@ -1,17 +1,13 @@
 "use client";
 import { Button, buttonVariants } from "@/components/ui/button";
+import { Link } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
-import { Facebook, Instagram, Linkedin, MapPin, X } from "lucide-react";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
-import { getImageProps } from "next/image";
-import NextLink from "next/link";
-import { Link, locales } from "@/lib/i18n";
+import { useAnimate } from "framer-motion";
+import { Linkedin, MapPin, X } from "lucide-react";
+import { useEffect, useState } from "react";
 import HeadingText from "../components/HeadingText";
 import { linksObj } from "../links";
-import { useLocale, useTranslations } from "next-intl";
-import { useEffect, useRef, useState } from "react";
-import { useAnimate } from "framer-motion";
-import BoxAnimation from "../components/BoxAnimation";
 
 type Props = {
   title: string;
@@ -22,14 +18,14 @@ type Props = {
 
 const ContactInfoAndSocial = () => {
   const socialLinks = [
-    {
-      Icon: Instagram,
-      alt: "Instagram Icon",
-    },
-    {
-      Icon: Facebook,
-      alt: "Facebook Icon",
-    },
+    // {
+    //   Icon: Instagram,
+    //   alt: "Instagram Icon",
+    // },
+    // {
+    //   Icon: Facebook,
+    //   alt: "Facebook Icon",
+    // },
     {
       Icon: Linkedin,
       alt: "LinkedIn Icon",
