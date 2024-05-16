@@ -39,9 +39,9 @@ const ContactInfoAndSocial = () => {
     <div className="flex flex-col gap-6 text-center sm:items-end sm:text-end">
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-current")}
-        href="tel:+244990009090"
+        href="tel:+244923228585"
       >
-        +244 990 009 090
+        +244 923 228 585
       </a>
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-current")}
