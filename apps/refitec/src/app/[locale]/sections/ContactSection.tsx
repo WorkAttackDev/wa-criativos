@@ -7,7 +7,7 @@ import { useAnimate } from "framer-motion";
 import { Linkedin, MapPin, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import HeadingText from "../components/HeadingText";
-import { linksObj } from "../links";
+import { contactLinksObj, linksObj } from "../links";
 
 type Props = {
   title: string;
@@ -35,15 +35,15 @@ const ContactInfoAndSocial = () => {
     <div className="flex flex-col gap-6 text-center sm:items-end sm:text-end">
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-current")}
-        href="tel:+244923228585"
+        href={contactLinksObj.phone.href}
       >
-        +244 923 228 585
+        {contactLinksObj.phone.label}
       </a>
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-current")}
-        href="mailto:info@refitec.com"
+        href={contactLinksObj.email.href}
       >
-        info@refitec.com
+        {contactLinksObj.email.label}
       </a>
       <span className="flex gap-4">
         {socialLinks.map((link) => (

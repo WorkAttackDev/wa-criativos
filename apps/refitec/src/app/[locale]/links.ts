@@ -1,3 +1,14 @@
+export const contactLinksObj = {
+  phone: {
+    href: "tel:+244923228585",
+    label: "+244 923 228 585",
+  },
+  email: {
+    href: "mailto:info@refitec.com",
+    label: "info@refitec.com",
+  },
+};
+
 export const linksObj = {
   whoWeAre: {
     key: "whoWeAre" as const,
