@@ -32,7 +32,7 @@ const ProductsSection = (_: Props) => {
   ];
   return (
     <section
-      id={linksObj.ourBrands.href.replace("#", "")}
+      id={linksObj.ourBrands.href.replace("/#", "")}
       className="grid gap-32 bg-white py-32 my-container"
     >
       <span className="grid gap-8">

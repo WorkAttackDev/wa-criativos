@@ -2,7 +2,7 @@ import { buttonVariants } from "@/components/ui/button";
 import { Link } from "@/lib/i18n";
 import NextLink from "next/link";
 import React from "react";
-import { linksObj, navLinks } from "../links";
+import { contactLinksObj, linksObj, navLinks } from "../links";
 import { cn } from "@/lib/utils";
 import { Facebook, Instagram, Linkedin } from "lucide-react";
 import BoxAnimation from "../components/BoxAnimation";
@@ -10,37 +10,39 @@ import { useTranslations } from "next-intl";
 
 const ContactInfoAndSocial = () => {
   const socialLinks = [
-    {
-      Icon: Instagram,
-      alt: "Instagram Icon",
-    },
-    {
-      Icon: Facebook,
-      alt: "Facebook Icon",
-    },
+    // {
+    //   Icon: Instagram,
+    //   alt: "Instagram Icon",
+    // },
+    // {
+    //   Icon: Facebook,
+    //   alt: "Facebook Icon",
+    // },
     {
       Icon: Linkedin,
       alt: "LinkedIn Icon",
+      href: "https://www.linkedin.com/company/grupo-naval",
     },
   ];
   return (
     <div className="flex flex-col items-center gap-6 text-center sm:items-end sm:text-end">
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-foreground")}
-        href="tel:+244990009090"
+        href={contactLinksObj.phone.href}
       >
-        +244 990 009 090
+        {contactLinksObj.phone.label}
       </a>
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-foreground")}
-        href="mailto:info@higitec.com"
+        href={contactLinksObj.email.href}
       >
-        info@higitec.com
+        {contactLinksObj.email.label}
       </a>
       <span className="flex gap-4">
         {socialLinks.map((link) => (
           <Link
-            href="#"
+            target="_blank"
+            href={link.href}
             key={link.alt}
             className="hover:text-primary focus:text-primary"
           >

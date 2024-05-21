@@ -7,6 +7,7 @@ import { render } from "@react-email/components";
 import { headers } from "next/headers";
 import { ContactType, contactSchema } from "./schema";
 import NewContactEmailTemplate from "@/lib/my-next-utils/mail/NewContactEmailTemplate";
+import { contactLinksObj } from "../links";
 
 export const sendContactEmailServerActions = (payload: ContactType) =>
   unsafeHandleServerActions({
@@ -18,7 +19,7 @@ export const sendContactEmailServerActions = (payload: ContactType) =>
     actionFn: async ({ data: { email, firstName, lastName, mensagem } }) =>
       Promise.all([
         sendEmail({
-          to: "info@higitec.com",
+          to: contactLinksObj.email.label,
           html: render(
             <NewContactEmailTemplate
               userName={firstName + " " + lastName}

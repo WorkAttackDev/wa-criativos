@@ -31,7 +31,7 @@ const AboutSection = (_: Props) => {
   return (
     <FeatherBgSection
       className="grid gap-32"
-      id={linksObj.whoWeAre.href.replace("#", "")}
+      id={linksObj.whoWeAre.href.replace("/#", "")}
     >
       <HeadingText size="lg" className="text-center">
         {t("about")}

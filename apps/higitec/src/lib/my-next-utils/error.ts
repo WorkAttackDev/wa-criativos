@@ -1,4 +1,5 @@
 import { ZodError } from "zod";
+import logger from "./logger";
 
 export const handleErrors = ({
   error,
@@ -9,7 +10,7 @@ export const handleErrors = ({
   message: string;
   hasLog?: boolean;
 }): string => {
-  hasLog && console.log(JSON.stringify(error));
+  hasLog && logger.error(error);
 
   if (error instanceof ZodError) {
     return message || "Ocorreu um erro na validação de dados";

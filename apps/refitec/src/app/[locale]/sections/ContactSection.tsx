@@ -29,6 +29,7 @@ const ContactInfoAndSocial = () => {
     {
       Icon: Linkedin,
       alt: "LinkedIn Icon",
+      href: "https://www.linkedin.com/company/grupo-naval",
     },
   ];
   return (
@@ -48,7 +49,9 @@ const ContactInfoAndSocial = () => {
       <span className="flex gap-4">
         {socialLinks.map((link) => (
           <Link
-            href="#"
+            aria-label={link.alt}
+            target="_blank"
+            href={link.href}
             key={link.alt}
             className="hover:text-secondary focus:text-secondary"
           >

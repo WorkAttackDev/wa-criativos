@@ -15,7 +15,7 @@ const ContactSection = () => {
 
   return (
     <FeatherBgSection
-      id={linksObj.contacts.href.replace("#", "")}
+      id={linksObj.contacts.href.replace("/#", "")}
       className="grid gap-16 md:grid-cols-[60%_1fr]"
     >
       <section className="flex flex-col gap-16">

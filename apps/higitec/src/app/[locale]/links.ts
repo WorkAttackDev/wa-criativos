@@ -1,24 +1,37 @@
-import { useTranslations } from "next-intl";
+export const contactLinksObj = {
+  phone: {
+    href: "tel:+244923228585",
+    label: "+244 923 228 585",
+  },
+  email: {
+    href: "mailto:info@higitec.com",
+    label: "info@higitec.com",
+  },
+  recruitingEmail: {
+    label: "recrutamento@everywhere-gt.com",
+    href: "mailto:recrutamento@everywhere-gt.com",
+  },
+};
 
 export const linksObj = {
   whoWeAre: {
-    href: "#who-we-are",
+    href: "/#who-we-are",
     key: "about" as const,
   },
   ourBrands: {
-    href: "#our-brands",
+    href: "/#our-brands",
     key: "products" as const,
   },
   production: {
-    href: "#production",
+    href: "/#production",
     key: "production" as const,
   },
   workWithUs: {
-    href: "#work-with-us",
+    href: "/#work-with-us",
     key: "workWithUs" as const,
   },
   contacts: {
-    href: "#contacts",
+    href: "/#contacts",
     key: "contacts" as const,
   },
   termsOfService: {

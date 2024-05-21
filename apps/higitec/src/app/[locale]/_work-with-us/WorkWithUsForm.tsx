@@ -11,6 +11,7 @@ import { useForm } from "react-hook-form";
 import MyFormField from "../components/MyFormField";
 import { WorkWithUsType, workWithUsSchema } from "./schema";
 import { sendWorkWithUsEmailServerActions } from "./serverActions";
+import { objectToFormData } from "@/lib/my-next-utils/object";
 
 type Props = {
   firstNameLabel: string;
@@ -20,6 +21,7 @@ type Props = {
   aboutYouLabel: string;
   clearLabel: string;
   sendLabel: string;
+  cvLabel: string;
 };
 
 const defaultValues: WorkWithUsType = {
@@ -28,7 +30,27 @@ const defaultValues: WorkWithUsType = {
   email: "",
   phone: "",
   about: "",
+  cv: new File([""], ""),
 };
+// const defaultValues: WorkWithUsType =
+//   process.env.NODE_ENV === "production"
+//     ? {
+//         firstName: "",
+//         lastName: "",
+//         email: "",
+//         phone: "",
+//         about: "",
+//         cv: new File([""], ""),
+//       }
+//     : {
+//         firstName: "Denilson",
+//         lastName: "Costa",
+//         email: "4Hn9v@example.com",
+//         phone: "999000990",
+//         about:
+//           "Ola, Venho por este meio submeter a minha candidatura para a vaga de emprego. Obrigado pela sua contribuição.",
+//         cv: new File([""], ""),
+//       };
 
 const WorkWithUsForm = ({
   firstNameLabel,
@@ -37,6 +59,7 @@ const WorkWithUsForm = ({
   phoneLabel,
   aboutYouLabel,
   clearLabel,
+  cvLabel,
   sendLabel,
 }: Props) => {
   const { isSubmitting, onSubmit } = useFormSubmit({
@@ -53,7 +76,9 @@ const WorkWithUsForm = ({
     <Form {...form}>
       <form
         onSubmit={form.handleSubmit((d) =>
-          onSubmit(d, { onSuccess: () => form.reset(defaultValues) }),
+          onSubmit(objectToFormData(d), {
+            onSuccess: () => form.reset(defaultValues),
+          }),
         )}
         className="relative grid gap-8 sm:grid-cols-2"
       >
@@ -121,6 +146,26 @@ const WorkWithUsForm = ({
               max={workWithUsSchema.shape.phone.maxLength || 15}
             />
           )}
+        </MyFormField>
+        <MyFormField
+          className="w-full sm:col-span-2"
+          label={
+            <FormLabel className="font-normal capitalize">{cvLabel}</FormLabel>
+          }
+          name="cv"
+          control={form.control}
+        >
+          {() => {
+            return (
+              <Input
+                required
+                {...form.register("cv", { required: true })}
+                type="file"
+                accept="application/pdf"
+                className="file:rounded file:bg-primary-foreground file:px-4 file:py-2 file:text-white file:shadow file:hover:bg-primary"
+              />
+            );
+          }}
         </MyFormField>
         <MyFormField
           className="w-full sm:col-span-2"

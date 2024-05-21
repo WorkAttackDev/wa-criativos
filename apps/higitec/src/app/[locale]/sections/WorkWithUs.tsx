@@ -22,7 +22,7 @@ const WorkWithUs = (_: Props) => {
   });
   return (
     <section
-      id={linksObj.workWithUs.href.replace("#", "")}
+      id={linksObj.workWithUs.href.replace("/#", "")}
       className="relative bg-cover bg-center bg-no-repeat"
       style={{
         backgroundImage: `url(${src})`,
@@ -42,6 +42,7 @@ const WorkWithUs = (_: Props) => {
           lastNameLabel={tg("lastName")}
           phoneLabel={tg("phone")}
           sendLabel={tg("send")}
+          cvLabel={tg("cv")}
         />
       </div>
     </section>

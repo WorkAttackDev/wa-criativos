@@ -5,8 +5,13 @@ import Header from "./sections/Header";
 import Footer from "./sections/Footer";
 import TopScrollButton from "./components/TopScrollButton";
 import { Toaster } from "@/components/ui/sonner";
+import { locales } from "@/lib/i18n";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export async function generateStaticParams() {
+  return [locales.map((locale) => ({ locale }))];
+}
 
 export const metadata: Metadata = {
   title: "Seja bem-vindo à Higitec!",

@@ -71,7 +71,7 @@ const ProductionSection = (_: Props) => {
   return (
     <FeatherBgSection
       className="grid gap-32 py-32"
-      id={linksObj.production.href.replace("#", "")}
+      id={linksObj.production.href.replace("/#", "")}
     >
       <HeadingText className="uppercase">{t("title")}</HeadingText>
       <ul className="flex flex-wrap items-center justify-start gap-x-16 gap-y-24 sm:justify-center">

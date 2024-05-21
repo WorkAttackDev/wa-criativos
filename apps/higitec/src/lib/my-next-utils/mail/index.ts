@@ -1,15 +1,24 @@
 import nodemailer from "nodemailer";
+import fs from "fs";
+import Mail from "nodemailer/lib/mailer";
+import logger from "../logger";
 
 const sendEmail = async ({
   subject,
   text,
   html,
   to,
+  attachments,
 }: {
   to: string;
   subject: string;
   text?: string;
   html: string;
+  attachments?: {
+    filename: string;
+    content: ArrayBuffer;
+    contentType?: string;
+  }[];
 }) => {
   const transporter = nodemailer.createTransport({
     host: process.env.EMAIL_HOST,
@@ -21,17 +30,24 @@ const sendEmail = async ({
     },
   });
 
-  const info = await transporter.sendMail({
+  const mailOptions = {
     from: `"Higitec noreply" <${process.env.EMAIL_FROM}>`,
     to,
     subject,
     html,
     text,
-  });
+    attachments: attachments?.map((attach) => ({
+      filename: attach.filename,
+      content: Buffer.from(attach.content),
+      contentType: attach.contentType,
+    })),
+  } satisfies Mail.Options;
 
-  console.log("Email sent:", info.response);
+  const info = await transporter.sendMail(mailOptions);
+
+  logger.info(`Email sent: ${info.accepted.join(", ")}`);
   process.env.NODE_ENV === "development" &&
-    console.log("Preview URL: %s", nodemailer.getTestMessageUrl(info));
+    logger.info(`Preview URL: %s`, nodemailer.getTestMessageUrl(info));
 };
 
 export default sendEmail;

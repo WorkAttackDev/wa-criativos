@@ -1,23 +1,26 @@
 "use server";
 import sendEmail from "@/lib/my-next-utils/mail";
 import ContactEmailTemplate from "@/lib/my-next-utils/mail/ContactEmailTemplate";
+import NewContactEmailTemplate from "@/lib/my-next-utils/mail/NewContactEmailTemplate";
 import { unsafeHandleServerActions } from "@/lib/my-next-utils/serverActionsUtils";
 import { render } from "@react-email/components";
 import { headers } from "next/headers";
-import { WorkWithUsType, workWithUsSchema } from "./schema";
-import NewContactEmailTemplate from "@/lib/my-next-utils/mail/NewContactEmailTemplate";
+import { workWithUsSchema } from "./schema";
+import { contactLinksObj } from "../links";
 
-export const sendWorkWithUsEmailServerActions = (payload: WorkWithUsType) =>
+export const sendWorkWithUsEmailServerActions = (payload: FormData) =>
   unsafeHandleServerActions({
     payload,
-    schema: workWithUsSchema,
     successMessage:
       "O email foi enviado com sucesso, abra o seu e-mail para confirmar o recebimento.",
     errorMessage: "Ocorreu um erro ao enviar o email",
-    actionFn: async ({ data: { email, firstName, lastName, about, phone } }) =>
-      Promise.all([
+    actionFn: async ({ data }) => {
+      const { cv, email, firstName, lastName, about, phone } =
+        workWithUsSchema.parse(Object.fromEntries(data));
+
+      return Promise.all([
         sendEmail({
-          to: "info@higitec.com",
+          to: contactLinksObj.recruitingEmail.label,
           html: render(
             <NewContactEmailTemplate
               userName={firstName + " " + lastName}
@@ -28,6 +31,13 @@ export const sendWorkWithUsEmailServerActions = (payload: WorkWithUsType) =>
             />,
           ),
           subject: "Contato para vaga de emprego",
+          attachments: [
+            {
+              filename: cv.name,
+              content: await cv.arrayBuffer(),
+              contentType: "application/pdf",
+            },
+          ],
         }),
         sendEmail({
           to: email,
@@ -39,5 +49,6 @@ export const sendWorkWithUsEmailServerActions = (payload: WorkWithUsType) =>
           ),
           subject: "Obrigado por entrar em contato",
         }),
-      ]),
+      ]);
+    },
   });

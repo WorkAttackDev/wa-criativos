@@ -1,14 +1,16 @@
-import { Link } from "@/lib/i18n";
-import LangDropdown from "../components/LangDropdown";
-import { navLinks } from "../links";
 import NextLink from "next/link";
 import BoxAnimation from "../components/BoxAnimation";
+import LangDropdown from "../components/LangDropdown";
 import SideBar from "../components/SideBar";
-import { buttonVariants } from "@/components/ui/button";
-import { useTranslations } from "next-intl";
+import NavLinks from "./NavLinks";
+import {
+  AbstractIntlMessages,
+  NextIntlClientProvider,
+  useMessages,
+} from "next-intl";
 
 const Header = () => {
-  const t = useTranslations("Header");
+  const messages = useMessages();
   return (
     <header className="sticky top-0 z-40  bg-white shadow-sm">
       <div className="flex flex-wrap items-center justify-between gap-8 bg-white py-8 shadow-sm my-container sm:gap-16">
@@ -22,17 +24,9 @@ const Header = () => {
             />
           </NextLink>
         </BoxAnimation>
-        <nav className="hidden flex-1 items-center justify-center gap-8 xl:flex">
-          {navLinks.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className={buttonVariants({ variant: "link" })}
-            >
-              {t(item.key)}
-            </Link>
-          ))}
-        </nav>
+        <NextIntlClientProvider messages={messages}>
+          <NavLinks />
+        </NextIntlClientProvider>
         <LangDropdown />
         <SideBar />
       </div>

@@ -7,7 +7,8 @@
         "email": "Email",
         "message": "Mensagem",
         "aboutYou": "Sobre Você",
-        "phone": "Telefone"
+        "phone": "Telefone",
+        "cv": "Curriculum Vitae"
     },
     "Header": {
         "home": "Início",
