@@ -22,10 +22,10 @@ const ProductsSection = (_: Props) => {
     {
       name: t("soap"),
       brands: [
-        { name: "Confiança", imgSrc: "/imgs/brand-4.png" },
+        { name: "Confiança", imgSrc: "/imgs/brand-4.jpg" },
         { name: "Sabom", imgSrc: "/imgs/brand-5.jpg" },
-        { name: "Topic", imgSrc: "/imgs/brand-6.png" },
-        { name: "Clara", imgSrc: "/imgs/brand-7.png" },
+        { name: "Topic", imgSrc: "/imgs/brand-6.jpg" },
+        { name: "Clara", imgSrc: "/imgs/brand-7.jpg" },
         { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-8.jpg" },
       ],
     },

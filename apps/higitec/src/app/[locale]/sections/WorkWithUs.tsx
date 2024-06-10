@@ -1,9 +1,9 @@
-import { getImageProps } from "next/image";
 import React from "react";
 import HeadingText from "../components/HeadingText";
 import WorkWithUsForm from "../_work-with-us/WorkWithUsForm";
 import { linksObj } from "../links";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 
 type Props = {};
 
@@ -11,25 +11,30 @@ const WorkWithUs = (_: Props) => {
   const t = useTranslations("WorkWithUs");
   const tg = useTranslations("Global");
 
-  const {
-    props: { src },
-  } = getImageProps({
-    alt: "Meeting room with people working",
-    fill: true,
-    sizes: "80vw",
-    src: "/imgs/work-group-photo-2.jpg",
-    quality: 90,
-  });
   return (
     <section
       id={linksObj.workWithUs.href.replace("/#", "")}
       className="relative bg-cover bg-bottom bg-no-repeat"
-      style={{
-        backgroundImage: `url(${src})`,
-      }}
     >
+      <Image
+        quality={90}
+        fill
+        sizes="80vw"
+        src="/imgs/work-group-photo.jpg"
+        alt="Work group photo"
+        className="object-cover object-bottom"
+      />
+      <Image
+        quality={90}
+        fill
+        sizes="80vw"
+        src="/imgs/work-group-photo-2.jpg"
+        alt="Work group photo"
+        className="fade-in-out object-cover object-bottom"
+      />
+
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-foreground/70 to-foreground/70" />
-      <div className="grid gap-32 py-32 text-white my-container md:grid-cols-2">
+      <div className="relative grid gap-32 py-32 text-white my-container md:grid-cols-2">
         <span className="relative grid content-start gap-8">
           <HeadingText className="text-inherit">{t("title")}</HeadingText>
           <p>{t("description")}</p>
