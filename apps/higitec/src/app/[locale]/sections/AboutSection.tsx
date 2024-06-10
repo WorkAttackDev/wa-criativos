@@ -19,12 +19,12 @@ const AboutSection = (_: Props) => {
     {
       title: t("vision"),
       text: t("visionText"),
-      imgSrc: "/imgs/female-scientist-working.jpeg",
+      imgSrc: "/imgs/fabric-space.jpg",
     },
     {
       title: t("values"),
       text: t("valuesText"),
-      imgSrc: "/imgs/worker-touching-tablet.jpg",
+      imgSrc: "/imgs/fabrica-with-workers.jpg",
     },
   ];
 

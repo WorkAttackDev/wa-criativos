@@ -17,13 +17,13 @@ const WorkWithUs = (_: Props) => {
     alt: "Meeting room with people working",
     fill: true,
     sizes: "80vw",
-    src: "/imgs/meeting.jpg",
-    quality: 70,
+    src: "/imgs/work-group-photo-2.jpg",
+    quality: 90,
   });
   return (
     <section
       id={linksObj.workWithUs.href.replace("/#", "")}
-      className="relative bg-cover bg-center bg-no-repeat"
+      className="relative bg-cover bg-bottom bg-no-repeat"
       style={{
         backgroundImage: `url(${src})`,
       }}

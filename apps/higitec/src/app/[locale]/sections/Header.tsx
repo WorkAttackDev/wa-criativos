@@ -1,13 +1,9 @@
+import { NextIntlClientProvider, useMessages } from "next-intl";
 import NextLink from "next/link";
 import BoxAnimation from "../components/BoxAnimation";
 import LangDropdown from "../components/LangDropdown";
 import SideBar from "../components/SideBar";
 import NavLinks from "./NavLinks";
-import {
-  AbstractIntlMessages,
-  NextIntlClientProvider,
-  useMessages,
-} from "next-intl";
 
 const Header = () => {
   const messages = useMessages();
