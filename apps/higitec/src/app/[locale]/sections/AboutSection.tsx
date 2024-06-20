@@ -1,19 +1,12 @@
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
+import { cn } from "@/lib/utils";
+import { useTranslations } from "next-intl";
 import Image from "next/image";
 import FadeInAnimation from "../components/FadeInAnimation";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
 import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 import { linksObj } from "../links";
-import { useTranslations } from "next-intl";
-import {
-  Dialog,
-  DialogContent,
-  DialogDescription,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
 
 type Props = {};
 
@@ -77,17 +70,17 @@ const AboutSection = (_: Props) => {
     {
       title: t("mission"),
       text: t("missionText"),
-      imgSrc: "/imgs/machine.jpg",
+      imgSrc: "/imgs/putting-soap-bar-in-plastic-bag.jpg",
     },
     {
       title: t("vision"),
       text: t("visionText"),
-      imgSrc: "/imgs/fabric-space.jpg",
+      imgSrc: "/imgs/machine.jpg",
     },
     {
       title: t("values"),
       text: t("valuesText"),
-      imgSrc: "/imgs/fabrica-with-workers.jpg",
+      imgSrc: "/imgs/worker-in-a-diaper-factory.jpg",
     },
   ];
 
@@ -122,6 +115,7 @@ const AboutSection = (_: Props) => {
                   height={720}
                   src={imgSrc}
                   alt={title}
+                  quality={95}
                   className="aspect-[2] w-full object-cover duration-500 ease-out hover:!scale-110"
                 />
               </SlideInUpZoomAnimation>

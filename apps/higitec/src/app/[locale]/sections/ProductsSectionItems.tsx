@@ -97,7 +97,7 @@ const ProductsSectionItems = ({ categories }: Props) => {
           isOpen ? "grid-rows-[1fr]" : "grid-rows-[0fr]",
         )}
       >
-        <article className="grid place-items-center gap-8 overflow-hidden">
+        <article className="grid place-items-center gap-16 overflow-hidden">
           <button
             className="relative flex w-fit items-center justify-center gap-4 text-foreground underline underline-offset-8 duration-300 ease-out hover:text-primary focus:text-primary"
             onClick={handleCloseProductsList}
