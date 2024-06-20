@@ -5,6 +5,7 @@ import HeadingText from "../components/HeadingText";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { linksObj } from "../links";
+import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
 
 type CategoryItem = {
   name: string;
@@ -45,7 +46,7 @@ const ProductsSectionItems = ({ categories }: Props) => {
             "grid gap-16 overflow-hidden duration-300 ease-out sm:grid-cols-3",
           )}
         >
-          {categories.map((category) => (
+          {categories.map((category, i) => (
             <li
               key={category.name}
               className="relative grid place-items-center gap-8"
@@ -53,35 +54,37 @@ const ProductsSectionItems = ({ categories }: Props) => {
               <HeadingText size="sm" className="uppercase">
                 {category.name}
               </HeadingText>
-              <button
-                className={cn(
-                  "group relative outline-primary duration-300 ease-out",
-                  selectedItem?.name === category.name && "bg-primary/20",
-                )}
-                onClick={() => {
-                  setIsOpen(!isOpen);
-                  setSelectedItem(category);
-                  setTimeout(() => {
-                    document
-                      .getElementById("category-products")
-                      ?.scrollIntoView({
-                        behavior: "smooth",
-                      });
-                  }, 400);
-                }}
-              >
-                <div className="absolute inset-0 flex items-center justify-center bg-primary/30 text-4xl font-medium text-white opacity-0 backdrop-blur-sm duration-300 ease-out group-hover:opacity-100 group-focus:opacity-100">
-                  <MousePointerClick className="h-16 w-16" strokeWidth={1} />
-                </div>
-                <Image
-                  src={category.imgSrc}
-                  alt={category.name}
-                  width={720}
-                  height={720}
-                  className="aspect-square h-auto w-[25rem] object-cover"
-                  quality={90}
-                />
-              </button>
+              <SlideInUpZoomAnimation duration={1} delay={i * 0.5}>
+                <button
+                  className={cn(
+                    "group relative outline-primary duration-300 ease-out",
+                    selectedItem?.name === category.name && "bg-primary/20",
+                  )}
+                  onClick={() => {
+                    setIsOpen(!isOpen);
+                    setSelectedItem(category);
+                    setTimeout(() => {
+                      document
+                        .getElementById("category-products")
+                        ?.scrollIntoView({
+                          behavior: "smooth",
+                        });
+                    }, 400);
+                  }}
+                >
+                  <div className="absolute inset-0 flex items-center justify-center bg-primary/30 text-4xl font-medium text-white opacity-0 backdrop-blur-sm duration-300 ease-out group-hover:opacity-100 group-focus:opacity-100">
+                    <MousePointerClick className="h-16 w-16" strokeWidth={1} />
+                  </div>
+                  <Image
+                    src={category.imgSrc}
+                    alt={category.name}
+                    width={720}
+                    height={720}
+                    className="aspect-square h-auto w-[25rem] object-cover"
+                    quality={90}
+                  />
+                </button>
+              </SlideInUpZoomAnimation>
             </li>
           ))}
         </ul>
