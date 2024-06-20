@@ -6,7 +6,7 @@ const headingVariants = cva("text-primary text-balance font-bold", {
     size: {
       default: "text-4xl uppercase",
       sm: "text-2xl uppercase",
-      lg: "text-6xl",
+      lg: "text-5xl",
     },
   },
   defaultVariants: {
@@ -17,9 +17,10 @@ const headingVariants = cva("text-primary text-balance font-bold", {
 type Props = VariantProps<typeof headingVariants> & {
   children: React.ReactNode;
   className?: string;
+  id?: string;
 };
 
-const HeadingText = ({ children, size, className }: Props) => {
+const HeadingText = ({ children, size, className, id }: Props) => {
   const sizeMap = {
     lg: 3,
     default: 4,
@@ -30,6 +31,7 @@ const HeadingText = ({ children, size, className }: Props) => {
 
   return (
     <Heading
+      id={id}
       className={cn(headingVariants({ size }), className, "leading-normal")}
     >
       {children}

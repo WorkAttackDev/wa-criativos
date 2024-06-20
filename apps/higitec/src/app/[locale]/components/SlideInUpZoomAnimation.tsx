@@ -14,9 +14,15 @@ type Props = {
   children: ReactNode;
   delay?: number;
   duration?: number;
+  className?: string;
 };
 
-const SlideInUpZoomAnimation = ({ children, delay, duration = 1 }: Props) => {
+const SlideInUpZoomAnimation = ({
+  children,
+  delay,
+  duration = 1,
+  className,
+}: Props) => {
   const [scope, animate] = useAnimate();
   const divRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(scope, {
@@ -56,7 +62,7 @@ const SlideInUpZoomAnimation = ({ children, delay, duration = 1 }: Props) => {
 
   return (
     // escrever artigo sobre esse código
-    <div ref={scope} className="relative overflow-hidden">
+    <div ref={scope} className={cn("relative overflow-hidden", className)}>
       {Children.map(children, (child) =>
         isValidElement<React.HTMLAttributes<HTMLElement>>(child)
           ? cloneElement(child, {

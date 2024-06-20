@@ -39,7 +39,8 @@
         "title": "Our Products",
         "description": "We offer a range of products that affirm quality at affordable prices. Explore our catalogue and elevate your retail offerings.",
         "diaper": "Diapers",
-        "soap": "Soap and Soaps"
+        "soap": "Soap",
+        "washingSoap": "Washing soap"
     },
     "Production": {
         "title": "Production",

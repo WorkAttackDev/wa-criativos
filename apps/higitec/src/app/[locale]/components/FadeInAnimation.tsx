@@ -14,9 +14,15 @@ type Props = {
   children: ReactNode;
   delay?: number;
   duration?: number;
+  className?: string;
 };
 
-const FadeInAnimation = ({ children, delay, duration = 1 }: Props) => {
+const FadeInAnimation = ({
+  children,
+  delay,
+  duration = 1,
+  className,
+}: Props) => {
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope, {
     once: true,
@@ -43,7 +49,7 @@ const FadeInAnimation = ({ children, delay, duration = 1 }: Props) => {
 
   return (
     // escrever artigo sobre esse código
-    <div ref={scope} className="relative overflow-hidden">
+    <div ref={scope} className={cn("relative overflow-hidden", className)}>
       {Children.map(children, (child) =>
         isValidElement<React.HTMLAttributes<HTMLElement>>(child)
           ? cloneElement(child, {

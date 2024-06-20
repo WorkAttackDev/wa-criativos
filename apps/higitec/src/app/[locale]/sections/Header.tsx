@@ -9,7 +9,7 @@ const Header = () => {
   const messages = useMessages();
   return (
     <header className="sticky top-0 z-40  bg-white shadow-sm">
-      <div className="flex flex-wrap items-center justify-between gap-8 bg-white py-8 shadow-sm my-container sm:gap-16">
+      <div className="flex items-center justify-between gap-8 bg-white py-8 shadow-sm my-container sm:gap-16">
         <BoxAnimation className="mr-auto">
           <NextLink href="/">
             <img

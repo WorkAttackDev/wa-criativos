@@ -39,7 +39,8 @@
         "title": "Os Nossos Produtos",
         "description": " Oferecemos uma gama de produtos que afirmam qualidade a preços acessíveis. Explore o nosso catálogo e eleve as suas ofertas de retalho.",
         "diaper": "Fraldas",
-        "soap": "Sabão e Sabonetes"
+        "soap": "Sabonete",
+        "washingSoap": "Sabão"
     },
     "Production": {
         "title": "Produção",
