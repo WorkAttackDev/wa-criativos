@@ -1,7 +1,9 @@
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
+import { Award, Goal, LucideProps, ShieldCheck, View } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { ElementType, ForwardRefExoticComponent, RefAttributes } from "react";
 import FadeInAnimation from "../components/FadeInAnimation";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
@@ -32,14 +34,18 @@ const AboutSectionCard = ({
   text,
   imgSrc,
   hideImage,
+  Icon,
 }: {
   title: string;
   text: string;
   imgSrc: string;
   hideImage?: boolean;
+  Icon?: ForwardRefExoticComponent<
+    Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>
+  >;
 }) => {
   return (
-    <article className="flex max-w-[40rem] flex-col gap-8 overflow-hidden text-justify">
+    <article className="flex max-w-[40rem] flex-col gap-8 overflow-hidden text-left">
       <SlideInUpZoomAnimation
         duration={2}
         className={cn(hideImage && "hidden")}
@@ -53,11 +59,17 @@ const AboutSectionCard = ({
           className="aspect-[2] w-full object-cover duration-500 ease-out hover:!scale-110"
         />
       </SlideInUpZoomAnimation>
-      <span className="grid w-full gap-4">
-        <HeadingText size="sm" className="uppercase">
+      <span className="grid w-full grid-cols-[auto_1fr] grid-rows-[auto_auto] items-center gap-x-6">
+        {Icon && (
+          <Icon
+            className="row-span-full h-20 w-20 bg-white p-4 text-primary"
+            strokeWidth={1}
+          />
+        )}
+        <HeadingText size="sm" className="self-end uppercase">
           {title}
         </HeadingText>
-        <p className="">{text}</p>
+        <p className="line-clamp-1 self-start">{text}</p>
       </span>
     </article>
   );
@@ -68,16 +80,19 @@ const AboutSection = (_: Props) => {
 
   const infos = [
     {
+      Icon: Goal,
       title: t("mission"),
       text: t("missionText"),
       imgSrc: "/imgs/putting-soap-bar-in-plastic-bag.jpg",
     },
     {
+      Icon: View,
       title: t("vision"),
       text: t("visionText"),
       imgSrc: "/imgs/machine.jpg",
     },
     {
+      Icon: Award,
       title: t("values"),
       text: t("valuesText"),
       imgSrc: "/imgs/worker-in-a-diaper-factory.jpg",
@@ -90,7 +105,7 @@ const AboutSection = (_: Props) => {
       id={linksObj.whoWeAre.href.replace("/#", "")}
     >
       <section className="grid justify-center justify-items-center gap-2">
-        {infos.map(({ imgSrc, text, title }, i) => (
+        {infos.map(({ imgSrc, text, title, Icon }, i) => (
           <AboutDialog
             trigger={
               <FadeInAnimation
@@ -104,6 +119,7 @@ const AboutSection = (_: Props) => {
                   text={text}
                   imgSrc={imgSrc}
                   hideImage
+                  Icon={Icon}
                 />
               </FadeInAnimation>
             }
