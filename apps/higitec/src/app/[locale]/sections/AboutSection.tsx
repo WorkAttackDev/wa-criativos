@@ -7,7 +7,9 @@ import { ElementType, ForwardRefExoticComponent, RefAttributes } from "react";
 import FadeInAnimation from "../components/FadeInAnimation";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
-import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
+import SlideInUpZoomAnimation, {
+  SlideFadeInDownAnimation,
+} from "../components/animations";
 import { linksObj } from "../links";
 
 type Props = {};
@@ -69,7 +71,7 @@ const AboutSectionCard = ({
         <HeadingText size="sm" className="self-end uppercase">
           {title}
         </HeadingText>
-        <p className="line-clamp-1 self-start">{text}</p>
+        <p className="line-clamp-2 self-start text-secondary">{text}</p>
       </span>
     </article>
   );
@@ -83,18 +85,21 @@ const AboutSection = (_: Props) => {
       Icon: Goal,
       title: t("mission"),
       text: t("missionText"),
+      question: t("missionQuestion"),
       imgSrc: "/imgs/putting-soap-bar-in-plastic-bag.jpg",
     },
     {
       Icon: View,
       title: t("vision"),
       text: t("visionText"),
+      question: t("visionQuestion"),
       imgSrc: "/imgs/machine.jpg",
     },
     {
       Icon: Award,
       title: t("values"),
       text: t("valuesText"),
+      question: t("valuesQuestion"),
       imgSrc: "/imgs/worker-in-a-diaper-factory.jpg",
     },
   ];
@@ -104,9 +109,10 @@ const AboutSection = (_: Props) => {
       className="grid items-center gap-x-10 gap-y-32 lg:grid-cols-2"
       id={linksObj.whoWeAre.href.replace("/#", "")}
     >
-      <section className="grid justify-center justify-items-center gap-2">
-        {infos.map(({ imgSrc, text, title, Icon }, i) => (
+      <section className="grid justify-center gap-4">
+        {infos.map(({ imgSrc, text, title, Icon, question }, i) => (
           <AboutDialog
+            key={title}
             trigger={
               <FadeInAnimation
                 key={title}
@@ -116,7 +122,7 @@ const AboutSection = (_: Props) => {
               >
                 <AboutSectionCard
                   title={title}
-                  text={text}
+                  text={question}
                   imgSrc={imgSrc}
                   hideImage
                   Icon={Icon}
@@ -143,9 +149,18 @@ const AboutSection = (_: Props) => {
           </AboutDialog>
         ))}
       </section>
-      <HeadingText size="lg" className="text-center max-lg:row-start-1">
-        {t("about")}
-      </HeadingText>
+      <SlideFadeInDownAnimation
+        duration={1.15}
+        delay={1}
+        className="max-lg:row-start-1"
+      >
+        <HeadingText
+          size="lg"
+          className="rounded bg-primary p-8 text-center text-white shadow sm:p-16"
+        >
+          {t("about")}
+        </HeadingText>
+      </SlideFadeInDownAnimation>
     </FeatherBgSection>
   );
 };

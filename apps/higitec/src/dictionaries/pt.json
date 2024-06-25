@@ -29,10 +29,13 @@
     "About": {
         "about": "Empenhados em estabelecer padrões na produção de produtos de higiene e limpeza de elevada qualidade, com uma base enraizada na inovação, atendendo a diversos sectores e garantindo um ambiente saudável e seguro para todos.",
         "mission": "Missão",
+        "missionQuestion": "A razão de ser da empresa. Por que existimos?",
         "missionText": "Fornecer soluções de higiene e limpeza inovadoras, que excedam as expectativas dos nossos clientes a preços acessíveis.",
         "vision": "Visão",
+        "visionQuestion": "Onde queremos chegar?",
         "visionText": "Aspiramos evoluir continuamente e sermos reconhecidos como o fornecedor líder de produtos de higiene e limpeza em Angola e arredores.",
         "values": "Valores",
+        "valuesQuestion": "O que nos identifica?",
         "valuesText": "Excelência e Qualidade: Produzindo produtos do mais alto padrão, explorando novas tendências e tecnologias, com produtos que contribuem para um planeta mais saudável."
     },
     "Products": {

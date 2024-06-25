@@ -5,7 +5,7 @@ import HeadingText from "../components/HeadingText";
 import { useState } from "react";
 import { cn } from "@/lib/utils";
 import { linksObj } from "../links";
-import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
+import SlideInUpZoomAnimation from "../components/animations";
 
 type CategoryItem = {
   name: string;

@@ -33,7 +33,10 @@
         "vision": "Vision",
         "visionText": "We aspire to continuously evolve and be recognized as the leading supplier of hygiene and cleaning products in Angola and surroundings.",
         "values": "Values",
-        "valuesText": "Excellence and Quality: Producing products of the highest standard, exploring new trends and technologies, with products that contribute to a healthier planet."
+        "valuesText": "Excellence and Quality: Producing products of the highest standard, exploring new trends and technologies, with products that contribute to a healthier planet.",
+        "missionQuestion": "The company's reason for being. Why do we exist?",
+        "visionQuestion": "Where do we want to go?",
+        "valuesQuestion": "What identifies us?"
     },
     "Products": {
         "title": "Our Products",

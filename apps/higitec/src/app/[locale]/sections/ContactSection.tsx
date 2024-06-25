@@ -1,7 +1,7 @@
 import Image from "next/image";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
-import SlideInUpZoomAnimation from "../components/SlideInUpZoomAnimation";
+import SlideInUpZoomAnimation from "../components/animations";
 import { linksObj } from "../links";
 import ContactForm from "../_contact/ContactForm";
 import { useLocale, useTranslations } from "next-intl";

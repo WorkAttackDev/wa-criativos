@@ -79,3 +79,49 @@ const SlideInUpZoomAnimation = ({
 };
 
 export default SlideInUpZoomAnimation;
+
+export const SlideFadeInDownAnimation = ({
+  children,
+  delay,
+  duration = 1,
+  className,
+}: Props) => {
+  const [scope, animate] = useAnimate();
+  const isInView = useInView(scope, {
+    once: true,
+    margin: "-100px",
+  });
+
+  useEffect(() => {
+    if (!isInView) return;
+
+    const firstChild = scope.current.firstChild;
+    if (!firstChild) return;
+
+    animate(
+      firstChild,
+      {
+        opacity: [0, 1, null],
+        x: [100, 0, null],
+        scale: [0.9, null, 1],
+      },
+      {
+        duration,
+        ease: "easeInOut",
+        delay,
+      },
+    );
+  }, [animate, isInView, scope, delay]);
+
+  return (
+    <div ref={scope} className={cn("relative", className)}>
+      {Children.map(children, (child) =>
+        isValidElement<React.HTMLAttributes<HTMLElement>>(child)
+          ? cloneElement(child, {
+              className: cn(child.props.className, "opacity-0"),
+            })
+          : child,
+      )}
+    </div>
+  );
+};
