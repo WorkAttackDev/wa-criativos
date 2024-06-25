@@ -25,12 +25,7 @@ const ProductsSection = (_: Props) => {
     {
       name: t("washingSoap"),
       imgSrc: "/imgs/man-stacking-soap-bars.jpg",
-      brands: [
-        { name: "Confiança", imgSrc: "/imgs/brand-4.jpg" },
-        { name: "Sabom", imgSrc: "/imgs/brand-5.jpg" },
-        { name: "Topic", imgSrc: "/imgs/brand-6.jpg" },
-        { name: "Clara", imgSrc: "/imgs/brand-7.jpg" },
-      ],
+      brands: [{ name: "Sabom", imgSrc: "/imgs/brand-5.jpg" }],
     },
     {
       name: t("soap"),
