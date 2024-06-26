@@ -39,10 +39,10 @@ const ProductsSection = (_: Props) => {
       name: t("soap"),
       imgSrc: "/imgs/woman-looking-to-soap-pack.jpg",
       brands: [
-        { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-13.jpg" },
-        { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-14.jpg" },
-        { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-7.jpg" },
-        { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-8.jpg" },
+        { name: "Mossi & Mossi Active", imgSrc: "/imgs/brand-13.jpg" },
+        { name: "Mossi & Mossi Active", imgSrc: "/imgs/brand-14.jpg" },
+        { name: "Mossi & Mossi Active", imgSrc: "/imgs/brand-7.jpg" },
+        { name: "Mossi & Mossi Active", imgSrc: "/imgs/brand-8.jpg" },
       ],
     },
   ];
