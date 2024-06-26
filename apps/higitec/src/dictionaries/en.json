@@ -15,7 +15,7 @@
         "about": "Who We Are",
         "products": "Our Products",
         "production": "Production",
-        "workWithUs": "Work With Us",
+        "workWithUs": "Careers",
         "contacts": "Contacts",
         "lang": "en",
         "language": "Language",
@@ -57,11 +57,11 @@
         "millions": "millions"
     },
     "WorkWithUs": {
-        "title": "Join us/vacancy",
+        "title": "Join our team of professionals",
         "description": "At HIGITEC we believe that a cheerful and motivated environment is the foundation for a healthy and prosperous society. Join us on our journey towards excellence to build a cleaner and safer future together."
     },
     "Contacts": {
-        "description": "At HIGITEC we believe that a cheerful and motivated environment is the foundation for a healthy and prosperous society. Join us on our journey towards excellence to build a cleaner and safer future together."
+        "description": "Contact us and find out more about our products and how we can meet your needs and boost the success of your business to build a cleaner and safer future together."
     },
     "Footer": {
         "termsOfService": "Terms of Service",

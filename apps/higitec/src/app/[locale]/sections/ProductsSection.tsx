@@ -25,15 +25,23 @@ const ProductsSection = (_: Props) => {
     {
       name: t("washingSoap"),
       imgSrc: "/imgs/man-stacking-soap-bars.jpg",
-      brands: [{ name: "Sabom", imgSrc: "/imgs/brand-5.jpg" }],
+      brands: [
+        { name: "Confiança", imgSrc: "/imgs/brand-4.jpg" },
+        { name: "Confiança", imgSrc: "/imgs/brand-9.jpg" },
+        { name: "Sabom", imgSrc: "/imgs/brand-5.jpg" },
+        { name: "Sabom", imgSrc: "/imgs/brand-10.jpg" },
+        { name: "Sabom", imgSrc: "/imgs/brand-12.jpg" },
+        { name: "Clara", imgSrc: "/imgs/brand-11.jpg" },
+        { name: "Topic", imgSrc: "/imgs/brand-6.jpg" },
+      ],
     },
     {
       name: t("soap"),
       imgSrc: "/imgs/woman-looking-to-soap-pack.jpg",
       brands: [
-        { name: "Confiança", imgSrc: "/imgs/brand-4.jpg" },
-        { name: "Topic", imgSrc: "/imgs/brand-6.jpg" },
-        { name: "Clara", imgSrc: "/imgs/brand-7.jpg" },
+        { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-13.jpg" },
+        { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-14.jpg" },
+        { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-7.jpg" },
         { name: "Mosi & Mosi Active", imgSrc: "/imgs/brand-8.jpg" },
       ],
     },

@@ -138,6 +138,7 @@ const AboutSection = (_: Props) => {
                   src={imgSrc}
                   alt={title}
                   quality={95}
+                  loading="eager"
                   className="aspect-[2] w-full object-cover duration-500 ease-out hover:!scale-110"
                 />
               </SlideInUpZoomAnimation>

@@ -48,7 +48,7 @@ const ProductsSectionItems = ({ categories }: Props) => {
         >
           {categories.map((category, i) => (
             <li
-              key={category.name}
+              key={category.imgSrc}
               className="relative grid place-items-center gap-8"
             >
               <HeadingText size="sm" className="uppercase">

@@ -15,7 +15,7 @@
         "about": "Quem Somos",
         "products": "Os Nossos Produtos",
         "production": "Produção",
-        "workWithUs": "Trabalhe Connosco",
+        "workWithUs": "Carreiras",
         "contacts": "Contactos",
         "lang": "pt",
         "language": "Idioma",
@@ -57,11 +57,11 @@
         "millions": "milhões"
     },
     "WorkWithUs": {
-        "title": "Junte-se a nós/vaga",
+        "title": "Junte-se à nossa equipa de profissionais",
         "description": "Na HIGITEC acreditamos que um ambiente alegre e motivado é a base para uma sociedade saudável e próspera. Junte-se a nós na nossa jornada rumo à excelência para juntos construirmos um futuro mais limpo e seguro."
     },
     "Contacts": {
-        "description": "Na HIGITEC acreditamos que um ambiente alegre e motivado é a base para uma sociedade saudável e próspera. Junte-se a nós na nossa jornada rumo à excelência para juntos construirmos um futuro mais limpo e seguro."
+        "description": "Entre em contacto conosco e descubra mais sobre os nossos produtos e como podemos atender às suas necessidades e  impulsionar o sucesso do seu negócio, para juntos construirmos um futuro mais limpo e seguro."
     },
     "Footer": {
         "termsOfService": "Termos de Serviço",
