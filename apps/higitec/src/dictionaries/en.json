@@ -43,7 +43,11 @@
         "description": "We offer a range of products that affirm quality at affordable prices. Explore our catalogue and elevate your retail offerings.",
         "diaper": "Diapers",
         "soap": "Soap",
-        "washingSoap": "Washing soap"
+        "washingSoap": "Washing soap",
+        "soupOneDescription": "Mossi Sweet Seduction",
+        "soupTwoDescription": "Mossi Natural Energy",
+        "soupThreeDescription": "Mossi Natural Care",
+        "soupFourDescription": "Mossi Revitalizing"
     },
     "Production": {
         "title": "Production",

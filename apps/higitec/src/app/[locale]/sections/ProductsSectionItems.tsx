@@ -14,6 +14,7 @@ type CategoryItem = {
   brands: {
     name: string;
     imgSrc: string;
+    description?: string;
   }[];
 };
 
@@ -174,9 +175,11 @@ const ProductsSectionItems = ({ categories }: Props) => {
             </SlideInUpZoomAnimation>
             <span className="grid w-full gap-4 bg-muted p-8 sm:p-12">
               <HeadingText className="text-3xl">
-                {selectedItem.name}
+                {selectedItem.description || selectedItem.name}
               </HeadingText>
-              {/* <p className="text-2xl/relaxed">{selectedCategory.}</p> */}
+              {/* {!!selectedItem.description && (
+                <p className="text-2xl/relaxed">{}</p>
+              )} */}
             </span>
           </article>
         </DialogContent>
