@@ -42,12 +42,15 @@
         "title": "Our Products",
         "description": "We offer a range of products that affirm quality at affordable prices. Explore our catalogue and elevate your retail offerings.",
         "diaper": "Diapers",
+        "diaperDescription": "All the comfort your baby needs from the early days of life with the Mimo, Noddy, Naval and Kido diapers. Diapers that fit the body, do not irritate the skin and have long absorption. All to make your baby's skin 100% more protected!",
         "soap": "Soap",
+        "soapDescription": "A new line of Mossi Soaps is tested dermatologically and promotes exceptional care for your skin.",
         "washingSoap": "Washing soap",
-        "soupOneDescription": "Mossi Sweet Seduction",
-        "soupTwoDescription": "Mossi Natural Energy",
-        "soupThreeDescription": "Mossi Natural Care",
-        "soupFourDescription": "Mossi Revitalizing"
+        "washingSoapDescription": "The line of bar soap from Higitec comes with exclusive benefits in each version, from confidence to Topic, to meet all your needs during the home and clothing cleaning.",
+        "soupOneTitle": "Mossi Sweet Seduction",
+        "soupTwoTitle": "Mossi Natural Energy",
+        "soupThreeTitle": "Mossi Natural Care",
+        "soupFourTitle": "Mossi Revitalizing"
     },
     "Production": {
         "title": "Production",

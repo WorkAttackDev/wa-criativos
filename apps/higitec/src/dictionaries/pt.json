@@ -42,12 +42,15 @@
         "title": "Os Nossos Produtos",
         "description": " Oferecemos uma gama de produtos que afirmam qualidade a preços acessíveis. Explore o nosso catálogo e eleve as suas ofertas de retalho.",
         "diaper": "Fraldas",
+        "diaperDescription": "Todo o conforto que o seu bebe precisa desde os primeiros dias de vida com as fraldas Mimo, Noddy, Naval e Kido. Fraldas que se ajustam ao corpinho, não irritam a pele e possuem longa absorção. Tudo para deixar a pele do seu bebê 100% mais protegido!",
         "soap": "Sabonete",
+        "soapDescription": "A nova linha de Sabonetes Mossi é testada dermatologicamente e promove um cuidado excepcional para a sua pele.",
         "washingSoap": "Sabão",
-        "soupOneDescription": "Mossi doce sedução",
-        "soupTwoDescription": "Mossi energia natural",
-        "soupThreeDescription": "Mossi cuidado natural",
-        "soupFourDescription": "Mossi revitalizante"
+        "washingSoapDescription": "A linha de sabão em barra da Higitec contam com benefícios exclusivos em cada versão, desde a linha confiança à Topic, para atender todas as suas necessidades durante a limpeza de casa e das roupas.",
+        "soupOneTitle": "Mossi doce sedução",
+        "soupTwoTitle": "Mossi energia natural",
+        "soupThreeTitle": "Mossi cuidado natural",
+        "soupFourTitle": "Mossi revitalizante"
     },
     "Production": {
         "title": "Produção",

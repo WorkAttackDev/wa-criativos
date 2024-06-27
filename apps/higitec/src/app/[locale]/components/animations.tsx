@@ -1,6 +1,8 @@
 "use client";
 import {
   Children,
+  DetailedHTMLProps,
+  HTMLAttributes,
   ReactNode,
   cloneElement,
   isValidElement,
@@ -10,7 +12,10 @@ import {
 import { useAnimate, useInView } from "framer-motion";
 import { cn } from "@/lib/utils";
 
-type Props = {
+type Props = DetailedHTMLProps<
+  HTMLAttributes<HTMLDivElement>,
+  HTMLDivElement
+> & {
   children: ReactNode;
   delay?: number;
   duration?: number;
@@ -22,6 +27,7 @@ const SlideInUpZoomAnimation = ({
   delay,
   duration = 1,
   className,
+  ...props
 }: Props) => {
   const [scope, animate] = useAnimate();
   const divRef = useRef<HTMLDivElement>(null);
@@ -62,7 +68,11 @@ const SlideInUpZoomAnimation = ({
 
   return (
     // escrever artigo sobre esse código
-    <div ref={scope} className={cn("relative overflow-hidden", className)}>
+    <div
+      ref={scope}
+      {...props}
+      className={cn("relative overflow-hidden", className)}
+    >
       {Children.map(children, (child) =>
         isValidElement<React.HTMLAttributes<HTMLElement>>(child)
           ? cloneElement(child, {

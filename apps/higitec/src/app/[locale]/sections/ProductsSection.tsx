@@ -1,9 +1,6 @@
-import React from "react";
-import HeadingText from "../components/HeadingText";
-import Image from "next/image";
-import { linksObj } from "../links";
 import { useTranslations } from "next-intl";
-import { MousePointerClick } from "lucide-react";
+import HeadingText from "../components/HeadingText";
+import { linksObj } from "../links";
 import ProductsSectionItems from "./ProductsSectionItems";
 
 type Props = {};
@@ -16,23 +13,67 @@ const ProductsSection = (_: Props) => {
       name: t("diaper"),
       imgSrc: "/imgs/woman-manufacturing-diapers.jpg",
       brands: [
-        { name: "Mimo", imgSrc: "/imgs/brand.jpg" },
-        { name: "Naval", imgSrc: "/imgs/brand-1.jpg" },
-        { name: "Noddy", imgSrc: "/imgs/brand-2.jpg" },
-        { name: "Kido", imgSrc: "/imgs/brand-3.jpg" },
+        {
+          name: "Mimo",
+          imgSrc: "/imgs/brand.jpg",
+          description: t("diaperDescription"),
+        },
+        {
+          name: "Naval",
+          imgSrc: "/imgs/brand-1.jpg",
+          description: t("diaperDescription"),
+        },
+        {
+          name: "Noddy",
+          imgSrc: "/imgs/brand-2.jpg",
+          description: t("diaperDescription"),
+        },
+        {
+          name: "Kido",
+          imgSrc: "/imgs/brand-3.jpg",
+          description: t("diaperDescription"),
+        },
       ],
     },
     {
       name: t("washingSoap"),
       imgSrc: "/imgs/man-stacking-soap-bars.jpg",
       brands: [
-        { name: "Confiança", imgSrc: "/imgs/brand-4.jpg" },
-        { name: "Confiança", imgSrc: "/imgs/brand-9.jpg" },
-        { name: "Sabom", imgSrc: "/imgs/brand-5.jpg" },
-        { name: "Sabom", imgSrc: "/imgs/brand-10.jpg" },
-        { name: "Sabom", imgSrc: "/imgs/brand-12.jpg" },
-        { name: "Clara", imgSrc: "/imgs/brand-11.jpg" },
-        { name: "Topic", imgSrc: "/imgs/brand-6.jpg" },
+        {
+          name: "Confiança",
+          imgSrc: "/imgs/brand-4.jpg",
+          description: t("washingSoapDescription"),
+        },
+        {
+          name: "Confiança",
+          imgSrc: "/imgs/brand-9.jpg",
+          description: t("washingSoapDescription"),
+        },
+        {
+          name: "Sabom",
+          imgSrc: "/imgs/brand-5.jpg",
+          description: t("washingSoapDescription"),
+        },
+        {
+          name: "Sabom",
+          imgSrc: "/imgs/brand-10.jpg",
+          description: t("washingSoapDescription"),
+        },
+        {
+          name: "Sabom",
+          imgSrc: "/imgs/brand-12.jpg",
+          description: t("washingSoapDescription"),
+        },
+        {
+          name: "Clara",
+          imgSrc: "/imgs/brand-11.jpg",
+          description: t("washingSoapDescription"),
+        },
+        {
+          name: "Topic",
+          imgSrc: "/imgs/brand-6.jpg",
+          description: t("washingSoapDescription"),
+        },
       ],
     },
     {
@@ -40,24 +81,24 @@ const ProductsSection = (_: Props) => {
       imgSrc: "/imgs/woman-looking-to-soap-pack.jpg",
       brands: [
         {
-          name: "Mossi & Mossi Active",
           imgSrc: "/imgs/brand-13.jpg",
-          description: t("soupOneDescription"),
+          name: t("soupOneTitle"),
+          description: t("soapDescription"),
         },
         {
-          name: "Mossi & Mossi Active",
           imgSrc: "/imgs/brand-14.jpg",
-          description: t("soupTwoDescription"),
+          name: t("soupTwoTitle"),
+          description: t("soapDescription"),
         },
         {
-          name: "Mossi & Mossi Active",
           imgSrc: "/imgs/brand-7.jpg",
-          description: t("soupThreeDescription"),
+          name: t("soupThreeTitle"),
+          description: t("soapDescription"),
         },
         {
-          name: "Mossi & Mossi Active",
           imgSrc: "/imgs/brand-8.jpg",
-          description: t("soupFourDescription"),
+          name: t("soupFourTitle"),
+          description: t("soapDescription"),
         },
       ],
     },
