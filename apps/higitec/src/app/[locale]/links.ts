@@ -4,8 +4,8 @@ export const contactLinksObj = {
     label: "+244 923 228 585",
   },
   email: {
-    href: "mailto:info@higitec.com",
-    label: "info@higitec.com",
+    href: "mailto:geral@higitec.co.ao",
+    label: "geral@higitec.co.ao",
   },
   recruitingEmail: {
     label: "recrutamento@everywhere-gt.com",

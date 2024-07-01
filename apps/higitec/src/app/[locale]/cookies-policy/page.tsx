@@ -34,7 +34,7 @@ const CookiesPolicyPage = (_: Props) => {
           />
           <SectionBlock
             title="Como você pode entrar em contato conosco?"
-            content="Se você tiver alguma dúvida ou comentário sobre a nossa política de cookies, você pode entrar em contato conosco pelo e-mail info@higitec.com ou pelo telefone +244 222 123 456."
+            content="Se você tiver alguma dúvida ou comentário sobre a nossa política de cookies, você pode entrar em contato conosco pelo e-mail geral@higitec.co.ao ou pelo telefone +244 222 123 456."
           />
         </section>
       </main>

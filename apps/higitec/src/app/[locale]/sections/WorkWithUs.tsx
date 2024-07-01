@@ -34,11 +34,11 @@ const WorkWithUs = (_: Props) => {
       />
 
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-primary-foreground/70 to-foreground/70" />
-      <div className="relative grid gap-32 py-32 text-white my-container md:grid-cols-2">
-        <span className="relative grid content-start gap-8">
-          <HeadingText className="text-inherit">{t("title")}</HeadingText>
+      <article className="relative grid place-content-center gap-32 py-32 text-white my-container">
+        <HeadingText className="text-inherit">{t("title")}</HeadingText>
+        {/* <span className="relative grid content-start gap-8">
           <p>{t("description")}</p>
-        </span>
+        </span> */}
         <WorkWithUsForm
           aboutYouLabel={tg("aboutYou")}
           clearLabel={tg("clear")}
@@ -49,7 +49,7 @@ const WorkWithUs = (_: Props) => {
           sendLabel={tg("send")}
           cvLabel={tg("cv")}
         />
-      </div>
+      </article>
     </section>
   );
 };

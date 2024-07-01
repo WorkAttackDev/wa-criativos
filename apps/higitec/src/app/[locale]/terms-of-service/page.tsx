@@ -55,7 +55,7 @@ const TermsOfServicePage = (_: Props) => {
           />
           <SectionBlock
             title="8. Informações de contacto"
-            content="Se você tiver alguma dúvida sobre esta termos de serviço, por favor Entre em contato conosco: - por e -mail: info@example.com"
+            content="Se você tiver alguma dúvida sobre esta termos de serviço, por favor Entre em contato conosco: - por e -mail: geral@higitec.co.ao"
           />
         </section>
       </main>

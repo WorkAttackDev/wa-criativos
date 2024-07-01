@@ -111,7 +111,7 @@ const ProductsSection = (_: Props) => {
     >
       <span className="grid gap-8">
         <HeadingText className="uppercase">{t("title")}</HeadingText>
-        <p>{t("description")}</p>
+        {/* <p>{t("description")}</p> */}
       </span>
 
       <ProductsSectionItems categories={categories} />
