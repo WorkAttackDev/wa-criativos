@@ -100,7 +100,7 @@ const AboutSection = (_: Props) => {
       title: t("values"),
       text: t("valuesText"),
       question: t("valuesQuestion"),
-      imgSrc: "/imgs/worker-in-a-diaper-factory.jpg",
+      imgSrc: "/imgs/workers-handling-diaper-rolls.jpg",
     },
   ];
 
