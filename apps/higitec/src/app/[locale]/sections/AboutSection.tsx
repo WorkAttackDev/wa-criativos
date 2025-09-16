@@ -1,6 +1,6 @@
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { cn } from "@/lib/utils";
-import { Award, Goal, LucideProps, ShieldCheck, View } from "lucide-react";
+import { Award, Goal, LucideProps, View } from "lucide-react";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { ElementType, ForwardRefExoticComponent, RefAttributes } from "react";

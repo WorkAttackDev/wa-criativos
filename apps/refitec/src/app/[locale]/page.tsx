@@ -1,21 +1,34 @@
-import { useLocale, useTranslations } from "next-intl";
-import AboutSection from "./sections/AboutSection";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import AboutSection from "./about/components/AboutSection";
+import ProductsSection from "./products/components/ProductsSection";
 import ContactSection from "./sections/ContactSection";
 import HeroSection from "./sections/HeroSection";
 import InNumbersSection from "./sections/InNumbersSection";
-import TimelineSection from "./sections/TimelineSection";
+// import TimelineSection from "./sections/TimelineSection";
+import { routing } from "@/i18n/routing";
+import { Locale } from "next-intl";
+import CareerSection from "./career/components/CareerSection";
+import NewsSection from "./news/components/NewsSection";
 
-type Props = {};
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
 
-const HomePage = (_: Props) => {
-  const tc = useTranslations("Contacts");
-  const locale = useLocale();
+const HomePage = async ({ params }: PageProps<"/[locale]">) => {
+  const { locale } = (await params) as { locale: Locale };
+  const tc = await getTranslations("Contacts");
+
+  setRequestLocale(locale);
+
   return (
     <main>
       <HeroSection />
       <AboutSection />
       <InNumbersSection />
-      <TimelineSection />
+      <ProductsSection />
+      {/* <TimelineSection /> */}
+      <CareerSection />
+      <NewsSection />
       <ContactSection
         description={tc("description")}
         title={tc("title")}

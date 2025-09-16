@@ -1,11 +1,7 @@
 import createMiddleware from "next-intl/middleware";
-import { locales, localePrefix } from "./lib/i18n";
+import { routing } from "./i18n/routing";
 
-export default createMiddleware({
-  locales,
-  localePrefix,
-  defaultLocale: locales[0],
-});
+export default createMiddleware(routing);
 
 export const config = {
   // Match only internationalized pathnames

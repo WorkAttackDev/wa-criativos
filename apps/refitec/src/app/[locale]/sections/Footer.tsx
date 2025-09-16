@@ -1,10 +1,9 @@
 import { buttonVariants } from "@/components/ui/button";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
-import NextLink from "next/link";
-import { Link } from "@/lib/i18n";
-import BoxAnimation from "../components/BoxAnimation";
+import { getTranslations } from "next-intl/server";
+import { MotionAnim } from "../animations";
 import { linksObj, navLinks } from "../links";
-import { useTranslations } from "next-intl";
 
 const legalLinks = [
   linksObj.termsOfService,
@@ -12,15 +11,15 @@ const legalLinks = [
   linksObj.privacyPolicy,
 ];
 
-const Footer = () => {
-  const t = useTranslations("Footer");
-  const th = useTranslations("Header");
+const Footer = async () => {
+  const t = await getTranslations("Footer");
+  const th = await getTranslations("Header");
   return (
-    <footer className="flex flex-col gap-16 py-16 my-container">
-      <section className="flex w-full  justify-between gap-16 max-md:flex-wrap md:gap-32 ">
+    <footer className="my-container flex flex-col gap-16 py-16">
+      <section className="flex w-full justify-between gap-16 max-md:flex-wrap md:gap-32">
         <article className="flex flex-col gap-8">
-          <BoxAnimation>
-            <NextLink href="/" className="flex max-md:min-w-full">
+          <MotionAnim keyframes={{ opacity: [0, 1], x: [-100, 0] }}>
+            <Link href="/" className="flex max-md:min-w-full">
               <img
                 src="/imgs/logo.svg"
                 width={185}
@@ -28,9 +27,9 @@ const Footer = () => {
                 alt="Refitec Logo"
                 className="h-auto w-72 object-contain"
               />
-            </NextLink>
-          </BoxAnimation>
-          <p className="text-xl text-secondary-foreground max-md:hidden">
+            </Link>
+          </MotionAnim>
+          <p className="text-secondary-foreground text-xl max-md:hidden">
             {t("allRightsReserved")}
           </p>
         </article>
@@ -52,22 +51,22 @@ const Footer = () => {
           </nav>
           <nav className="flex flex-wrap gap-8 md:justify-end">
             {legalLinks.map((item) => (
-              <NextLink
+              <Link
                 key={item.href}
                 href={item.href}
                 className={cn(
                   buttonVariants({
                     variant: "link",
                   }),
-                  "text-xl font-medium text-secondary-foreground",
+                  "text-xl font-medium",
                 )}
               >
                 {t(item.key)}
-              </NextLink>
+              </Link>
             ))}
           </nav>
         </article>
-        <p className="text-xl text-secondary-foreground md:hidden">
+        <p className="text-secondary-foreground text-xl md:hidden">
           {t("allRightsReserved")}
         </p>
       </section>

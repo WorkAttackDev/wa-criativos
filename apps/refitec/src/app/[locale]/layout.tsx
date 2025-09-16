@@ -1,10 +1,16 @@
+import { routing } from "@/i18n/routing";
 import type { Metadata } from "next";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
-import "./globals.css";
-import Header from "./sections/Header";
-import Footer from "./sections/Footer";
+import { notFound } from "next/navigation";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
+import AnnouncementBanner from "./components/AnnouncementBanner";
 import TopScrollButton from "./components/TopScrollButton";
-import { locales } from "@/lib/i18n";
+import "./globals.css";
+import Footer from "./sections/Footer";
+import Header from "./sections/Header";
+import { LazyMotionProvider } from "@/lib/motion-index";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -96,20 +102,31 @@ export const metadata: Metadata = {
   }/site.webmanifest`,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
-}: Readonly<{
-  children: React.ReactNode;
-  params: { locale: string };
-}>) {
+  params,
+}: LayoutProps<"/[locale]">) {
+  const { locale } = await params;
+  if (!hasLocale(routing.locales, locale)) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
-        <TopScrollButton />
+        <NextIntlClientProvider>
+          <LazyMotionProvider>
+            <NuqsAdapter>
+              <AnnouncementBanner />
+              <Header />
+              {children}
+              <Footer />
+              <TopScrollButton />
+            </NuqsAdapter>
+          </LazyMotionProvider>
+        </NextIntlClientProvider>
       </body>
     </html>
   );

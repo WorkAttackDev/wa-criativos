@@ -26,6 +26,18 @@ export const linksObj = {
     key: "contacts" as const,
     href: "#contacts",
   },
+  products: {
+    key: "products" as const,
+    href: "#products",
+  },
+  career: {
+    key: "career" as const,
+    href: "#career",
+  },
+  news: {
+    key: "news" as const,
+    href: "#news",
+  },
   termsOfService: {
     key: "termsOfService" as const,
     href: "/terms-of-service",
@@ -43,6 +55,9 @@ export const linksObj = {
 export const navLinks = [
   linksObj.whoWeAre,
   linksObj.inNumbers,
-  linksObj.timeline,
+  // linksObj.timeline,
+  linksObj.products,
+  linksObj.career,
+  linksObj.news,
   linksObj.contacts,
 ];

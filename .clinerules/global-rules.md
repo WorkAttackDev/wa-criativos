@@ -1,0 +1,1 @@
+- Always read the copilot instructions in the `.github` folder before writing any code.

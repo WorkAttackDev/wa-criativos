@@ -1,6 +1,6 @@
 "use client";
 
-import { useAnimate, useInView } from "framer-motion";
+import { animate, inView } from "motion";
 import { useEffect, useRef } from "react";
 
 type Props = {
@@ -10,31 +10,32 @@ type Props = {
 };
 
 const CounterEffect: React.FC<Props> = ({ from, to, className }) => {
-  const [scope, animate] = useAnimate<HTMLParagraphElement>();
-  const onceRef = useRef(false);
-  const isInView = useInView(scope, {
-    margin: "-10%",
-  });
+  const ref = useRef<HTMLParagraphElement>(null);
 
   useEffect(() => {
-    if (isInView && !onceRef.current) {
-      animate(from, to, {
-        duration: 2,
-        onUpdate(value) {
-          scope.current.textContent = Number(value.toFixed(0)).toLocaleString(
-            "de",
-          );
-        },
-      });
+    if (!ref.current) return;
+    const stop = inView(
+      ref.current,
+      () => {
+        animate(from, to, {
+          duration: 2,
+          onUpdate(value) {
+            if (!ref.current) return;
+            ref.current.textContent = Number(value.toFixed(0)).toLocaleString(
+              "de",
+            );
+          },
+        });
 
-      onceRef.current = true;
-    }
-
-    // return () => controls.stop();
-  }, [scope, from, isInView, to]);
+        return () => stop();
+      },
+      { amount: 0.4 },
+    );
+    return () => stop();
+  }, [from, to]);
 
   return (
-    <b className={className} ref={scope}>
+    <b className={className} ref={ref}>
       {from}
     </b>
   );

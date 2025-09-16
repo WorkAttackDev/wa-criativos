@@ -34,32 +34,40 @@ const InNumbersSection = () => {
   ];
 
   return (
-    <section
-      className="relative grid gap-32 bg-cover bg-center py-32 my-container"
+    <div
       style={{
         background: `url(${src})`,
       }}
-      id={linksObj.inNumbers.href.replace("#", "")}
+      className="relative bg-cover bg-center"
     >
-      <div className="pointer-events-none absolute inset-0 bg-foreground/60"></div>
-      <header className="relative grid justify-center gap-12 text-center">
-        <HeadingText variant="secondary" className="text-center">
-          {t("title")}
-        </HeadingText>
-        <p className="text-white">{t("description")}</p>
-      </header>
-      <ul className="relative flex flex-wrap items-center justify-center gap-16 text-white lg:gap-32">
-        {infos.map(({ value, label }) => (
-          <li
-            key={label}
-            className={cn("flex flex-col items-center justify-center gap-8")}
-          >
-            <CounterEffect className="text-8xl font-bold" from={0} to={value} />
-            <p className="text-xl uppercase">{label}</p>
-          </li>
-        ))}
-      </ul>
-    </section>
+      <div className="bg-foreground/60 pointer-events-none absolute inset-0"></div>
+      <section
+        className="my-container relative grid gap-32 py-32"
+        id={linksObj.inNumbers.href.replace("#", "")}
+      >
+        <header className="relative grid justify-center gap-12 text-center">
+          <HeadingText variant="secondary" className="text-center">
+            {t("title")}
+          </HeadingText>
+          <p className="text-white">{t("description")}</p>
+        </header>
+        <ul className="relative flex flex-wrap items-center justify-center gap-16 text-white lg:gap-32">
+          {infos.map(({ value, label }) => (
+            <li
+              key={label}
+              className={cn("flex flex-col items-center justify-center gap-8")}
+            >
+              <CounterEffect
+                className="text-8xl font-bold"
+                from={0}
+                to={value}
+              />
+              <p className="text-xl uppercase">{label}</p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
   );
 };
 

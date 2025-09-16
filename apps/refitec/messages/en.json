@@ -1,0 +1,122 @@
+{
+    "Global": {
+        "clear": "Clear",
+        "send": "Send",
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "message": "Message",
+        "aboutYou": "About You",
+        "phone": "Phone"
+    },
+    "Header": {
+        "whoWeAre": "Who We Are",
+        "inNumbers": "In Numbers",
+        "timeline": "Timeline",
+        "contacts": "Contacts",
+        "products": "Products",
+        "career": "Careers",
+        "news": "News",
+        "lang": "en",
+        "language": "Language",
+        "mainNavigation": "Main Navigation"
+    },
+    "Hero": {
+        "welcome": "Refitec, an industrial powerhouse",
+        "slogan": "Transforming Processing of food oils in Angola",
+        "watchVideo": "Watch Video"
+    },
+    "About": {
+        "whoWeAre": "Who we are",
+        "whoWeAreText": "Refitec is an operational Angolan industrial powerhouse dedicated to the processing, refining, packaging and marketing of edible oils with high quality standards.<br></br><br></br>With cutting-edge technology and a sustainable production model, Refitec has as its mission to transform Angola's edible oil sector, promoting national industrialization and reducing dependence on imports.<br></br><br></br>Aiming to achieve a market share of over 50%, we reaffirm our commitment to quality, innovation and sustainability, actively contributing to the country's economic and social development.",
+        "mission": "Mission",
+        "missionText": "To become a leading force in the food oil industry, providing products that redefine excellence.",
+        "vision": "Vision",
+        "visionText": "To establish a benchmark for quality, sustainability and customer satisfaction. We strive to be a driving force in the culinary scene.",
+        "values": "Values",
+        "valuesText": "We maintain the highest standards in processing, aiming to minimize our ecological footprint and contribute to a sustainable future.",
+        "factory": "Factory",
+        "factoryText": "Located in a strategic area of 84,440m² near the Port of Luanda, the factory has an installed capacity to refine and process up to 500,000 liters per day of palm oil, soybean, sunflower and other vegetable fats.<br></br><br></br>Local production replaces imports, strengthens the national economy and guarantees a 100% Angolan product, with quality ensured by cutting-edge technology.",
+        "sustainability": "Sustainability",
+        "sustainabilityText": "Our operation prioritizes the rational use of resources, the reduction of environmental footprint and the strengthening of local value chains.<br></br><br></br>The bet on national production reduces dependence on imports, stimulates local suppliers and promotes the country's productive autonomy. Our goal is to achieve, in the medium term, total autonomy in the main areas in which we operate, with positive economic and environmental impact.",
+        "readMore": "Read More"
+    },
+    "InNumbers": {
+        "title": "Refitec in Numbers",
+        "description": "Welcome to REFITEC, where precision meets excellence in our specialised production line departments.",
+        "dailyProcessingCapacity": "Litres of daily processing capacity",
+        "dailyPackagingCapacity": "Litres of daily packaging capacity",
+        "totalArea": "Square metres of total area"
+    },
+    "Timeline": {
+        "title": "Timeline",
+        "investmentDecision": {
+            "title": "January 2021",
+            "description": "Investment Decision"
+        },
+        "supplierSelection": {
+            "title": "August 2021",
+            "description": "Supplier Selection"
+        },
+        "supplyContractsSigning": {
+            "title": "December 2021",
+            "description": "Signing of equipment supply contracts"
+        },
+        "projectDevelopment": {
+            "title": "January 2022",
+            "description": "Start of facility project development"
+        },
+        "landAcquisition": {
+            "title": "July 2022",
+            "description": "Completion of the land acquisition process for project implementation"
+        },
+        "constructionStart": {
+            "title": "March 2023",
+            "description": "Construction Start"
+        },
+        "productionStart": {
+            "title": "End of 2024",
+            "description": "Production Start"
+        }
+    },
+    "Contacts": {
+        "title": "Contacts",
+        "description": "The project will be implemented in the Province of Luanda-Angola, approximately 700m from the Port of Luanda, in a location used for the development of industrial activities during the colonial period."
+    },
+    "Footer": {
+        "termsOfService": "Terms of Service",
+        "cookiesPolicy": "Cookies Policy",
+        "privacyPolicy": "Privacy Policy",
+        "allRightsReserved": "© 2025 All rights reserved to Refitec LDA."
+    },
+    "Cookies": {
+        "title": "Cookies Policy",
+        "description": "Please read this policy carefully before using our service."
+    },
+    "TermsOfService": {
+        "title": "Terms of Service",
+        "description": "Please read these Terms and Conditions carefully before using our Service."
+    },
+    "News": {
+        "title": "News",
+        "subtitle": "Stay updated with the latest news and developments from Refitec"
+    },
+    "Career": {
+        "title": "Careers",
+        "description": "We invest in the training of young people and professionals with technical programs and internal training. In the second phase of the project, we created more than 1,300 direct jobs, committing ourselves to real opportunities and a strong and inclusive team. Join us and be part of a project with purpose and impact.",
+        "form": {
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phone": "Phone",
+            "about": "About You",
+            "cv": "Curriculum Vitae",
+            "clear": "Clear",
+            "send": "Send"
+        }
+    },
+    "Products": {
+        "title": "Our Products",
+        "description": "Among our main products are Refined Palm Oil, Refined Soy Oil, Sunflower Oil and other varieties of vegetable oils and fats. The use of cutting-edge technology in the refining and packaging processes ensures high food safety standards, purity and durability, making Refitec products a benchmark in the national market."
+    }
+}

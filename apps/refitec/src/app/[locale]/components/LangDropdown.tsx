@@ -7,23 +7,23 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Link } from "@/lib/i18n";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
-import { useTranslations } from "next-intl";
+import { getTranslations } from "next-intl/server";
 
-const LangDropdown = () => {
-  const t = useTranslations("Header");
+const LangDropdown = async () => {
+  const t = await getTranslations("Header");
   return (
     <DropdownMenu>
       <DropdownMenuTrigger
         className={cn(
           buttonVariants({ variant: "outline", size: "sm" }),
-          "uppercase",
+          "ml-auto uppercase",
         )}
       >
         {t("lang")}
-        <ChevronsUpDown className="ml-2 h-5 w-5" />
+        <ChevronsUpDown />
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuLabel>{t("language")}</DropdownMenuLabel>

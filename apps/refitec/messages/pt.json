@@ -1,0 +1,122 @@
+{
+    "Global": {
+        "clear": "Limpar",
+        "send": "Enviar",
+        "firstName": "Primeiro Nome",
+        "lastName": "Último Nome",
+        "email": "Email",
+        "message": "Mensagem",
+        "aboutYou": "Sobre Você",
+        "phone": "Telefone"
+    },
+    "Header": {
+        "whoWeAre": "Quem Somos",
+        "inNumbers": "Em Números",
+        "timeline": "Cronograma",
+        "contacts": "Contactos",
+        "products": "Produtos",
+        "career": "Carreiras",
+        "news": "Notícias",
+        "lang": "pt",
+        "language": "Idioma",
+        "mainNavigation": "Navegação Principal"
+    },
+    "Hero": {
+        "welcome": "Refitec, uma potência industrial",
+        "slogan": "Transformando o Processamento de Óleos Alimentares em Angola",
+        "watchVideo": "Ver Vídeo"
+    },
+    "About": {
+        "whoWeAre": "Quem nós somos",
+        "whoWeAreText": "A Refitec é uma potência industrial angolana em operação, dedicada ao processamento, refinação, embalagem e comercialização de óleos alimentares com padrões de qualidade elevados.<br></br><br></br>Com tecnologia de ponta e um modelo de produção sustentável, a Refitec tem como missão transformar o setor de óleos alimentares em Angola, promovendo a industrialização nacional e reduzindo a dependência de importações.<br></br><br></br>Almejando alcançar uma quota de mercado superior a 50%, reafirmamos o nosso compromisso com a qualidade, a inovação e a sustentabilidade, contribuindo ativamente para o desenvolvimento económico e social do país.",
+        "mission": "Missão",
+        "missionText": "Tornarmo-nos uma força líder na indústria de óleos alimentares, fornecendo produtos que redefinem a excelência.",
+        "vision": "Visão",
+        "visionText": "Estabelecer uma referência de qualidade, sustentabilidade e satisfação do cliente. Nós nos esforçamos para ser uma força motriz no cenário culinário.",
+        "values": "Valores",
+        "valuesText": "Mantemos os mais altos padrões no processamento, visando minimizar a nossa pegada ecológica e contribuir para um futuro sustentável.",
+        "factory": "Fábrica",
+        "factoryText": "Localizada numa área estratégica de 84.440m² nas imediações do Porto de Luanda, a fábrica possui uma capacidade instalada para refinar e processar até 500.000 litros por dia de óleo de palma, soja, girassol e outras gorduras vegetais.<br></br><br></br>A produção local substitui importações, fortalece a economia nacional e garante um produto 100% angolano, com qualidade assegurada por tecnologia de ponta.",
+        "sustainability": "Sustentabilidade",
+        "sustainabilityText": "A nossa operação privilegia o uso racional de recursos, a redução da pegada ambiental e o fortalecimento das cadeias de valor locais.<br></br><br></br>A aposta na produção nacional reduz a dependência de importações, estimula fornecedores locais e promove a autonomia produtiva do país. O nosso objetivo é atingir, a médio prazo, autonomia total nas principais áreas em que atuamos, com impacto económico e ambiental positivo.",
+        "readMore": "Ler Mais"
+    },
+    "InNumbers": {
+        "title": "Refitec em Números",
+        "description": "Bem-vindo à REFITEC, onde a precisão encontra a excelência nos nossos departamentos especializados de linhas de produção.",
+        "dailyProcessingCapacity": "Litros de capacidade de processamento diário",
+        "dailyPackagingCapacity": "Litros de capacidade de embalamento diário",
+        "totalArea": "Metros quadrado de área total"
+    },
+    "Timeline": {
+        "title": "Cronograma",
+        "investmentDecision": {
+            "title": "Janeiro de 2021",
+            "description": "Decisão de Investimento"
+        },
+        "supplierSelection": {
+            "title": "Agosto de 2021",
+            "description": "Selecção de fornecedores"
+        },
+        "supplyContractsSigning": {
+            "title": "Dezembro de 2021",
+            "description": "Assinatura de contratos de fornecimento de equipamentos"
+        },
+        "projectDevelopment": {
+            "title": "Janeiro de 2022",
+            "description": "Início do desenvolvimento do projecto das instalações"
+        },
+        "landAcquisition": {
+            "title": "Julho de 2022",
+            "description": "Conclusão do processo de aquisição de terreno para implantação do projecto"
+        },
+        "constructionStart": {
+            "title": "Março de 2023",
+            "description": "Início da construção"
+        },
+        "productionStart": {
+            "title": "Final de 2024",
+            "description": "Início da produção"
+        }
+    },
+    "Contacts": {
+        "title": "Contactos",
+        "description": "O projecto será implementado na Província de Luanda-Angola,aproximadamente 700m do Porto de Luanda, num local utilizado para o desenvolvimento de actividades industriais durante o período colonial."
+    },
+    "Footer": {
+        "termsOfService": "Termos de Serviço",
+        "cookiesPolicy": "Política de Cookies",
+        "privacyPolicy": "Política de Privacidade",
+        "allRightsReserved": "© 2025 Todos direitos reservados à Refitec LDA."
+    },
+    "Cookies": {
+        "title": "Política de Cookies",
+        "description": "Leia atentamente esta política antes de usar nosso serviço."
+    },
+    "TermsOfService": {
+        "title": "Termos de Serviço",
+        "description": "Leia estes Termos e Condições cuidadosamente antes de usar nosso Serviço."
+    },
+    "News": {
+        "title": "Notícias",
+        "subtitle": "Fique por dentro das últimas novidades e desenvolvimentos da Refitec"
+    },
+    "Career": {
+        "title": "Carreiras",
+        "description": "Investimos na capacitação de jovens e profissionais com programas técnicos e formação interna. Na segunda fase do projecto, criámos mais de 1.300 empregos directos, comprometendo-nos com oportunidades reais e uma equipa forte e inclusiva. Junte-se a nós e faça parte de um projecto com propósito e impacto.",
+        "form": {
+            "firstName": "Nome",
+            "lastName": "Sobrenome",
+            "email": "E-mail",
+            "phone": "Telefone",
+            "about": "Sobre Você",
+            "cv": "Curriculum Vitae",
+            "clear": "Limpar",
+            "send": "Enviar"
+        }
+    },
+    "Products": {
+        "title": "Os nossos produtos",
+        "description": "Entre os nossos principais produtos estão o Óleo de Palma Refinado, Óleo de Soja Refinado, Óleo de Girassol e outras variedades de óleos e gorduras vegetais. A utilização de tecnologia de ponta nos processos de refinação e embalagem assegura elevados padrões de segurança alimentar, pureza e durabilidade, tornando os produtos Refitec uma referência no mercado nacional."
+    }
+}

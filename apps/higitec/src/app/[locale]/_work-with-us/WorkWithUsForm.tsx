@@ -32,25 +32,6 @@ const defaultValues: WorkWithUsType = {
   about: "",
   cv: new File([""], ""),
 };
-// const defaultValues: WorkWithUsType =
-//   process.env.NODE_ENV === "production"
-//     ? {
-//         firstName: "",
-//         lastName: "",
-//         email: "",
-//         phone: "",
-//         about: "",
-//         cv: new File([""], ""),
-//       }
-//     : {
-//         firstName: "Denilson",
-//         lastName: "Costa",
-//         email: "4Hn9v@example.com",
-//         phone: "999000990",
-//         about:
-//           "Ola, Venho por este meio submeter a minha candidatura para a vaga de emprego. Obrigado pela sua contribuição.",
-//         cv: new File([""], ""),
-//       };
 
 const WorkWithUsForm = ({
   firstNameLabel,

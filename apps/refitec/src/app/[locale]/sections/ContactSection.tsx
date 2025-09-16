@@ -1,11 +1,11 @@
 "use client";
 import { Button, buttonVariants } from "@/components/ui/button";
-import { Link } from "@/lib/i18n";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
-import { useAnimate } from "framer-motion";
+import { animate } from "motion";
 import { Linkedin, MapPin, X } from "lucide-react";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import HeadingText from "../components/HeadingText";
 import { contactLinksObj, linksObj } from "../links";
 
@@ -64,14 +64,14 @@ const ContactInfoAndSocial = () => {
 };
 
 const ContactSection = ({ description, locale, title, mapKey }: Props) => {
-  const [scope, animate] = useAnimate();
+  const ref = useRef<HTMLDivElement>(null);
   const [showMap, setShowMap] = useState(false);
 
   useEffect(() => {
-    if (!scope.current) return;
+    if (!ref.current) return;
 
     animate(
-      scope.current,
+      ref.current,
       {
         y: showMap ? "105%" : "0%",
       },
@@ -112,33 +112,40 @@ const ContactSection = ({ description, locale, title, mapKey }: Props) => {
         language={locale}
         aria-label="Google Maps Embed"
       />
-      <article
-        ref={scope}
+      <div
+        ref={ref}
         className={
-          "relative flex flex-wrap justify-between gap-16 bg-foreground/80 py-16 text-white my-container"
+          "from-primary/80 to-foreground/90 relative bg-gradient-to-tr"
         }
       >
-        <span className="grid gap-4">
-          <HeadingText variant="secondary">{title}</HeadingText>
-          <p className="max-w-3xl leading-normal">{description}</p>
-        </span>
-        <ContactInfoAndSocial />
-        <Button
-          aria-label="Show Map"
-          title="Show Map"
-          size="icon"
-          className={cn(
-            "absolute left-[50%] top-[-15%] z-10 size-24 translate-x-[-50%] rounded-full max-sm:top-[-8%]",
-          )}
-          onClick={() => setShowMap((prev) => !prev)}
+        <article
+          ref={ref}
+          className={
+            "my-container flex flex-wrap justify-between gap-16 py-16 text-white"
+          }
         >
-          {showMap ? (
-            <X className="size-12 flex-shrink-0" strokeWidth={1.5} />
-          ) : (
-            <MapPin className="size-12 flex-shrink-0" strokeWidth={1.5} />
-          )}
-        </Button>
-      </article>
+          <span className="grid gap-4">
+            <HeadingText variant="secondary">{title}</HeadingText>
+            <p className="max-w-3xl leading-normal">{description}</p>
+          </span>
+          <ContactInfoAndSocial />
+          <Button
+            aria-label="Show Map"
+            title="Show Map"
+            size="icon"
+            className={cn(
+              "absolute top-[-15%] left-[50%] z-10 size-24 translate-x-[-50%] rounded-full max-sm:top-[-8%]",
+            )}
+            onClick={() => setShowMap((prev) => !prev)}
+          >
+            {showMap ? (
+              <X className="size-12 flex-shrink-0" strokeWidth={1.5} />
+            ) : (
+              <MapPin className="size-12 flex-shrink-0" strokeWidth={1.5} />
+            )}
+          </Button>
+        </article>
+      </div>
     </section>
   );
 };
