@@ -99,7 +99,8 @@
     },
     "News": {
         "title": "Notícias",
-        "subtitle": "Fique por dentro das últimas novidades e desenvolvimentos da Refitec"
+        "subtitle": "Fique por dentro das últimas novidades e desenvolvimentos da Refitec",
+        "viewMore": "Ver mais"
     },
     "Career": {
         "title": "Carreiras",
@@ -117,6 +118,6 @@
     },
     "Products": {
         "title": "Os nossos produtos",
-        "description": "Entre os nossos principais produtos estão o Óleo de Palma Refinado, Óleo de Soja Refinado, Óleo de Girassol e outras variedades de óleos e gorduras vegetais. A utilização de tecnologia de ponta nos processos de refinação e embalagem assegura elevados padrões de segurança alimentar, pureza e durabilidade, tornando os produtos Refitec uma referência no mercado nacional."
+        "description": "A Refitec oferece três marcas de óleos alimentares: <strong>Boavista</strong>, <strong>Ádria</strong> e <strong>Glória</strong>, cada uma com versões de Óleo de Soja e Óleo Vegetal.<br></br><br></br>O <strong>Óleo de Soja Boavista</strong> destaca-se pela pureza, estabilidade e sabor neutro, ideal para uso doméstico, industrial e gastronômico. Já o <strong>Óleo Vegetal Boavista</strong> garante alto desempenho e confiança, preservando o sabor natural dos alimentos.<br></br><br></br>A linha <strong>Ádria</strong> traz o Óleo de Soja, feito de grãos selecionados, leve e consistente, perfeito para o dia a dia. O <strong>Óleo Vegetal Ádria</strong> oferece versatilidade, rendimento e sabor neutro, adaptando-se a diferentes preparos.<br></br><br></br>A marca <strong>Glória</strong> apresenta o Óleo de Soja, leve, versátil e com excelente rendimento para frituras e refogados, e o <strong>Óleo Vegetal Glória</strong>, prático e confiável, ideal para cozinhas domésticas e profissionais, sempre preservando a qualidade e o sabor natural dos alimentos."
     }
 }

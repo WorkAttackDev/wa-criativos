@@ -16,7 +16,11 @@ const motionVariants = {
   },
 };
 
-const ProductBrands = () => {
+type Props = {
+  className?: string;
+};
+
+const ProductBrands = ({ className }: Props) => {
   const [brandParams, setBrandParams] = useQueryStates(brandSearchParams);
 
   const activeBrand = useMemo(
@@ -37,7 +41,10 @@ const ProductBrands = () => {
           },
         },
       }}
-      className="flex shrink items-center justify-center gap-20"
+      className={cn(
+        "flex shrink items-center justify-center gap-20",
+        className,
+      )}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}

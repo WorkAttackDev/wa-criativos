@@ -15,7 +15,9 @@ const AnnouncementBanner = (props: Props) => {
         República.
       </p>
       <Link
-        href={newsSearchParamsSerialize({ newsId: "1" }) + linksObj.news.href}
+        href={
+          newsSearchParamsSerialize({ newsId: "news-3" }) + linksObj.news.href
+        }
         className={cn(
           buttonVariants({ size: "sm", variant: "secondary" }),
           "hover:text-card hover:bg-primary",

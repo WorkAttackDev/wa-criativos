@@ -12,6 +12,9 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
+import { Button, buttonVariants } from "@/components/ui/button";
+import { ExternalLink } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 interface NewsCardProps {
   news: NewsItem;
@@ -19,6 +22,7 @@ interface NewsCardProps {
 }
 
 const NewsCard = ({ news, className }: NewsCardProps) => {
+  const t = useTranslations("News");
   const [queryParams, setQueryParams] = useQueryStates(newsSearchParams);
 
   const isOpen = queryParams.newsId === news.id;
@@ -37,7 +41,7 @@ const NewsCard = ({ news, className }: NewsCardProps) => {
     <>
       <article
         className={cn(
-          "group bg-card flex flex-1 cursor-pointer flex-col shadow-sm transition-all duration-300 hover:shadow-md",
+          "group bg-card flex flex-1 cursor-pointer flex-col overflow-hidden rounded-lg shadow-sm transition-all duration-300 hover:shadow-md",
           className,
         )}
         onClick={handleCardClick}
@@ -94,6 +98,19 @@ const NewsCard = ({ news, className }: NewsCardProps) => {
             <div className="prose prose-2xl max-w-none">
               <p className="text-2xl/normal">{news.description}</p>
             </div>
+
+            <a
+              href={news.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(
+                buttonVariants({ variant: "default", size: "sm" }),
+                "flex w-fit items-center",
+              )}
+            >
+              {t("viewMore")}
+              <ExternalLink />
+            </a>
           </div>
         </DialogContent>
       </Dialog>

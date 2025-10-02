@@ -99,7 +99,8 @@
     },
     "News": {
         "title": "News",
-        "subtitle": "Stay updated with the latest news and developments from Refitec"
+        "subtitle": "Stay updated with the latest news and developments from Refitec",
+        "viewMore": "View more"
     },
     "Career": {
         "title": "Careers",
@@ -117,6 +118,6 @@
     },
     "Products": {
         "title": "Our Products",
-        "description": "Among our main products are Refined Palm Oil, Refined Soy Oil, Sunflower Oil and other varieties of vegetable oils and fats. The use of cutting-edge technology in the refining and packaging processes ensures high food safety standards, purity and durability, making Refitec products a benchmark in the national market."
+        "description": "Refitec offers three brands of edible oils: <strong>Boavista</strong>, <strong>Ádria</strong> and <strong>Glória</strong>, each with Soybean Oil and Vegetable Oil versions.<br></br><br></br><strong>Boavista Soybean Oil</strong> stands out for its purity, stability and neutral flavor, ideal for domestic, industrial and gastronomic use. <strong>Boavista Vegetable Oil</strong> guarantees high performance and reliability, preserving the natural flavor of food.<br></br><br></br>The <strong>Ádria</strong> line brings Soybean Oil, made from selected grains, light and consistent, perfect for everyday use. <strong>Ádria Vegetable Oil</strong> offers versatility, yield and neutral flavor, adapting to different preparations.<br></br><br></br>The <strong>Glória</strong> brand presents Soybean Oil, light, versatile and with excellent yield for frying and sautéing, and <strong>Glória Vegetable Oil</strong>, practical and reliable, ideal for domestic and professional kitchens, always preserving the quality and natural flavor of food."
     }
 }

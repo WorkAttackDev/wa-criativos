@@ -12,7 +12,7 @@ const ProductSectionWrapper = ({ children }: Props) => {
   return (
     <MotionSection
       id={linksObj.products.href.replace("#", "")}
-      className="my-container flex flex-col items-center gap-32 py-32"
+      className="my-container flex flex-col items-center gap-20 py-32"
       variants={{
         hidden: {
           opacity: 0,
