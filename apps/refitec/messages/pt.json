@@ -46,7 +46,7 @@
         "description": "Bem-vindo à REFITEC, onde a precisão encontra a excelência nos nossos departamentos especializados de linhas de produção.",
         "dailyProcessingCapacity": "Litros de capacidade de processamento diário",
         "dailyPackagingCapacity": "Litros de capacidade de embalamento diário",
-        "totalArea": "Metros quadrado de área total"
+        "totalArea": "Metros quadrados de área total"
     },
     "Timeline": {
         "title": "Cronograma",
@@ -104,7 +104,7 @@
     },
     "Career": {
         "title": "Carreiras",
-        "description": "Investimos na capacitação de jovens e profissionais com programas técnicos e formação interna. Na segunda fase do projecto, criámos mais de 1.300 empregos directos, comprometendo-nos com oportunidades reais e uma equipa forte e inclusiva. Junte-se a nós e faça parte de um projecto com propósito e impacto.",
+        "description": "Investimos na capacitação de jovens e profissionais com programas técnicos e formação interna. Na segunda fase do projecto, criamos mais de 1.300 empregos directos, comprometendo-nos com oportunidades reais e uma equipa forte e inclusiva. Junte-se a nós e faça parte de um projecto com propósito e impacto.",
         "form": {
             "firstName": "Nome",
             "lastName": "Sobrenome",
@@ -118,6 +118,6 @@
     },
     "Products": {
         "title": "Os nossos produtos",
-        "description": "A Refitec oferece três marcas de óleos alimentares: <strong>Boavista</strong>, <strong>Ádria</strong> e <strong>Glória</strong>, cada uma com versões de Óleo de Soja e Óleo Vegetal.<br></br><br></br>O <strong>Óleo de Soja Boavista</strong> destaca-se pela pureza, estabilidade e sabor neutro, ideal para uso doméstico, industrial e gastronômico. Já o <strong>Óleo Vegetal Boavista</strong> garante alto desempenho e confiança, preservando o sabor natural dos alimentos.<br></br><br></br>A linha <strong>Ádria</strong> traz o Óleo de Soja, feito de grãos selecionados, leve e consistente, perfeito para o dia a dia. O <strong>Óleo Vegetal Ádria</strong> oferece versatilidade, rendimento e sabor neutro, adaptando-se a diferentes preparos.<br></br><br></br>A marca <strong>Glória</strong> apresenta o Óleo de Soja, leve, versátil e com excelente rendimento para frituras e refogados, e o <strong>Óleo Vegetal Glória</strong>, prático e confiável, ideal para cozinhas domésticas e profissionais, sempre preservando a qualidade e o sabor natural dos alimentos."
+        "description": "A Refitec oferece três marcas de óleos alimentares: <strong>Boavista</strong>, <strong>Ádria</strong> e <strong>Glória</strong>, cada uma com versões de <strong>Óleo de Soja e Óleo Vegetal</strong>.<br></br><br></br>O <strong>Óleo de Soja Boavista</strong> destaca-se pela pureza, estabilidade e sabor neutro, ideal para uso doméstico, industrial e gastronômico. Já o <strong>Óleo Vegetal Boavista</strong> garante alto desempenho e confiança, preservando o sabor natural dos alimentos.<br></br><br></br>A linha <strong>Ádria</strong> traz o <strong>Óleo de Soja</strong>, feito de grãos selecionados, leve e consistente, perfeito para o dia a dia. O <strong>Óleo Vegetal Ádria</strong> oferece versatilidade, rendimento e sabor neutro, adaptando-se a diferentes preparos.<br></br><br></br>A marca <strong>Glória</strong> apresenta o <strong>Óleo de Soja</strong>, leve, versátil e com excelente rendimento para frituras e refogados, e o <strong>Óleo Vegetal Glória</strong>, prático e confiável, ideal para cozinhas domésticas e profissionais, sempre preservando a qualidade e o sabor natural dos alimentos."
     }
 }
