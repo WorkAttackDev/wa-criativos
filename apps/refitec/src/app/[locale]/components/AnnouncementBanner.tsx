@@ -16,7 +16,8 @@ const AnnouncementBanner = (props: Props) => {
       </p>
       <Link
         href={
-          newsSearchParamsSerialize({ newsId: "news-3" }) + linksObj.news.href
+          newsSearchParamsSerialize({ newsId: "news-inauguration" }) +
+          linksObj.news.href
         }
         className={cn(
           buttonVariants({ size: "sm", variant: "secondary" }),

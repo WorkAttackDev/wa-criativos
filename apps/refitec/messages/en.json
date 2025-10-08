@@ -43,7 +43,7 @@
     },
     "InNumbers": {
         "title": "Refitec in Numbers",
-        "description": "Welcome to REFITEC, where precision meets excellence in our specialised production line departments.",
+        "description": "Where precision meets excellence in our specialized production line departments.",
         "dailyProcessingCapacity": "Litres of daily processing capacity",
         "dailyPackagingCapacity": "Litres of daily packaging capacity",
         "totalArea": "Square metres of total area"
@@ -80,8 +80,7 @@
         }
     },
     "Contacts": {
-        "title": "Contacts",
-        "description": "The project will be implemented in the Province of Luanda-Angola, approximately 700m from the Port of Luanda, in a location used for the development of industrial activities during the colonial period."
+        "title": "Contacts"
     },
     "Footer": {
         "termsOfService": "Terms of Service",
@@ -118,6 +117,6 @@
     },
     "Products": {
         "title": "Our Products",
-        "description": "Refitec offers three brands of edible oils: <strong>Boavista</strong>, <strong>Ádria</strong> and <strong>Glória</strong>, each with Soybean Oil and Vegetable Oil versions.<br></br><br></br><strong>Boavista Soybean Oil</strong> stands out for its purity, stability and neutral flavor, ideal for domestic, industrial and gastronomic use. <strong>Boavista Vegetable Oil</strong> guarantees high performance and reliability, preserving the natural flavor of food.<br></br><br></br>The <strong>Ádria</strong> line brings Soybean Oil, made from selected grains, light and consistent, perfect for everyday use. <strong>Ádria Vegetable Oil</strong> offers versatility, yield and neutral flavor, adapting to different preparations.<br></br><br></br>The <strong>Glória</strong> brand presents Soybean Oil, light, versatile and with excellent yield for frying and sautéing, and <strong>Glória Vegetable Oil</strong>, practical and reliable, ideal for domestic and professional kitchens, always preserving the quality and natural flavor of food."
+        "description": "Refitec offers three brands of edible oils: <strong>Boavista</strong>, <strong>Adria</strong> and <strong>Glória</strong>, each with Soybean Oil and Vegetable Oil versions.<br></br><br></br><strong>Boavista Soybean Oil</strong> stands out for its purity, stability and neutral flavor, ideal for domestic, industrial and gastronomic use.<br></br><strong>Boavista Vegetable Oil</strong> guarantees high performance and reliability, preserving the natural flavor of food.<br></br><br></br>The <strong>Adria</strong> line brings Soybean Oil, made from selected grains, light and consistent, perfect for everyday use.<br></br><strong>Adria Vegetable Oil</strong> offers versatility, yield and neutral flavor, adapting to different preparations.<br></br><br></br>The <strong>Glória</strong> brand presents Soybean Oil, light, versatile and with excellent yield for frying and sautéing.<br></br>The <strong>Glória Vegetable Oil</strong>, practical and reliable, ideal for domestic and professional kitchens, always preserving the quality and natural flavor of food."
     }
 }

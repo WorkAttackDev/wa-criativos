@@ -2,7 +2,7 @@
 
 import * as React from "react";
 import Image from "next/image";
-import { useQueryState, parseAsString, useQueryStates } from "nuqs";
+import { useQueryStates } from "nuqs";
 import { NewsItem, newsSearchParams } from "../data/newsData";
 import { cn } from "@/lib/utils";
 import {
@@ -12,7 +12,7 @@ import {
   DialogTitle,
   DialogDescription,
 } from "@/components/ui/dialog";
-import { Button, buttonVariants } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { ExternalLink } from "lucide-react";
 import { useTranslations } from "next-intl";
 
@@ -48,7 +48,7 @@ const NewsCard = ({ news, className }: NewsCardProps) => {
       >
         <figure className="relative overflow-hidden">
           <Image
-            src={news.image}
+            src={news.thumbnail}
             alt={news.title}
             width={640}
             height={360}
@@ -86,31 +86,58 @@ const NewsCard = ({ news, className }: NewsCardProps) => {
 
           <div className="grid gap-6">
             <figure className="relative overflow-hidden">
-              <Image
-                src={news.image}
-                alt={news.title}
-                width={800}
-                height={450}
-                className="aspect-[4/2.5] w-full object-cover"
-              />
+              {news.media?.type === "video" ? (
+                <video
+                  controls
+                  className="aspect-[4/2.5] w-full object-cover"
+                  preload="metadata"
+                >
+                  <source src={news.media.src} type="video/webm" />
+                  <source
+                    src={news.media.src.replace(".webm", ".mp4")}
+                    type="video/mp4"
+                  />
+                  Your browser does not support the video tag.
+                </video>
+              ) : news.media?.type === "image" ? (
+                <Image
+                  src={news.media.src}
+                  alt={news.title}
+                  width={800}
+                  height={450}
+                  placeholder="blur"
+                  className="aspect-[4/2.5] w-full object-cover"
+                />
+              ) : (
+                <Image
+                  src={news.thumbnail}
+                  alt={news.title}
+                  width={800}
+                  height={450}
+                  placeholder="blur"
+                  className="aspect-[4/2.5] w-full object-cover"
+                />
+              )}
             </figure>
 
             <div className="prose prose-2xl max-w-none">
               <p className="text-2xl/normal">{news.description}</p>
             </div>
 
-            <a
-              href={news.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={cn(
-                buttonVariants({ variant: "default", size: "sm" }),
-                "flex w-fit items-center",
-              )}
-            >
-              {t("viewMore")}
-              <ExternalLink />
-            </a>
+            {news.link && (
+              <a
+                href={news.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={cn(
+                  buttonVariants({ variant: "default", size: "sm" }),
+                  "flex w-fit items-center",
+                )}
+              >
+                {t("viewMore")}
+                <ExternalLink />
+              </a>
+            )}
           </div>
         </DialogContent>
       </Dialog>

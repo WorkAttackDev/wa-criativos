@@ -1,7 +1,9 @@
-import MissionImg from "@/assets/imgs/bottling-line-sunflower-oil-bottles-vegetable-oil-production-plant-high.jpg";
-import VisionImg from "@/assets/imgs/man-handling-machine.jpg";
-import Worker1 from "@/assets/imgs/worker-1.jpg";
-import ValuesImg from "@/assets/imgs/worker-touching-tablet.jpg";
+import WhoWeAreImg from "@/assets/imgs/refitec-entrance.jpg";
+import SustainabilityImg from "@/assets/imgs/factory.jpeg";
+import MissionImg from "@/assets/imgs/mission-img.jpeg";
+// import VisionImg from "@/assets/imgs/workers.jpg";
+import VisionImg from "@/assets/imgs/smiling-young-customer-holding-bottle-oil.jpg";
+import ValuesImg from "@/assets/imgs/sustainability.jpg";
 
 // export type AboutTFunction = ReturnType<typeof useTranslations<"About">>;
 
@@ -10,7 +12,7 @@ export const AboutInfo = [
     items: undefined,
     titleKey: "whoWeAre",
     textKey: "whoWeAreText",
-    img: Worker1,
+    img: WhoWeAreImg,
     type: "article",
   },
   {
@@ -47,7 +49,7 @@ export const AboutInfo = [
         textKey: "sustainabilityText",
       },
     ],
-    img: Worker1,
+    img: SustainabilityImg,
     type: "article-items",
   },
 ] as const;

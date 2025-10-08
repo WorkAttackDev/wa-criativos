@@ -69,18 +69,8 @@ const HeroSection = (_: Props) => {
         playsInline
         className="absolute h-full w-full object-cover"
       >
-        <source
-          src="/vids/refitec-inauguration-sm.webm"
-          type="video/webm"
-          media="(max-width: 720px)"
-        />
-        <source
-          src="/vids/refitec-inauguration-sm.mp4"
-          type="video/mp4"
-          media="(max-width: 720px)"
-        />
-        <source src="/vids/refitec-inauguration-lg.webm" type="video/webm" />
-        <source src="/vids/refitec-inauguration-lg.mp4" type="video/mp4" />
+        <source src="/vids/refitec-intro-xl.webm" type="video/webm" />
+        <source src="/vids/refitec-intro-xl.mp4" type="video/mp4" />
       </video>
       <div
         className={cn(

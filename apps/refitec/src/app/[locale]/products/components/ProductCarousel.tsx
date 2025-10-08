@@ -1,11 +1,6 @@
 "use client";
 import { Carousel, CarouselDots, CarouselItem } from "@/components/ui/carousel";
-import {
-  MotionButton,
-  MotionCarouselContent,
-  MotionPicture,
-} from "@/lib/motion-index";
-import { cn } from "@/lib/utils";
+import { MotionButton, MotionCarouselContent } from "@/lib/motion-index";
 import { Variants } from "motion";
 import Image from "next/image";
 import { useQueryStates } from "nuqs";
@@ -36,67 +31,43 @@ export default function ProductCarousel() {
       }}
       className="relative grid w-full gap-20"
     >
-      <div className="max-mdx:flex-col mdx:gap-32 flex items-center gap-10">
-        <MotionPicture
-          key={activeBrand.name + "-logo"}
-          variants={{
-            hidden: { opacity: 0, scale: 0, y: 100 },
-            visible: {
-              opacity: 1,
-              scale: 1,
-              y: 0,
-              transition: { duration: 0.5 },
+      <MotionCarouselContent
+        key={activeBrand.name + "-products"}
+        variants={{
+          hidden: { opacity: 0 },
+          visible: {
+            opacity: 1,
+            transition: {
+              delay: 0.5,
+              staggerChildren: 0.1,
+              when: "beforeChildren",
             },
-          }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          className="aspect-square h-full w-full max-w-64 flex-2 transition-all duration-300"
-        >
-          <Image
-            src={activeBrand.logo}
-            alt={`${activeBrand.name} logo`}
-            className={cn("aspect-square h-full w-full object-contain")}
-          />
-        </MotionPicture>
-        <MotionCarouselContent
-          key={activeBrand.name + "-products"}
-          variants={{
-            hidden: { opacity: 0 },
-            visible: {
-              opacity: 1,
-              transition: {
-                delay: 0.5,
-                staggerChildren: 0.1,
-                when: "beforeChildren",
-              },
-            },
-          }}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.5 }}
-          className="-ml-5 flex-1 p-4"
-        >
-          {activeBrand.products.map((product) => (
-            <CarouselItem
-              key={product.alt}
-              className="flex items-center justify-center pl-5 sm:basis-1/2 md:basis-1/3 lg:basis-1/4"
+          },
+        }}
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.5 }}
+        className="-ml-5 p-4"
+      >
+        {activeBrand.products.map((product) => (
+          <CarouselItem
+            key={product.alt}
+            className="flex basis-1/2 items-center justify-center pl-5 sm:basis-1/3 lg:basis-1/4"
+          >
+            <MotionButton
+              variants={buttonVariants}
+              className="relative flex aspect-square items-center justify-center bg-white p-5 shadow-[0_2px_10px_rgba(0,0,0,0.1)]"
             >
-              <MotionButton
-                variants={buttonVariants}
-                className="relative flex aspect-square items-center justify-center bg-white p-5 shadow-md"
-              >
-                <Image
-                  src={product.src}
-                  alt={product.alt}
-                  className="h-full w-full object-contain"
-                  placeholder="blur"
-                />
-              </MotionButton>
-            </CarouselItem>
-          ))}
-        </MotionCarouselContent>
-      </div>
+              <Image
+                src={product.src}
+                alt={product.alt}
+                className="h-full w-full object-contain"
+                placeholder="blur"
+              />
+            </MotionButton>
+          </CarouselItem>
+        ))}
+      </MotionCarouselContent>
       <CarouselDots />
     </Carousel>
   );

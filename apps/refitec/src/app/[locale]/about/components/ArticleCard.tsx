@@ -70,10 +70,10 @@ export const ArticleCardImage = ({
         src={img}
         alt={alt}
         className={cn(
-          "h-full w-full object-cover duration-500 ease-out group-hover:scale-110",
+          "h-full w-full object-cover duration-500 ease-out will-change-transform group-hover:scale-110",
         )}
       />
-      <div className="from-foreground absolute inset-0 bg-gradient-to-t from-1%"></div>
+      {/* <div className="from-foreground absolute inset-0 bg-gradient-to-t from-1%"></div> */}
     </MotionPicture>
   );
 };

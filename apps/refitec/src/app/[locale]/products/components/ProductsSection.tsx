@@ -14,16 +14,16 @@ export default async function ProductsSection() {
 
   return (
     <ProductSectionWrapper>
-      <section className="max-mdx:flex-col mdx:gap-32 flex gap-10">
+      <section className="flex flex-col gap-20">
         <MotionArticle
           variants={{
             hidden: { opacity: 0, x: -100 },
             visible: { opacity: 1, x: 0, transition: { duration: 0.5 } },
           }}
-          className="flex min-w-80 flex-2 flex-col gap-10"
+          className="flex flex-col items-center gap-10 text-center"
         >
           <HeadingText variant="secondary">{t("title")}</HeadingText>
-          <div className="text-foreground line-clamp-6 text-justify">
+          <div className="text-foreground line-clamp-6 max-w-5xl text-justify">
             {t.rich("description", {
               strong: (chunks) => (
                 <strong className="font-semibold">{chunks}</strong>
@@ -42,14 +42,14 @@ export default async function ProductsSection() {
             readMoreLabel={tAbout("readMore")}
           />
         </MotionArticle>
+        <Separator />
         <Suspense fallback={null}>
-          <ProductBrands className="flex-1" />
+          <ProductBrands />
+        </Suspense>
+        <Suspense fallback={null}>
+          <ProductCarousel />
         </Suspense>
       </section>
-      <Separator />
-      <Suspense fallback={null}>
-        <ProductCarousel />
-      </Suspense>
     </ProductSectionWrapper>
   );
 }

@@ -16,7 +16,7 @@ type Props = {
 const ProductDialog = ({ title, description, readMoreLabel }: Props) => {
   return (
     <Dialog>
-      <DialogTrigger className="text-primary hover:text-secondary hover:border-b-secondary mt-auto ml-auto flex w-fit cursor-pointer items-center gap-4 border-b border-b-transparent font-medium duration-300 ease-out">
+      <DialogTrigger className="text-primary hover:text-secondary hover:border-b-secondary flex w-fit cursor-pointer items-center gap-4 border-b border-b-transparent font-medium duration-300 ease-out">
         {readMoreLabel}
         <Captions className="size-8" strokeWidth={1.5} />
       </DialogTrigger>

@@ -11,7 +11,6 @@ import { contactLinksObj, linksObj } from "../links";
 
 type Props = {
   title: string;
-  description: string;
   locale: string;
   mapKey: string;
 };
@@ -33,7 +32,7 @@ const ContactInfoAndSocial = () => {
     },
   ];
   return (
-    <div className="flex flex-col gap-6 text-center sm:items-end sm:text-end">
+    <div className="flex flex-col gap-4 text-center sm:items-start sm:text-start">
       <a
         className={cn(buttonVariants({ variant: "link" }), "text-current")}
         href={contactLinksObj.phone.href}
@@ -63,7 +62,7 @@ const ContactInfoAndSocial = () => {
   );
 };
 
-const ContactSection = ({ description, locale, title, mapKey }: Props) => {
+const ContactSection = ({ locale, title, mapKey }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [showMap, setShowMap] = useState(false);
 
@@ -120,15 +119,12 @@ const ContactSection = ({ description, locale, title, mapKey }: Props) => {
       >
         <article
           ref={ref}
-          className={
-            "my-container flex flex-wrap justify-between gap-16 py-16 text-white"
-          }
+          className={"my-container flex flex-wrap gap-16 py-16 text-white"}
         >
-          <span className="grid gap-4">
+          <span className="grid gap-8">
             <HeadingText variant="secondary">{title}</HeadingText>
-            <p className="max-w-3xl leading-normal">{description}</p>
+            <ContactInfoAndSocial />
           </span>
-          <ContactInfoAndSocial />
           <Button
             aria-label="Show Map"
             title="Show Map"

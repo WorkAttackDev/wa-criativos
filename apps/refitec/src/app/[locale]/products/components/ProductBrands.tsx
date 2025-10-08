@@ -23,14 +23,10 @@ type Props = {
 const ProductBrands = ({ className }: Props) => {
   const [brandParams, setBrandParams] = useQueryStates(brandSearchParams);
 
-  const activeBrand = useMemo(
-    () => brandsData[brandParams.brand],
-    [brandParams],
-  );
+  const activeBrandId = useMemo(() => brandParams.brand, [brandParams]);
 
   return (
     <MotionDiv
-      key={activeBrand.name + "-brands"}
       variants={{
         hidden: { opacity: 0 },
         visible: {
@@ -42,35 +38,38 @@ const ProductBrands = ({ className }: Props) => {
         },
       }}
       className={cn(
-        "flex shrink items-center justify-center gap-20",
+        "flex shrink items-center justify-center gap-5 sm:gap-10",
         className,
       )}
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true }}
     >
-      {brands
-        .filter((brand) => brand.name !== activeBrand.name)
-        .map((brand) => (
+      {brands.map((brand) => {
+        const isActive = brand.id === activeBrandId;
+
+        return (
           <MotionButton
             variants={motionVariants}
             whileTap={{
-              scale: 0.8,
-              transition: { duration: 0.1, ease: "easeIn" },
+              scale: 0.9,
+              transition: { duration: 0.05, ease: "linear" },
             }}
             key={`${brand.name}-${brand.id}`}
             onClick={() => setBrandParams({ brand: brand.id })}
             className={cn(
-              "cursor-pointer transition-all duration-300 hover:scale-110",
+              "cursor-pointer rounded-lg p-5 px-10 transition-all duration-300 will-change-transform",
+              isActive ? "bg-muted/20" : "hover:bg-muted/10 hover:scale-95",
             )}
           >
             <Image
               src={brand.logo}
               alt={`${brand.name} logo`}
-              className="aspect-square w-64"
+              className="aspect-square w-full max-w-36 lg:max-w-48"
             />
           </MotionButton>
-        ))}
+        );
+      })}
     </MotionDiv>
   );
 };

@@ -101,7 +101,7 @@ export type BrandTypeWithoutProducts = Omit<
 export const brandSearchParams = {
   brand: parseAsStringLiteral(
     Object.values(brandsData).map((b) => b.id),
-  ).withDefault("gloria"),
+  ).withDefault("adria"),
 };
 
 // export const brandSearchParamsCache =

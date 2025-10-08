@@ -9,6 +9,7 @@ import {
 import {
   Children,
   cloneElement,
+  HTMLAttributes,
   HtmlHTMLAttributes,
   isValidElement,
   ReactNode,
@@ -24,17 +25,15 @@ type Props = {
   keyframes: DOMKeyframesDefinition;
 };
 
-export interface ElementProps extends HtmlHTMLAttributes<HTMLElement> {
+export interface ElementProps extends HTMLAttributes<HTMLElement> {
   ref?: React.Ref<HTMLElement>;
 }
-
 export const MotionAnim = ({
   children,
   ...props
 }: Props & { children: ReactNode }) => {
   const { selector, stagger = false, duration = 0.7, delay = 0 } = props || {};
-  const ref = useRef<HTMLDivElement>(null);
-
+  const ref = useRef<HTMLElement>(null);
   useLayoutEffect(() => {
     if (!ref.current) return;
     const _sel =
