@@ -7,7 +7,9 @@ export const careerFormSchema = z.object({
   phone: z.string().min(9, "Telefone inválido").max(15, "Telefone inválido"),
   about: z.string().min(10, "Mínimo 10 caracteres").max(1000),
   cv: z
-    .file()
+    .file({
+      error: "Por favor, insira o seu CV",
+    })
     .min(1, "Por favor, insira o seu CV")
     .max(5 * 1024 * 1024, "O CV deve ter no máximo 5MB")
     .mime("application/pdf", "O CV deve ser um ficheiro PDF"),

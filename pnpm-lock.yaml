@@ -174,6 +174,9 @@ importers:
       '@radix-ui/react-slot':
         specifier: ^1.2.3
         version: 1.2.3(@types/react@19.1.16)(react@19.1.1)
+      '@react-email/components':
+        specifier: ^0.0.18
+        version: 0.0.18(@types/react@19.1.16)(react@19.1.1)
       class-variance-authority:
         specifier: ^0.7.1
         version: 0.7.1
@@ -195,6 +198,12 @@ importers:
       next-intl:
         specifier: ^4.3.9
         version: 4.3.9(next@15.5.4(@playwright/test@1.55.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)(typescript@5.9.2)
+      next-themes:
+        specifier: ^0.3.0
+        version: 0.3.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      nodemailer:
+        specifier: ^6.9.14
+        version: 6.9.14
       nuqs:
         specifier: ^2.5.2
         version: 2.5.2(next@15.5.4(@playwright/test@1.55.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
@@ -207,6 +216,9 @@ importers:
       react-hook-form:
         specifier: ^7.62.0
         version: 7.62.0(react@19.1.1)
+      sonner:
+        specifier: ^1.5.0
+        version: 1.5.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -223,6 +235,9 @@ importers:
       '@types/node':
         specifier: ^24.6.1
         version: 24.6.1
+      '@types/nodemailer':
+        specifier: ^6.4.15
+        version: 6.4.15
       '@types/react':
         specifier: ^19.1.16
         version: 19.1.16
@@ -432,10 +447,6 @@ packages:
 
   '@babel/runtime-corejs3@7.22.10':
     resolution: {integrity: sha512-IcixfV2Jl3UrqZX4c81+7lVg5++2ufYJyAFW3Aux/ZTvY6LVYYhJ9rMgnbX0zGVq6eqfVpnoatTjZdVki/GmWA==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/runtime@7.23.9':
-    resolution: {integrity: sha512-0CX6F+BI2s9dkUqr08KFrAIZgNFj75rdBU/DjCyYLIaV/quFjkk6T+EJ2LkZHyZTbEV4L5p97mNkUsHl2wLFAw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/runtime@7.24.5':
@@ -4556,10 +4567,6 @@ packages:
     resolution: {integrity: sha512-jYofLM5Dam9279rdkWzqHozUo4ybjdZmCsDHePy5V/PbBcVMiSZR97gmAy45aqi8CK1lG2ECd356FU86avfwUQ==}
     engines: {node: '>=16 || 14 >=14.17'}
 
-  minipass@7.1.1:
-    resolution: {integrity: sha512-UZ7eQ+h8ywIRAW1hIEl2AqdwzJucU/Kp59+8kkZeSvafXhZjul247BvIJjEVFVeON6d7lM46XX1HXCduKAS8VA==}
-    engines: {node: '>=16 || 14 >=14.17'}
-
   minipass@7.1.2:
     resolution: {integrity: sha512-qOOzS1cBTWYF4BH8fVePDBOO9iptMnGUEZwNc/cMWnTV2nVLZ7VoNWEPHkYczZA0pdoA7dl6e7FL659nX9S2aw==}
     engines: {node: '>=16 || 14 >=14.17'}
@@ -6510,10 +6517,6 @@ snapshots:
       core-js-pure: 3.32.1
       regenerator-runtime: 0.14.0
 
-  '@babel/runtime@7.23.9':
-    dependencies:
-      regenerator-runtime: 0.14.0
-
   '@babel/runtime@7.24.5':
     dependencies:
       regenerator-runtime: 0.14.1
@@ -7137,10 +7140,17 @@ snapshots:
 
   '@radix-ui/react-compose-refs@1.0.1(@types/react@18.3.3)(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.24.7
       react: 19.0.0-rc-8971381549-20240625
     optionalDependencies:
       '@types/react': 18.3.3
+
+  '@radix-ui/react-compose-refs@1.0.1(@types/react@19.1.16)(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.24.7
+      react: 19.1.1
+    optionalDependencies:
+      '@types/react': 19.1.16
 
   '@radix-ui/react-compose-refs@1.1.0(@types/react@18.3.3)(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
@@ -7543,11 +7553,19 @@ snapshots:
 
   '@radix-ui/react-slot@1.0.2(@types/react@18.3.3)(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
-      '@babel/runtime': 7.23.9
+      '@babel/runtime': 7.24.7
       '@radix-ui/react-compose-refs': 1.0.1(@types/react@18.3.3)(react@19.0.0-rc-8971381549-20240625)
       react: 19.0.0-rc-8971381549-20240625
     optionalDependencies:
       '@types/react': 18.3.3
+
+  '@radix-ui/react-slot@1.0.2(@types/react@19.1.16)(react@19.1.1)':
+    dependencies:
+      '@babel/runtime': 7.24.7
+      '@radix-ui/react-compose-refs': 1.0.1(@types/react@19.1.16)(react@19.1.1)
+      react: 19.1.1
+    optionalDependencies:
+      '@types/react': 19.1.16
 
   '@radix-ui/react-slot@1.1.0(@types/react@18.3.3)(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
@@ -7659,22 +7677,43 @@ snapshots:
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/body@0.0.8(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
+
   '@react-email/button@0.0.15(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/button@0.0.15(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@react-email/code-block@0.0.4(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       prismjs: 1.29.0
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/code-block@0.0.4(react@19.1.1)':
+    dependencies:
+      prismjs: 1.29.0
+      react: 19.1.1
+
   '@react-email/code-inline@0.0.2(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/code-inline@0.0.2(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
+
   '@react-email/column@0.0.10(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/column@0.0.10(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@react-email/components@0.0.18(@types/react@18.3.3)(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
@@ -7702,17 +7741,55 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
+  '@react-email/components@0.0.18(@types/react@19.1.16)(react@19.1.1)':
+    dependencies:
+      '@react-email/body': 0.0.8(react@19.1.1)
+      '@react-email/button': 0.0.15(react@19.1.1)
+      '@react-email/code-block': 0.0.4(react@19.1.1)
+      '@react-email/code-inline': 0.0.2(react@19.1.1)
+      '@react-email/column': 0.0.10(react@19.1.1)
+      '@react-email/container': 0.0.12(react@19.1.1)
+      '@react-email/font': 0.0.6(react@19.1.1)
+      '@react-email/head': 0.0.9(react@19.1.1)
+      '@react-email/heading': 0.0.12(@types/react@19.1.16)(react@19.1.1)
+      '@react-email/hr': 0.0.8(react@19.1.1)
+      '@react-email/html': 0.0.8(react@19.1.1)
+      '@react-email/img': 0.0.8(react@19.1.1)
+      '@react-email/link': 0.0.8(react@19.1.1)
+      '@react-email/markdown': 0.0.10(react@19.1.1)
+      '@react-email/preview': 0.0.9(react@19.1.1)
+      '@react-email/render': 0.0.14
+      '@react-email/row': 0.0.8(react@19.1.1)
+      '@react-email/section': 0.0.12(react@19.1.1)
+      '@react-email/tailwind': 0.0.17(react@19.1.1)
+      '@react-email/text': 0.0.8(react@19.1.1)
+      react: 19.1.1
+    transitivePeerDependencies:
+      - '@types/react'
+
   '@react-email/container@0.0.12(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/container@0.0.12(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@react-email/font@0.0.6(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/font@0.0.6(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
+
   '@react-email/head@0.0.9(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/head@0.0.9(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@react-email/heading@0.0.12(@types/react@18.3.3)(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
@@ -7721,30 +7798,62 @@ snapshots:
     transitivePeerDependencies:
       - '@types/react'
 
+  '@react-email/heading@0.0.12(@types/react@19.1.16)(react@19.1.1)':
+    dependencies:
+      '@radix-ui/react-slot': 1.0.2(@types/react@19.1.16)(react@19.1.1)
+      react: 19.1.1
+    transitivePeerDependencies:
+      - '@types/react'
+
   '@react-email/hr@0.0.8(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/hr@0.0.8(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@react-email/html@0.0.8(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/html@0.0.8(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
+
   '@react-email/img@0.0.8(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/img@0.0.8(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
+
   '@react-email/link@0.0.8(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/link@0.0.8(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@react-email/markdown@0.0.10(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       md-to-react-email: 5.0.2(react@19.0.0-rc-8971381549-20240625)
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/markdown@0.0.10(react@19.1.1)':
+    dependencies:
+      md-to-react-email: 5.0.2(react@19.1.1)
+      react: 19.1.1
+
   '@react-email/preview@0.0.9(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/preview@0.0.9(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@react-email/render@0.0.14':
     dependencies:
@@ -7758,17 +7867,33 @@ snapshots:
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/row@0.0.8(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
+
   '@react-email/section@0.0.12(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/section@0.0.12(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@react-email/tailwind@0.0.17(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
 
+  '@react-email/tailwind@0.0.17(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
+
   '@react-email/text@0.0.8(react@19.0.0-rc-8971381549-20240625)':
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
+
+  '@react-email/text@0.0.8(react@19.1.1)':
+    dependencies:
+      react: 19.1.1
 
   '@rtsao/scc@1.1.0': {}
 
@@ -7937,7 +8062,7 @@ snapshots:
   '@types/glob@7.2.0':
     dependencies:
       '@types/minimatch': 5.1.2
-      '@types/node': 20.10.6
+      '@types/node': 20.14.9
 
   '@types/inquirer@6.5.0':
     dependencies:
@@ -8007,7 +8132,7 @@ snapshots:
 
   '@types/through@0.0.30':
     dependencies:
-      '@types/node': 20.10.6
+      '@types/node': 20.14.9
 
   '@types/tinycolor2@1.4.6': {}
 
@@ -9155,7 +9280,7 @@ snapshots:
       '@one-ini/wasm': 0.1.1
       commander: 10.0.1
       minimatch: 9.0.1
-      semver: 7.6.2
+      semver: 7.7.2
 
   electron-to-chromium@1.4.812: {}
 
@@ -10415,8 +10540,8 @@ snapshots:
     dependencies:
       foreground-child: 3.1.1
       jackspeak: 3.1.2
-      minimatch: 9.0.4
-      minipass: 7.1.1
+      minimatch: 9.0.5
+      minipass: 7.1.2
       path-scurry: 1.11.1
 
   glob@7.2.3:
@@ -11186,6 +11311,11 @@ snapshots:
       marked: 7.0.4
       react: 19.0.0-rc-8971381549-20240625
 
+  md-to-react-email@5.0.2(react@19.1.1):
+    dependencies:
+      marked: 7.0.4
+      react: 19.1.1
+
   merge-stream@2.0.0: {}
 
   merge2@1.4.1: {}
@@ -11217,7 +11347,7 @@ snapshots:
 
   minimatch@9.0.1:
     dependencies:
-      brace-expansion: 2.0.1
+      brace-expansion: 2.0.2
 
   minimatch@9.0.3:
     dependencies:
@@ -11234,8 +11364,6 @@ snapshots:
   minimist@1.2.8: {}
 
   minipass@7.0.4: {}
-
-  minipass@7.1.1: {}
 
   minipass@7.1.2: {}
 
@@ -11314,6 +11442,11 @@ snapshots:
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
       react-dom: 19.0.0-rc-8971381549-20240625(react@19.0.0-rc-8971381549-20240625)
+
+  next-themes@0.3.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+    dependencies:
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   next@14.2.4(@playwright/test@1.55.0)(react-dom@19.0.0-rc-8971381549-20240625(react@19.0.0-rc-8971381549-20240625))(react@19.0.0-rc-8971381549-20240625):
     dependencies:
@@ -11690,7 +11823,7 @@ snapshots:
   path-scurry@1.11.1:
     dependencies:
       lru-cache: 10.2.2
-      minipass: 7.1.1
+      minipass: 7.1.2
 
   path-type@4.0.0: {}
 
@@ -12369,6 +12502,11 @@ snapshots:
     dependencies:
       react: 19.0.0-rc-8971381549-20240625
       react-dom: 19.0.0-rc-8971381549-20240625(react@19.0.0-rc-8971381549-20240625)
+
+  sonner@1.5.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
+    dependencies:
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   sort-object-keys@1.1.3: {}
 

@@ -7,6 +7,10 @@ export const contactLinksObj = {
     href: "mailto:info@refitec.com",
     label: "info@refitec.com",
   },
+  recruitingEmail: {
+    href: "mailto:carreiras@grupo-naval.com",
+    label: "carreiras@grupo-naval.com",
+  },
 };
 
 export const linksObj = {

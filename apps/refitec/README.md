@@ -5,8 +5,8 @@
 - ✅ Colocar as três marcas justas e por baixo os produtos
 - ✅ Adria sem acento
 - ✅ Adicionar o video da inauguração nas notícias
-- 🔄 Terminar o formulário
-- 🔄 E-mail de carreiras: carreiras@grupo-naval.com
+- ✅ Terminar o formulário
+- ✅ E-mail de carreiras: carreiras@grupo-naval.com
 - ⌛ Informação dos depoimentos
 - ✅ Remover o texto dos contactos e manter a informação por baixo do titulo de contacto
 - ✅ Mover refitec em números para de baixo da secção de produtos

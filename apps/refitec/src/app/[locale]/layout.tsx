@@ -11,6 +11,7 @@ import "./globals.css";
 import Footer from "./sections/Footer";
 import Header from "./sections/Header";
 import { LazyMotionProvider } from "@/lib/motion-index";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -124,6 +125,7 @@ export default async function RootLayout({
               {children}
               <Footer />
               <TopScrollButton />
+              <Toaster />
             </NuqsAdapter>
           </LazyMotionProvider>
         </NextIntlClientProvider>

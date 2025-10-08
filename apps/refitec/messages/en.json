@@ -112,7 +112,19 @@
             "about": "About You",
             "cv": "Curriculum Vitae",
             "clear": "Clear",
-            "send": "Send"
+            "send": "Send",
+            "firstNamePlaceholder": "Ex: John",
+            "lastNamePlaceholder": "Ex: Smith",
+            "emailPlaceholder": "Ex: john.smith@gmail.com",
+            "phonePlaceholder": "Ex: +14445556666",
+            "aboutPlaceholder": "Ex: I am looking for a professional growth opportunity.",
+            "successTitle": "Operation completed successfully",
+            "errorTitle": "An error occurred",
+            "applicationSubject": "New job application received",
+            "confirmationSubject": "Thank you for applying",
+            "successMessage": "The email was sent successfully, please check your inbox to confirm receipt.",
+            "invalidFormMessage": "Please check the form data.",
+            "errorMessage": "An error occurred while sending the email. Please try again later."
         }
     },
     "Products": {

@@ -15,6 +15,10 @@ import { standardSchemaResolver } from "@hookform/resolvers/standard-schema";
 import { useForm } from "react-hook-form";
 import { CareerFormType, careerFormSchema } from "../schema";
 import { useTranslations } from "next-intl";
+import { useTransition } from "react";
+import { sendCareerApplicationEmail } from "../serverAction";
+import { toast } from "sonner";
+import { Loader2 } from "lucide-react";
 
 const defaultValues: Partial<CareerFormType> = {
   firstName: "",
@@ -26,18 +30,44 @@ const defaultValues: Partial<CareerFormType> = {
 
 const CareerForm = () => {
   const t = useTranslations("Career");
+  const [isPending, startTransition] = useTransition();
+
   const form = useForm<CareerFormType>({
     resolver: standardSchemaResolver(careerFormSchema),
     defaultValues,
+    disabled: isPending,
   });
+
+  const onSubmit = async (data: CareerFormType) => {
+    startTransition(async () => {
+      const formData = new FormData();
+      Object.entries(data).forEach(([key, value]) => {
+        if (value) {
+          formData.append(key, value);
+        }
+      });
+
+      const result = await sendCareerApplicationEmail(formData);
+
+      if (result.success) {
+        toast.success(t("form.successTitle", { namespace: "Career" }), {
+          description: result.message,
+          duration: 8000,
+        });
+        form.reset(defaultValues);
+      } else {
+        toast.error(t("form.errorTitle", { namespace: "Career" }), {
+          description: result.message,
+          duration: 8000,
+        });
+      }
+    });
+  };
 
   return (
     <Form {...form}>
       <form
-        onSubmit={form.handleSubmit((d) => {
-          console.log("Career form submitted", d);
-          form.reset(defaultValues);
-        })}
+        onSubmit={form.handleSubmit(onSubmit)}
         className="mx-auto grid w-full gap-8 text-white/90 max-lg:max-w-3xl"
       >
         <div className="grid gap-8 md:grid-cols-2">
@@ -52,7 +82,9 @@ const CareerForm = () => {
                 <FormControl>
                   <Input
                     {...field}
-                    placeholder="Ex: João"
+                    placeholder={t("form.firstNamePlaceholder", {
+                      namespace: "Career",
+                    })}
                     autoComplete="given-name"
                   />
                 </FormControl>
@@ -71,7 +103,9 @@ const CareerForm = () => {
                 <FormControl>
                   <Input
                     {...field}
-                    placeholder="Ex: Silva"
+                    placeholder={t("form.lastNamePlaceholder", {
+                      namespace: "Career",
+                    })}
                     autoComplete="family-name"
                   />
                 </FormControl>
@@ -89,7 +123,9 @@ const CareerForm = () => {
                   <Input
                     {...field}
                     type="email"
-                    placeholder="Ex: joao.silva@gmail.com"
+                    placeholder={t("form.emailPlaceholder", {
+                      namespace: "Career",
+                    })}
                     autoComplete="email"
                   />
                 </FormControl>
@@ -107,7 +143,9 @@ const CareerForm = () => {
                   <Input
                     {...field}
                     type="tel"
-                    placeholder="Ex: +244923228585"
+                    placeholder={t("form.phonePlaceholder", {
+                      namespace: "Career",
+                    })}
                     autoComplete="tel"
                   />
                 </FormControl>
@@ -146,7 +184,9 @@ const CareerForm = () => {
                   <Textarea
                     {...field}
                     rows={5}
-                    placeholder="Ex: Estou à procura de uma oportunidade de crescimento profissional."
+                    placeholder={t("form.aboutPlaceholder", {
+                      namespace: "Career",
+                    })}
                   />
                 </FormControl>
                 <FormMessage />
@@ -161,10 +201,12 @@ const CareerForm = () => {
             variant="secondary"
             size="sm"
             onClick={() => form.reset(defaultValues)}
+            disabled={isPending}
           >
             {t("form.clear")}
           </Button>
-          <Button size="sm" type="submit">
+          <Button size="sm" type="submit" disabled={isPending}>
+            {isPending && <Loader2 className="mr-2 h-4 w-4 animate-spin" />}
             {t("form.send")}
           </Button>
         </span>

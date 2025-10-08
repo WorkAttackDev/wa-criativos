@@ -10,7 +10,6 @@ import {
   Children,
   cloneElement,
   HTMLAttributes,
-  HtmlHTMLAttributes,
   isValidElement,
   ReactNode,
   useLayoutEffect,

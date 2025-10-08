@@ -112,7 +112,19 @@
             "about": "Sobre Você",
             "cv": "Curriculum Vitae",
             "clear": "Limpar",
-            "send": "Enviar"
+            "send": "Enviar",
+            "firstNamePlaceholder": "Ex: João",
+            "lastNamePlaceholder": "Ex: Silva",
+            "emailPlaceholder": "Ex: joao.silva@gmail.com",
+            "phonePlaceholder": "Ex: +244923228585",
+            "aboutPlaceholder": "Ex: Estou à procura de uma oportunidade de crescimento profissional.",
+            "successTitle": "Operação realizada com sucesso",
+            "errorTitle": "Ocorreu um erro",
+            "applicationSubject": "Nova candidatura para vaga de emprego",
+            "confirmationSubject": "Obrigado por se candidatar",
+            "successMessage": "O email foi enviado com sucesso, abra o seu e-mail para confirmar o recebimento.",
+            "invalidFormMessage": "Por favor, verifique os dados do formulário.",
+            "errorMessage": "Ocorreu um erro ao enviar o email. Tente novamente mais tarde."
         }
     },
     "Products": {
