@@ -18,7 +18,7 @@ const AboutSection = async (_: Props) => {
 
   return (
     <section className="my-container grid gap-32 py-32">
-      <section className="mdx:grid-cols-3 grid grid-cols-1 justify-center justify-items-center gap-20">
+      <section className="mdx:grid-cols-3 grid grid-cols-1 justify-center justify-items-center gap-20 overflow-hidden">
         {AboutInfo.map(({ img, textKey, titleKey, type, items }, i) =>
           type === "article" && !items ? (
             <article
@@ -96,7 +96,7 @@ const AboutSection = async (_: Props) => {
                     alt={t(titleKey)}
                     className="aspect-[2/1.25] w-full object-cover duration-500 ease-out group-hover:scale-110"
                   />
-                  <figcaption className="from-foreground absolute inset-0 flex items-end justify-start bg-gradient-to-t from-1% p-8">
+                  <figcaption className="from-foreground/60 absolute inset-0 flex items-end justify-start bg-gradient-to-t from-1% p-8 opacity-100 duration-300 ease-out group-hover:opacity-0">
                     <HeadingText variant="secondary">{t(titleKey)}</HeadingText>
                   </figcaption>
                 </figure>

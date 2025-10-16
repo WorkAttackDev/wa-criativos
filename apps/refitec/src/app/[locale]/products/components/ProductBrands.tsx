@@ -58,14 +58,14 @@ const ProductBrands = ({ className }: Props) => {
             key={`${brand.name}-${brand.id}`}
             onClick={() => setBrandParams({ brand: brand.id })}
             className={cn(
-              "cursor-pointer rounded-lg p-5 px-10 transition-all duration-300 will-change-transform",
+              `cursor-pointer rounded-lg p-5 px-10 transition-all duration-300 will-change-transform`,
               isActive ? "bg-muted/20" : "hover:bg-muted/10 hover:scale-95",
             )}
           >
             <Image
               src={brand.logo}
               alt={`${brand.name} logo`}
-              className="aspect-square w-full max-w-36 lg:max-w-48"
+              className={`aspect-square w-full max-w-36 object-contain lg:max-w-48`}
             />
           </MotionButton>
         );

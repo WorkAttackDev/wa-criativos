@@ -23,7 +23,7 @@ export default async function ProductsSection() {
           className="flex flex-col items-center gap-10 text-center"
         >
           <HeadingText variant="secondary">{t("title")}</HeadingText>
-          <div className="text-foreground line-clamp-6 max-w-5xl text-justify">
+          <div className="text-foreground dark:text-primary line-clamp-6 max-w-5xl text-justify">
             {t.rich("description", {
               strong: (chunks) => (
                 <strong className="font-semibold">{chunks}</strong>

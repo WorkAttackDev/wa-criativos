@@ -28,16 +28,19 @@ import gloriaOilSquareCupDuoVeg from "@/assets/imgs/products/brand-gloria_produc
 import gloriaOilSquareCupMonoSoja from "@/assets/imgs/products/brand-gloria_product-oil_square_cup_mono_soja.png";
 import gloriaOilSquareCupMonoVeg from "@/assets/imgs/products/brand-gloria_product-oil_square_cup_mono_veg.png";
 import gloriaSecondaryPackSoja from "@/assets/imgs/products/brand-gloria_product-secondary_pack_soja.png";
+// Logos
 import AdriaLogo from "@/assets/imgs/adria-logo.svg";
-import BoaVistaLogo from "@/assets/imgs/boa_vista-logo.svg";
+import BoaVistaLogo from "@/assets/imgs/boa_vista-logo-all.png";
 import GloriaLogo from "@/assets/imgs/gloria-logo.svg";
-import { createSearchParamsCache, parseAsStringLiteral } from "nuqs/server";
+// import GloriaLogoDark from "@/assets/imgs/gloria-logo-dark.svg";
+import { parseAsStringLiteral } from "nuqs/server";
 
 export const brandsData = {
   adria: {
     id: "adria" as const,
     name: "Adria",
     logo: AdriaLogo,
+    logoDark: AdriaLogo,
     products: [
       { id: "1", src: adriaOilJarrycan20lSoja, alt: "Adria Product 1" },
       { id: "2", src: adriaOilRoundCupDuoSoja, alt: "Adria Product 2" },
@@ -55,6 +58,7 @@ export const brandsData = {
     id: "boaVista" as const,
     name: "Boa Vista",
     logo: BoaVistaLogo,
+    logoDark: BoaVistaLogo,
     products: [
       { id: "1", src: boaVistaOilJarrycan20lSoja, alt: "Boa Vista Product 1" },
       { id: "2", src: boaVistaOilRoundCupDuoSoja, alt: "Boa Vista Product 2" },
@@ -76,6 +80,7 @@ export const brandsData = {
     id: "gloria" as const,
     name: "Gloria",
     logo: GloriaLogo,
+    logoDark: GloriaLogo,
     products: [
       { id: "1", src: gloriaOilJarrycan20lSoja, alt: "Gloria Product 1" },
       { id: "2", src: gloriaOilRoundCupDuoSoja, alt: "Gloria Product 2" },

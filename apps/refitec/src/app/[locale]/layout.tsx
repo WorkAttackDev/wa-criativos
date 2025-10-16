@@ -1,5 +1,5 @@
 import { routing } from "@/i18n/routing";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { hasLocale, NextIntlClientProvider } from "next-intl";
 import { setRequestLocale } from "next-intl/server";
 import { Inter } from "next/font/google";
@@ -14,6 +14,10 @@ import { LazyMotionProvider } from "@/lib/motion-index";
 import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
+
+export const viewport: Viewport = {
+  colorScheme: "only light",
+};
 
 export const metadata: Metadata = {
   title: "Seja bem-vindo à Refitec!",
@@ -115,7 +119,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className="scheme-light">
       <body className={inter.className}>
         <NextIntlClientProvider>
           <LazyMotionProvider>
