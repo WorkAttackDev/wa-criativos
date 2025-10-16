@@ -1,7 +1,6 @@
-import WhoWeAreImg from "@/assets/imgs/refitec-entrance.jpg";
+import WhoWeAreImg from "@/assets/imgs/inside-factory.jpg";
 import SustainabilityImg from "@/assets/imgs/factory.jpeg";
-import MissionImg from "@/assets/imgs/mission-img.jpeg";
-// import VisionImg from "@/assets/imgs/workers.jpg";
+import MissionImg from "@/assets/imgs/bottle-of-oil-and-soy-bean.jpg";
 import VisionImg from "@/assets/imgs/smiling-young-customer-holding-bottle-oil.jpg";
 import ValuesImg from "@/assets/imgs/sustainability.jpg";
 
