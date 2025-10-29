@@ -1,6 +1,7 @@
 import WhoWeAreImg from "@/assets/imgs/refitec-oils.jpg";
 import SustainabilityImg from "@/assets/imgs/factory.jpeg";
 import MissionImg from "@/assets/imgs/bottle-of-oil-and-soy-bean.jpg";
+import MissionImg from "@/assets/imgs/bottle-of-oil-and-soy-bean.jpg";
 import VisionImg from "@/assets/imgs/smiling-young-customer-holding-bottle-oil.jpg";
 import ValuesImg from "@/assets/imgs/sustainability.jpg";
 

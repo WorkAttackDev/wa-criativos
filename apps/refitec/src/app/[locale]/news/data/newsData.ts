@@ -37,6 +37,7 @@ export const newsData: NewsItem[] = [
     description:
       "A Refitec celebrou um marco histórico com a inauguração oficial da sua fábrica em Luanda, contando com a presença do Presidente da República de Angola. Este evento representa um momento de grande importância para a indústria nacional, consolidando o compromisso da empresa com o desenvolvimento económico do país e a criação de emprego.",
     thumbnail: NewsInaugurationImg,
+    thumbnail: NewsInaugurationImg,
     date: "28 de Julho de 2025",
     category: "NOTÍCIA",
     media: {
@@ -63,6 +64,7 @@ export const newsData: NewsItem[] = [
     description:
       "O Grupo Acelerador Angola está a impulsionar o crescimento do tecido empresarial angolano através de programas de educação voltados para o desenvolvimento de líderes e gestores de empresas. Instalado no país há cerca de seis meses, o grupo já formou mais de 100 empresas, apoiando os empresários a obterem melhores resultados através de conhecimento aplicado e boas práticas de gestão.",
     thumbnail: NewsPlaceholderImg,
+    thumbnail: NewsPlaceholderImg,
     date: "26 de Julho de 2025",
     category: "NOTÍCIA",
     link: "https://www.angop.ao/noticias/economia/filda-2025-grupo-acelerador-angola-aposta-na-formacao-de-lideres-empresariais",
@@ -74,10 +76,21 @@ export const newsData: NewsItem[] = [
     description:
       "O vice-governador provincial de Luanda, Manuel Sebastião, considerou a realização da 40ª edição da FILDA em Icolo e Bengo um factor estratégico para o crescimento económico local e um impulso à descentralização do ambiente de negócios em Angola. O evento constitui uma plataforma essencial para a promoção de serviços, produtos e parcerias comerciais que reforçam a dinâmica empresarial angolana.",
     thumbnail: News5Img,
+    thumbnail: News5Img,
     date: "26 de Julho de 2025",
     category: "NOTÍCIA",
     link: "https://www.angop.ao/noticias/economia/filda-2025-vice-governador-de-luanda-destaca-importancia-da-filda-para-crescimento-economico-de-icolo-e-bengo",
   },
+  // {
+  //   id: "news-6",
+  //   title: "FILDA/2025: Sonangol vence Grande Prémio Leão de Ouro",
+  //   description:
+  //     "A Sonangol foi distinguida com o Grande Prémio Leão de Ouro na FILDA 2025, reconhecendo a excelência e o contributo da petrolífera nacional para o desenvolvimento do sector energético angolano. Este prémio reforça a posição de liderança da empresa no mercado nacional e internacional.",
+  //   thumbnail: newsPlaceholderImg,
+  //   date: "27 de Julho de 2025",
+  //   category: "NOTÍCIA",
+  //   link: "https://www.angop.ao/noticias/economia/filda-2025-sonangol-vence-grande-premio",
+  // },
   // {
   //   id: "news-6",
   //   title: "FILDA/2025: Sonangol vence Grande Prémio Leão de Ouro",
@@ -94,6 +107,7 @@ export const newsData: NewsItem[] = [
     description:
       "A Refitec lançou oficialmente a marca 'Boa Vista', o primeiro óleo alimentar 100% produzido em Angola. Este marco histórico representa um avanço significativo na indústria alimentar nacional, promovendo a substituição de importações e fortalecendo a economia local com produtos de qualidade certificada e o selo 'Feito em Angola'.",
     thumbnail: News7Img,
+    thumbnail: News7Img,
     date: "25 de Julho de 2025",
     category: "NOTÍCIA",
     link: "https://www.youtube.com/embed/MpdawZm_RNc",
@@ -103,6 +117,7 @@ export const newsData: NewsItem[] = [
     title: "Grupo Naval marca presença na FILDA 2025",
     description:
       "O Grupo Naval marcou presença destacada na 40ª edição da FILDA 2025, apresentando o seu portfólio diversificado de produtos nacionais. A participação reforçou o compromisso do grupo com a industrialização e desenvolvimento económico de Angola, destacando investimentos em produção local e criação de emprego.",
+    thumbnail: NewsPlaceholderImg,
     thumbnail: NewsPlaceholderImg,
     date: "25 de Julho de 2025",
     category: "NOTÍCIA",
@@ -115,6 +130,7 @@ export const newsData: NewsItem[] = [
     description:
       "A Refitec divulgou a marca 'Boa Vista' no programa televisivo 'A sua manhã', apresentando ao público angolano os detalhes sobre o primeiro óleo alimentar produzido integralmente em Luanda. A entrevista destacou a qualidade do produto, o processo de produção nacional e os benefícios para os consumidores e para a economia do país.",
     thumbnail: News9Img,
+    thumbnail: News9Img,
     date: "25 de Julho de 2025",
     category: "NOTÍCIA",
     link: "https://www.youtube.com/embed/HRgwJukZ5Dg",
@@ -125,6 +141,7 @@ export const newsData: NewsItem[] = [
     description:
       "O Grupo Naval participou na FILDA 2025 com um enfoque estratégico voltado para a expansão dos seus negócios e consolidação no mercado angolano. A empresa apresentou planos de crescimento que incluem aumento da capacidade produtiva, diversificação de produtos e criação de novos postos de trabalho, reforçando o seu papel no desenvolvimento industrial do país.",
     thumbnail: News10Img,
+    thumbnail: News10Img,
     date: "23 de Julho de 2025",
     category: "NOTÍCIA",
     link: "https://www.youtube.com/embed/3Jg4KNSTML0",
@@ -134,6 +151,7 @@ export const newsData: NewsItem[] = [
     title: "Sector privado valoriza selo Feito em Angola",
     description:
       "O sector privado angolano valorizou o selo 'Feito em Angola' durante a FILDA 2025, reconhecendo a sua importância para a promoção da produção nacional e fortalecimento da economia local. Empresários destacaram que a certificação aumenta a confiança dos consumidores nos produtos nacionais e estimula o crescimento da indústria angolana.",
+    thumbnail: NewsPlaceholderImg,
     thumbnail: NewsPlaceholderImg,
     date: "23 de Julho de 2025",
     category: "NOTÍCIA",
@@ -157,6 +175,7 @@ export const newsData: NewsItem[] = [
     description:
       "A Refitec apresentou a marca 'Boa Vista' no programa televisivo Sexto Sentido, partilhando com os telespectadores os detalhes sobre o lançamento do primeiro óleo alimentar produzido em Angola. A entrevista abordou o processo de produção, os padrões de qualidade e o impacto positivo deste produto nacional no mercado angolano.",
     thumbnail: NewsPlaceholderImg,
+    thumbnail: NewsPlaceholderImg,
     date: "23 de Julho de 2025",
     category: "NOTÍCIA",
     link: "https://www.youtube.com/embed/cNASuJ7h4gE",
@@ -166,6 +185,7 @@ export const newsData: NewsItem[] = [
     title: "Grupo Naval apresenta óleo Boa Vista na 40ª edição da FILDA 2025",
     description:
       "O Grupo Naval apresentou oficialmente o óleo alimentar 'Boa Vista' na 40ª edição da FILDA 2025, marcando um momento histórico para a indústria alimentar angolana. Produzido pela refinaria Refitec em Luanda, este óleo representa o compromisso do grupo com a produção nacional de qualidade e a redução da dependência de importações no sector alimentar.",
+    thumbnail: NewsPlaceholderImg,
     thumbnail: NewsPlaceholderImg,
     date: "21 de Julho de 2025",
     category: "NOTÍCIA",
