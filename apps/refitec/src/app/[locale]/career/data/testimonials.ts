@@ -1,36 +1,49 @@
-import worker1 from "@/assets/imgs/worker-1.jpg";
+import eduardoMiguel from "@/assets/imgs/eduardo_miguel_worker.webp";
+import manuelSantos from "@/assets/imgs/manuel_santos_worker.webp";
+import catarinaCunga from "@/assets/imgs/catarina_cunga_worker.webp";
+import vandelsonBernardo from "@/assets/imgs/vandelson_bernardo_worker.webp";
 import { StaticImageData } from "next/image";
+
 export type TestimonialType = {
   id: string;
   name: string;
-  role: string;
-  quote: string;
+  roleKey: string;
+  quoteKey: string;
   imgSrc: StaticImageData;
 };
 
-export const testimonials: TestimonialType[] = [
+export type TranslatedTestimonialType = TestimonialType & {
+  role: string;
+  quote: string;
+};
+
+export const testimonials = [
   {
     id: "1",
-    name: "João Pedro Camossa",
-    role: "Operador de Máquinas",
-    quote:
-      "Trabalhar como Operador de Máquinas na nossa empresa tem sido uma experiência incrível. A equipe é unida e sempre disposta a ajudar.",
-    imgSrc: worker1,
+    name: "Eduardo Miguel",
+    roleKey: "eduardoMiguel.role" as const,
+    quoteKey: "eduardoMiguel.quote" as const,
+    imgSrc: eduardoMiguel,
   },
   {
     id: "2",
-    name: "Joana Pereira",
-    role: "Operadora de Máquinas",
-    quote:
-      "Sinto que meu trabalho é valorizado e que tenho a oportunidade de crescer profissionalmente.",
-    imgSrc: worker1,
+    name: "Manuel dos Santos",
+    roleKey: "manuelSantos.role" as const,
+    quoteKey: "manuelSantos.quote" as const,
+    imgSrc: manuelSantos,
   },
   {
     id: "3",
-    name: "José Alberto",
-    role: "Operador",
-    quote:
-      "Trabalhar com esta equipe tem sido uma experiência gratificante. Sempre somos apoiados e desafiados a evoluir.",
-    imgSrc: worker1,
+    name: "Catarina Cunga",
+    roleKey: "catarinaCunga.role" as const,
+    quoteKey: "catarinaCunga.quote" as const,
+    imgSrc: catarinaCunga,
   },
-];
+  {
+    id: "4",
+    name: "Vandelson Bernardo",
+    roleKey: "vandelsonBernardo.role" as const,
+    quoteKey: "vandelsonBernardo.quote" as const,
+    imgSrc: vandelsonBernardo,
+  },
+] satisfies TestimonialType[];

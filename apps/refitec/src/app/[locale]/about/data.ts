@@ -1,7 +1,7 @@
-import WhoWeAreImg from "@/assets/imgs/refitec-oils.jpg";
-import SustainabilityImg from "@/assets/imgs/factory.jpeg";
 import MissionImg from "@/assets/imgs/bottle-of-oil-and-soy-bean.jpg";
-import VisionImg from "@/assets/imgs/smiling-young-customer-holding-bottle-oil.jpg";
+import FactoryTopImg from "@/assets/imgs/refitec-factory-top.jpg";
+import FactoryImg from "@/assets/imgs/refitec-factory.jpg";
+import OilsImg from "@/assets/imgs/refitec-oils.jpg";
 import ValuesImg from "@/assets/imgs/sustainability.jpg";
 
 // export type AboutTFunction = ReturnType<typeof useTranslations<"About">>;
@@ -11,7 +11,7 @@ export const AboutInfo = [
     items: undefined,
     titleKey: "whoWeAre",
     textKey: "whoWeAreText",
-    img: WhoWeAreImg,
+    img: FactoryImg,
     type: "article",
   },
   {
@@ -25,7 +25,7 @@ export const AboutInfo = [
     items: undefined,
     titleKey: "vision",
     textKey: "visionText",
-    img: VisionImg,
+    img: OilsImg,
     type: undefined,
   },
   {
@@ -48,7 +48,7 @@ export const AboutInfo = [
         textKey: "sustainabilityText",
       },
     ],
-    img: SustainabilityImg,
+    img: FactoryTopImg,
     type: "article-items",
   },
 ] as const;

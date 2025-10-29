@@ -125,6 +125,24 @@
             "successMessage": "The email was sent successfully, please check your inbox to confirm receipt.",
             "invalidFormMessage": "Please check the form data.",
             "errorMessage": "An error occurred while sending the email. Please try again later."
+        },
+        "testimonials": {
+            "eduardoMiguel": {
+                "role": "Forklift Operator",
+                "quote": "As a resident of Boavista, I am grateful for the opportunity to be part of this great family that is Grupo Naval, specifically at Refitec. It has been a great experience."
+            },
+            "manuelSantos": {
+                "role": "Stevedore",
+                "quote": "It has been a very good experience, I always learn good things from my supervisors and colleagues. This project has helped many residents of Boavista escape delinquency and helped me make significant progress in my life."
+            },
+            "catarinaCunga": {
+                "role": "Packaging Operator",
+                "quote": "I have been here for a short time, but I have already grown a lot within the Group. I am a resident of Boavista and I found a family in my team. I am grateful for the opportunity that the group gave to me and other young people."
+            },
+            "vandelsonBernardo": {
+                "role": "Water Treatment Technician",
+                "quote": "It has been a great experience working here. The company came to provide many opportunities for young Angolans and I am one of them."
+            }
         }
     },
     "Products": {

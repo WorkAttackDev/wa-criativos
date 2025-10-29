@@ -4,13 +4,15 @@ import {
   Carousel,
   CarouselContent,
   CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel";
 import TestimonialCard from "./TestimonialCard";
-import { testimonials } from "../data/testimonials";
+import { TranslatedTestimonialType } from "../data/testimonials";
 
-const TestimonialSlider = () => {
+type TestimonialSliderProps = {
+  testimonials: TranslatedTestimonialType[];
+};
+
+const TestimonialSlider = ({ testimonials }: TestimonialSliderProps) => {
   return (
     <Carousel
       opts={{ align: "center", loop: true }}

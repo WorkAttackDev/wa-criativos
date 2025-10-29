@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { Quote } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { TestimonialType } from "../data/testimonials";
+import { TranslatedTestimonialType } from "../data/testimonials";
 
 const TestimonialCard = ({
   testimonial,
   className,
 }: {
-  testimonial: TestimonialType;
+  testimonial: TranslatedTestimonialType;
   className?: string;
 }) => {
   return (

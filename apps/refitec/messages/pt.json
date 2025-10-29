@@ -125,6 +125,24 @@
             "successMessage": "O email foi enviado com sucesso, abra o seu e-mail para confirmar o recebimento.",
             "invalidFormMessage": "Por favor, verifique os dados do formulário.",
             "errorMessage": "Ocorreu um erro ao enviar o email. Tente novamente mais tarde."
+        },
+        "testimonials": {
+            "eduardoMiguel": {
+                "role": "Operador de Empilhadeira",
+                "quote": "Sendo morador da Boavista, Agradeço pela oportunidade de fazer parte desta grande família que é o Grupo naval, especificamente na Refitec, tem sido uma grande experiência."
+            },
+            "manuelSantos": {
+                "role": "Estivador",
+                "quote": "Tem sido uma experiência muito boa, aprendo sempre coisas boas com os supervisores e colegas, este projeto ajudou muitos moradores da Boavista a saírem da delinquência e ajudou-me a dar um avanço significativo na minha vida."
+            },
+            "catarinaCunga": {
+                "role": "Embaladora",
+                "quote": "Estou a pouco tempo, mas já cresci muito dentro do Grupo, sou moradora da Boavista mesmo e encontrei uma família na minha equipa, agradeço pela oportunidade que o grupo deu a mim e aos outros jovens."
+            },
+            "vandelsonBernardo": {
+                "role": "Técnico de Tratamento de água",
+                "quote": "Tem sido uma experiência muito grande trabalhar aqui, a empresa veio para dar muitas oportunidades para os jovens angolanos e eu sou um deles."
+            }
         }
     },
     "Products": {
