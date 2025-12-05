@@ -4,8 +4,6 @@ import FactoryImg from "@/assets/imgs/refitec-factory.jpg";
 import OilsImg from "@/assets/imgs/refitec-oils.jpg";
 import ValuesImg from "@/assets/imgs/sustainability.jpg";
 
-// export type AboutTFunction = ReturnType<typeof useTranslations<"About">>;
-
 export const AboutInfo = [
   {
     items: undefined,
