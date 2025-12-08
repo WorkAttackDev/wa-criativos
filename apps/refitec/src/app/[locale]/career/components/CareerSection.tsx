@@ -34,7 +34,7 @@ const CareerSection = async () => {
           "from-primary/80 to-foreground/90 relative bg-gradient-to-tr"
         }
       >
-        <article className="my-container grid gap-32 py-32 text-white md:grid-cols-2">
+        <article className="my-container grid gap-32 py-32 text-white lg:grid-cols-2">
           <CareerInfo title={t("title")} description={t("description")} />
           <div className="grid content-start">
             <CareerForm />

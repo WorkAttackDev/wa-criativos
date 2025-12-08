@@ -29,7 +29,7 @@ const TestimonialCard = ({
             alt={testimonial.name}
             width={192}
             height={192}
-            className="size-16 object-cover"
+            className="size-20 object-cover"
           />
           <figcaption className="grid">
             <h6 className="text-secondary text-2xl font-semibold">

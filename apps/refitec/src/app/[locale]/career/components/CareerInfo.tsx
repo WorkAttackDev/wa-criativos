@@ -21,10 +21,17 @@ const CareerInfo = async ({
   );
 
   return (
-    <div className="grid gap-10 text-white">
-      <HeadingText variant="secondary">{title}</HeadingText>
-      <p className="max-w-3xl leading-normal">{description}</p>
-      <TestimonialSlider testimonials={translatedTestimonials} />
+    <div className="grid gap-10 text-white max-lg:justify-items-center">
+      <HeadingText className="max-lg:text-center" variant="secondary">
+        {title}
+      </HeadingText>
+      <p className="max-w-3xl leading-normal max-lg:text-center">
+        {description}
+      </p>
+      <TestimonialSlider
+        className="mt-4"
+        testimonials={translatedTestimonials}
+      />
     </div>
   );
 };

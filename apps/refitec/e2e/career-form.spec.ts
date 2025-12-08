@@ -70,7 +70,9 @@ test.describe("Career Form Tests", () => {
   test("should successfully submit form with valid data", async ({ page }) => {
     await page.locator("input[name='firstName']").fill("João");
     await page.locator("input[name='lastName']").fill("Silva");
-    await page.locator("input[name='email']").fill("joao.silva@gmail.com");
+    await page
+      .locator("input[name='email']")
+      .fill("denilsonjosephjunior@gmail.com");
     await page.locator("input[name='phone']").fill("+244923228585");
     await page
       .locator("textarea[name='about']")

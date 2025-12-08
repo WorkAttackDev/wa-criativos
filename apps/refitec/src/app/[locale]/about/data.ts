@@ -1,6 +1,6 @@
 import MissionImg from "@/assets/imgs/bottle-of-oil-and-soy-bean.jpg";
-import FactoryTopImg from "@/assets/imgs/refitec-factory-top.jpg";
-import FactoryImg from "@/assets/imgs/refitec-factory.jpg";
+import FactoryImg from "@/assets/imgs/factory.jpeg";
+import InsideFactoryImg from "@/assets/imgs/inside-factory.jpg";
 import OilsImg from "@/assets/imgs/refitec-oils.jpg";
 import ValuesImg from "@/assets/imgs/sustainability.jpg";
 
@@ -9,7 +9,7 @@ export const AboutInfo = [
     items: undefined,
     titleKey: "whoWeAre",
     textKey: "whoWeAreText",
-    img: FactoryImg,
+    img: InsideFactoryImg,
     type: "article",
   },
   {
@@ -46,7 +46,7 @@ export const AboutInfo = [
         textKey: "sustainabilityText",
       },
     ],
-    img: FactoryTopImg,
+    img: FactoryImg,
     type: "article-items",
   },
 ] as const;

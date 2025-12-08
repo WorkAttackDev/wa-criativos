@@ -281,5 +281,6 @@ export {
   CarouselNext,
   CarouselPrevious,
   CarouselDots,
+  useCarousel,
   type CarouselApi,
 };
