@@ -8,3 +8,4 @@ export const config = {
   matcher: ["/", "/(pt|en)/:path*"],
   // matcher: ["/", `/:locale(${locales.join("|")})/:path*`],
 };
+
