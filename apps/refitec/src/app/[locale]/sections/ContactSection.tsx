@@ -65,11 +65,6 @@ const ContactSection = ({ locale, title }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [showMap, setShowMap] = useState(false);
 
-  console.log(
-    "Google Maps API Key:",
-    process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
-  );
-
   useEffect(() => {
     if (!ref.current) return;
 
