@@ -66,6 +66,8 @@ const ContactSection = ({ locale, title, mapKey }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [showMap, setShowMap] = useState(false);
 
+  console.log({ mapKey });
+
   useEffect(() => {
     if (!ref.current) return;
 
