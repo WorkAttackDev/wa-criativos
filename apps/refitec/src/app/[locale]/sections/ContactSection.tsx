@@ -12,7 +12,6 @@ import { contactLinksObj, linksObj } from "../links";
 type Props = {
   title: string;
   locale: string;
-  mapKey: string;
 };
 
 const ContactInfoAndSocial = () => {
@@ -62,11 +61,14 @@ const ContactInfoAndSocial = () => {
   );
 };
 
-const ContactSection = ({ locale, title, mapKey }: Props) => {
+const ContactSection = ({ locale, title }: Props) => {
   const ref = useRef<HTMLDivElement>(null);
   const [showMap, setShowMap] = useState(false);
 
-  console.log({ mapKey });
+  console.log(
+    "Google Maps API Key:",
+    process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+  );
 
   useEffect(() => {
     if (!ref.current) return;
@@ -103,7 +105,7 @@ const ContactSection = ({ locale, title, mapKey }: Props) => {
     >
       <GoogleMapsEmbed
         id="map"
-        apiKey={mapKey}
+        apiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ""}
         width="100%"
         height={200}
         mode="place"

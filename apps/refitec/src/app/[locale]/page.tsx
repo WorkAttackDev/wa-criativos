@@ -29,11 +29,7 @@ const HomePage = async ({ params }: PageProps<"/[locale]">) => {
       {/* <TimelineSection /> */}
       <CareerSection />
       <NewsSection />
-      <ContactSection
-        title={tc("title")}
-        locale={locale}
-        mapKey={process.env.GOOGLE_MAPS_API_KEY || ""}
-      />
+      <ContactSection title={tc("title")} locale={locale} />
     </main>
   );
 };
