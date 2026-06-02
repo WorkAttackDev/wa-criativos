@@ -106,7 +106,7 @@ const ContactSection = ({ locale, title }: Props) => {
         mode="place"
         allowfullscreen
         style="position:absolute; inset:0; width:100%; height:100%;"
-        q="56XV+429, Largo 4 de Fevereiro, Luanda"
+        q="Refitec"
         language={locale}
         aria-label="Google Maps Embed"
       />
