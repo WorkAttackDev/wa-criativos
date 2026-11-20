@@ -20,6 +20,7 @@ const Footer = async () => {
         <article className="flex flex-col gap-8">
           <MotionAnim keyframes={{ opacity: [0, 1], x: [-100, 0] }}>
             <Link href="/" className="flex max-md:min-w-full">
+              {/* eslint-disable-next-line @next/next/no-img-element -- SVG logo is served as-is from /public */}
               <img
                 src="/imgs/logo.svg"
                 width={185}

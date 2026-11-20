@@ -55,6 +55,7 @@ export const MotionAnim = ({
       { amount: 0.4 },
     );
     return () => stop();
+    // eslint-disable-next-line react-hooks/exhaustive-deps -- run once; keyframes are per-render objects
   }, [ref]);
 
   return (
