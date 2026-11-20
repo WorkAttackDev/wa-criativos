@@ -65,7 +65,9 @@ const FooterBottom = () => {
 
   return (
     <footer className="flex w-full justify-between gap-8 text-lg text-secondary max-sm:flex-col max-sm:text-center">
-      <p className="max-sm:order-2">{t("allRightsReserved")}</p>
+      <p className="max-sm:order-2">
+        {t("allRightsReserved", { year: new Date().getFullYear() })}
+      </p>
       <nav className="flex flex-wrap gap-8 max-sm:justify-center">
         {links.map((item) => (
           <Link

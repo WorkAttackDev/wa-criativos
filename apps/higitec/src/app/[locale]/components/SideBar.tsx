@@ -61,7 +61,7 @@ const SideBar = (props: Props) => {
         </nav>
         <SheetFooter>
           <p className="text-xl text-secondary-foreground">
-            {tf("allRightsReserved")}
+            {tf("allRightsReserved", { year: new Date().getFullYear() })}
           </p>
         </SheetFooter>
       </SheetContent>

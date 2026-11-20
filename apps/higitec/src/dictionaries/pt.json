@@ -74,7 +74,7 @@
         "termsOfService": "Termos de Serviço",
         "cookiesPolicy": "Política de Cookies",
         "privacyPolicy": "Política de Privacidade",
-        "allRightsReserved": "© 2024 Todos direitos reservados à HIGITEC LDA."
+        "allRightsReserved": "© {year} Todos direitos reservados à HIGITEC LDA."
     },
     "Cookies": {
         "title": "Política de Cookies",
