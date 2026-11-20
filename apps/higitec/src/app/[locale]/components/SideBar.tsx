@@ -1,3 +1,4 @@
+"use client";
 import { buttonVariants } from "@/components/ui/button";
 import {
   Sheet,
@@ -10,7 +11,8 @@ import {
 import { cn } from "@/lib/utils";
 import { AlignRight } from "lucide-react";
 import Image from "next/image";
-import Link from "next/link";
+import { useState, type MouseEvent } from "react";
+import { Link } from "@/i18n/navigation";
 import { navLinks } from "../links";
 import BoxAnimation from "./BoxAnimation";
 import { useTranslations } from "next-intl";
@@ -20,8 +22,19 @@ type Props = {};
 const SideBar = (props: Props) => {
   const t = useTranslations("Header");
   const tf = useTranslations("Footer");
+  const [open, setOpen] = useState(false);
+
+  const handleNavClick = (event: MouseEvent, href: string) => {
+    const target = document.getElementById(href.split("#")[1] ?? "");
+    setOpen(false);
+    if (!target) return; // not on this page: let the link navigate
+    event.preventDefault();
+    // wait for the 300ms close animation to release the body scroll lock
+    setTimeout(() => target.scrollIntoView({ behavior: "smooth" }), 350);
+  };
+
   return (
-    <Sheet>
+    <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger
         className={cn(
           "text-primary hover:text-secondary focus:text-secondary xl:hidden",
@@ -50,6 +63,7 @@ const SideBar = (props: Props) => {
             <Link
               key={item.href}
               href={item.href}
+              onClick={(event) => handleNavClick(event, item.href)}
               className={cn(
                 buttonVariants({ variant: "link" }),
                 "w-fit justify-start",
