@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/sheet";
 import { cn } from "@/lib/utils";
 import { AlignRight } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { navLinks } from "../links";
 import BoxAnimation from "./BoxAnimation";
@@ -32,10 +33,12 @@ const SideBar = (props: Props) => {
         <SheetHeader className="flex flex-col items-start gap-8">
           <BoxAnimation>
             <Link href="/">
-              <img
+              <Image
                 src="/imgs/logo.svg"
                 width={185}
                 height={87}
+                alt="Higitec"
+                unoptimized
                 className="h-auto w-48 object-contain lg:w-64"
               />
             </Link>

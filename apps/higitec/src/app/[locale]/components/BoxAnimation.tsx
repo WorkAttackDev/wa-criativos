@@ -52,7 +52,7 @@ const BoxAnimation = ({ children, delay, className }: Props) => {
         delay,
       },
     );
-  }, [animate, isInView, delay, divRef]);
+  }, [animate, isInView, delay, divRef, scope]);
 
   return (
     <div ref={scope} className={cn("relative", className)}>

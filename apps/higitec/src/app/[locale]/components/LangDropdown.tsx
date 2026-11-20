@@ -7,7 +7,7 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { Link } from "@/lib/i18n";
+import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/utils";
 import { ChevronsUpDown } from "lucide-react";
 import { useTranslations } from "next-intl";

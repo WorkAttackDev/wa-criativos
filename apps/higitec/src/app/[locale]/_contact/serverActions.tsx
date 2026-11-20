@@ -9,15 +9,16 @@ import { ContactType, contactSchema } from "./schema";
 import NewContactEmailTemplate from "@/lib/my-next-utils/mail/NewContactEmailTemplate";
 import { contactLinksObj } from "../links";
 
-export const sendContactEmailServerActions = (payload: ContactType) =>
+export const sendContactEmailServerActions = async (payload: ContactType) =>
   unsafeHandleServerActions({
     payload,
     schema: contactSchema,
     successMessage:
       "O email foi enviado com sucesso, abra o seu e-mail para confirmar o recebimento.",
     errorMessage: "Ocorreu um erro ao enviar o email",
-    actionFn: async ({ data: { email, firstName, lastName, mensagem } }) =>
-      Promise.all([
+    actionFn: async ({ data: { email, firstName, lastName, mensagem } }) => {
+      const host = (await headers()).get("host") || "localhost";
+      return Promise.all([
         sendEmail({
           to: contactLinksObj.email.label,
           html: render(
@@ -35,10 +36,11 @@ export const sendContactEmailServerActions = (payload: ContactType) =>
           html: render(
             <ContactEmailTemplate
               userName={firstName + " " + lastName}
-              host={headers().get("host") || "localhost"}
+              host={host}
             />,
           ),
           subject: "Obrigado por entrar em contato",
         }),
-      ]),
+      ]);
+    },
   });

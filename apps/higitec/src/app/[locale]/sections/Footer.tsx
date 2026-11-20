@@ -1,6 +1,7 @@
 import { buttonVariants } from "@/components/ui/button";
-import { Link } from "@/lib/i18n";
+import { Link } from "@/i18n/navigation";
 import NextLink from "next/link";
+import Image from "next/image";
 import React from "react";
 import { contactLinksObj, linksObj, navLinks } from "../links";
 import { cn } from "@/lib/utils";
@@ -92,11 +93,12 @@ const Footer = () => {
       <section className="flex w-full flex-col  justify-between gap-32 max-sm:justify-center sm:flex-row">
         <BoxAnimation>
           <NextLink href="/" className="flex justify-center max-sm:min-w-full">
-            <img
+            <Image
               src="/imgs/logo.svg"
               width={285}
               height={97}
               alt="Higitec Logo"
+              unoptimized
               className="h-auto w-80 object-contain lg:w-[28rem]"
             />
           </NextLink>

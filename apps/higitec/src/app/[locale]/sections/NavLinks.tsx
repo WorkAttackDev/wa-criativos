@@ -4,7 +4,7 @@ import { navLinks } from "../links";
 import { buttonVariants } from "@/components/ui/button";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-import { Link } from "@/lib/i18n";
+import { Link } from "@/i18n/navigation";
 import { useTranslations } from "next-intl";
 
 type Props = { className?: string };

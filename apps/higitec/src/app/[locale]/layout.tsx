@@ -5,7 +5,10 @@ import Header from "./sections/Header";
 import Footer from "./sections/Footer";
 import TopScrollButton from "./components/TopScrollButton";
 import { Toaster } from "@/components/ui/sonner";
-import { locales } from "@/lib/i18n";
+import { routing } from "@/i18n/routing";
+import { hasLocale, NextIntlClientProvider } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
+import { notFound } from "next/navigation";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -108,21 +111,29 @@ export const metadata: Metadata = {
   }/site.webmanifest`,
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
-  params: { locale },
+  params,
 }: Readonly<{
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 }>) {
+  const { locale } = await params;
+
+  if (!hasLocale(routing.locales, locale)) notFound();
+
+  setRequestLocale(locale);
+
   return (
-    <html lang={locale}>
+    <html lang={locale} data-scroll-behavior="smooth">
       <body className={inter.className}>
-        <Header />
-        {children}
-        <Footer />
-        <TopScrollButton />
-        <Toaster />
+        <NextIntlClientProvider>
+          <Header />
+          {children}
+          <Footer />
+          <TopScrollButton />
+          <Toaster />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

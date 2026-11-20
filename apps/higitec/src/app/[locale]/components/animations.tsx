@@ -64,7 +64,7 @@ const SlideInUpZoomAnimation = ({
         delay,
       },
     );
-  }, [animate, isInView, scope, delay]);
+  }, [animate, isInView, scope, delay, duration]);
 
   return (
     // escrever artigo sobre esse código
@@ -121,7 +121,7 @@ export const SlideFadeInDownAnimation = ({
         delay,
       },
     );
-  }, [animate, isInView, scope, delay]);
+  }, [animate, isInView, scope, delay, duration]);
 
   return (
     <div ref={scope} className={cn("relative", className)}>
