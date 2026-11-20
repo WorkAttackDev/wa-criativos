@@ -119,7 +119,7 @@ export default async function RootLayout({
   setRequestLocale(locale);
 
   return (
-    <html lang={locale} className="scheme-light">
+    <html lang={locale} className="scheme-light" data-scroll-behavior="smooth">
       <body className={inter.className}>
         <NextIntlClientProvider>
           <LazyMotionProvider>

@@ -90,7 +90,7 @@ const ContactSection = ({ locale, title }: Props) => {
         ease: "easeInOut",
       },
     );
-  }, [showMap, animate]);
+  }, [showMap]);
 
   return (
     <section
