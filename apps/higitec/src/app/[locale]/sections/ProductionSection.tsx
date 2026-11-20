@@ -1,4 +1,5 @@
 import { cn } from "@/lib/utils";
+import Image from "next/image";
 import FeatherBgSection from "../components/FeatherBgSection";
 import HeadingText from "../components/HeadingText";
 import { linksObj } from "../links";
@@ -82,7 +83,7 @@ const ProductionSection = (_: Props) => {
               "grid grid-cols-[auto_auto] grid-rows-[auto_auto_auto] items-start gap-x-8 uppercase text-secondary",
             )}
           >
-            <img
+            <Image
               className={cn(
                 "row-span-full object-contain",
                 info.size === "sm" ? "size-24" : "size-32",
@@ -91,6 +92,7 @@ const ProductionSection = (_: Props) => {
               alt={info.title}
               width={sizeMap[info.size].width}
               height={sizeMap[info.size].height}
+              unoptimized
             />
             <h3 className="text-6xl font-bold">
               <CounterEffect from={0} to={info.value} className="inline" />{" "}

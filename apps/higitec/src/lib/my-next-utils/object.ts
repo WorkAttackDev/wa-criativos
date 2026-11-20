@@ -28,11 +28,17 @@ export const objectToFormData = (
       } else if (obj[property] instanceof FileList) {
         // if the property is a FileList, append each file to the FormData
         for (let i = 0; i < obj[property].length; i++) {
-          fd.append(formKey, obj[property].item(i));
+          const file = obj[property].item(i);
+          if (file) fd.append(formKey, file);
         }
       } else {
         // if it's a string or a File object
-        fd.append(formKey, obj[property]);
+        const value = obj[property];
+        if (value instanceof File) {
+          fd.append(formKey, value);
+        } else {
+          fd.append(formKey, String(value));
+        }
       }
     }
   }

@@ -31,7 +31,7 @@ const CounterEffect = ({
     }
 
     // return () => controls.stop();
-  }, [scope, from, isInView, to]);
+  }, [scope, from, isInView, to, animate]);
 
   return (
     <p className={className} ref={scope}>

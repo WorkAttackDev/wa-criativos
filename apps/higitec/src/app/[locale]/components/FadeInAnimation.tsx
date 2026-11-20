@@ -45,7 +45,7 @@ const FadeInAnimation = ({
         delay,
       },
     );
-  }, [animate, isInView, scope, delay]);
+  }, [animate, isInView, scope, delay, duration]);
 
   return (
     // escrever artigo sobre esse código

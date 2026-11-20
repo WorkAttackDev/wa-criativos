@@ -8,7 +8,7 @@ import { headers } from "next/headers";
 import { workWithUsSchema } from "./schema";
 import { contactLinksObj } from "../links";
 
-export const sendWorkWithUsEmailServerActions = (payload: FormData) =>
+export const sendWorkWithUsEmailServerActions = async (payload: FormData) =>
   unsafeHandleServerActions({
     payload,
     successMessage:
@@ -17,6 +17,7 @@ export const sendWorkWithUsEmailServerActions = (payload: FormData) =>
     actionFn: async ({ data }) => {
       const { cv, email, firstName, lastName, about, phone } =
         workWithUsSchema.parse(Object.fromEntries(data));
+      const host = (await headers()).get("host") || "localhost";
 
       return Promise.all([
         sendEmail({
@@ -44,7 +45,7 @@ export const sendWorkWithUsEmailServerActions = (payload: FormData) =>
           html: render(
             <ContactEmailTemplate
               userName={firstName + " " + lastName}
-              host={headers().get("host") || "localhost"}
+              host={host}
             />,
           ),
           subject: "Obrigado por entrar em contato",
